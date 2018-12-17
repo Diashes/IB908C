@@ -1,0 +1,111 @@
+* {
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+h1, h2, h3, ul, li {
+    margin:0;
+    padding:0;
+}
+
+body, html {
+    margin:0;
+    padding:0;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background:whitesmoke;
+    height:100%;
+}
+
+header {
+    background:black;
+    color:white;
+    width:100%;
+    height:60px;
+    padding:10px;
+}
+
+#container {
+    max-width: 640px;
+    margin:0 auto;
+    background:white;
+    height:100%;
+}
+
+
+/* TOOLTIP */
+.tooltip {
+    border-radius:5px;
+    display:none;
+    position:absolute;
+    padding:10px;
+    border:1px solid black;
+    background: white;
+}
+
+
+/* TABS */
+
+#tabbed-panel .tabs {
+    background: black;
+}
+
+#tabbed-panel .tabs li {
+    height:40px;
+    display:inline-block;
+    padding:10px;
+}
+
+#tabbed-panel .tabs li:hover {
+    cursor:pointer;
+    background:white;
+    color:gray;
+}
+
+#tabbed-panel .tabs li a {
+    padding:15px;
+    color:whitesmoke;
+}
+
+#tabbed-panel .tabs li a:hover {
+    color:gray;
+}
+
+.active-tab {
+    background:white;
+    color:black !important;
+}
+
+
+/* PANELS */
+
+#tabbed-panel .panel {
+    display:none;
+    padding:10px;
+    margin:0;
+}
+
+.active-panel {
+    display:block !important;
+}
+
+
+/* IMAGE SLIDER */
+
+#slider {
+    max-width:640px;
+    max-height:425px;
+    background:blue;
+    overflow:hidden;
+}
+
+#slider .slides {
+    width:7000px;
+    white-space: nowrap;
+}
+
+#slider .slide {
+    float:left;
+    width: 640px;
+}

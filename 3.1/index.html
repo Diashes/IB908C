@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../base.css">
+    <title>3.1 Grunderna i JavaScript</title>
+</head>
+<body>
+
+<header>
+    <h1>Grunderna i JavaScript</h1>
+</header>
+
+<div id="wrapper">
+    <div id="inner-wrapper">
+        <h2>Externt länkad JavaScript-fil och dess fördelar</h2>
+        <p>Externa JavaScript-filer är användbara om man vill använda samma kod till flera
+            olika webbsidor. För att länka till en extern JavaScript-fil så använder man sig av
+            &lt;script&gt; taggen.</p>
+        <code>&lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;</code>
+
+        <hr />
+
+        <h2>Satser</h2>
+        <p>I den externa JavaScript-filen går det att skriva JavaScript-kod. För att skriva ut någonting
+            på webbsidan kan till exempel denna kod-sats köras. Koden markerar elementet "test" och
+            kan då redigera elementets html.</p>
+        <code>document.getElementById("test").innerHTML = "Hello World!";</code>
+
+        <hr />
+
+        <h2>Datatyper</h2>
+        <p>I JavaScript används variabler som kan vara av olika datatyper. Variabler som innehåller
+            textvärden kallas för strängar. Strängar skrivs innanför citationstecken. Variabler som
+            innehåller siffror utan citationstecken kommer att behandlas som matematiska nummer. Andra
+            datatyper som finns är till exempel array och object.</p>
+<pre><code>var meningenMedLivet = 42;                       // Number
+var name = "Amanda Stensland";                   // String
+var pets = ["Rocky", "Tussi", "Vita"];           // Array
+var adress = {adress:"Vägvägen", nummer:"3"};    // Object</code></pre>
+        <p>I JavaScript behöver man inte definiera i förväg vilken datatyp som variabeln kommer att innehålla,
+            vilket kan behöva göras i andra programmeringsspråk, såsom Java.</p>
+
+        <hr />
+
+        <h2>Variabler och arrayer</h2>
+        <p>En variabel används för att förvara data av diverse datatyper.</p>
+        <code>var test = "Hello World";</code>
+        <p>Arrayer kan förvara många värden i en och samma variabel. Värdena kan kommas åt genom att
+            definiera en indexplats i arrayen som har ett värde man önskar nå.</p>
+<pre><code>var masen = ["måsen", "måsen", "hej", "hej", "hej"];
+document.getElementById("demo").innerHTML = masen[0];</code></pre>
+
+        <hr />
+
+        <h2>Operatorer och stränghantering</h2>
+        <p>I JavaScript kan aritmetiska operatorer appliceras för att beräkna värden.</p>
+<pre><code>var addition = 4 + 2;
+var subtraktion = 4 - 2;
+var multiplikation = 4 * 2;
+var division = 4 / 2;
+var modulus = 4 % 2;
+var increment = ++42;
+var decrement = --42;</code></pre>
+        <p>
+            Strängar används för att förvara text. Strängar måste skrivas med citationstecken och
+            därför går det inte att använda citationstecken i texten, eftersom det betyder att strängen
+            slutar där. Vill man visa citationstecken så måste man först skriva ett backslash framför.
+        </p>
+<pre><code>var doubleQuote = "\"For a moment, nothing happened. Then, after a second or so, nothing continued to happen.\"";
+var singleQuote = 'What\'s that?';
+var backslash = "C:\\Users";
+var newLine = "This is a \n newline";
+var tab = "This is a \t tab";</code></pre>
+
+        <hr />
+
+        <h2>Flödeshantering (if-satser och lopar)</h2>
+        <p>
+            If-satser används för att kontrollera vad som är sant eller falskt och agera annorlunda
+            beroende på detta.
+        </p>
+<pre><code>var temp = 5;
+if (temp === 5) {
+    document.getElementById("demo").innerHTML = "temp innehåller värdet 5";
+}</code></pre>
+        <p>
+            Om jämförelsen visar sig vara falsk så exekveras inte koden inom måsvingarna. Om man vill att
+            något annat ska hända när jämförelsen är falskt så kan man använda "else".
+        </p>
+<pre><code>var temp = 5;
+if (temp === 5) {
+    document.getElementById("demo").innerHTML = "temp innehåller värdet 5";
+} else {
+    document.getElementById("demo").innerHTML = "temp innehåller INTE värdet 5";
+}</code></pre>
+        <p>
+            Loopar kan användas för att upprepa en bit kod ett önskvärt antal gånger, tills villkoret
+            för loopen har uppnåtts. Istället för att skriva:
+        </p>
+<pre><code>document.getElementById("demo").innerHTML = "Hello World!";
+document.getElementById("demo").innerHTML = "Hello World!";
+document.getElementById("demo").innerHTML = "Hello World!";
+document.getElementById("demo").innerHTML = "Hello World!";
+document.getElementById("demo").innerHTML = "Hello World!";</code></pre>
+        <p>Så kan man göra en for-loop:</p>
+<pre><code>var temp = 5;
+for (var i = 0; i &lt; temp; i++) {
+    document.getElementById("demo").innerHTML = "Hello World!";
+}</code></pre>
+
+        <hr />
+
+        <h2>Funktioner</h2>
+        <p>Funktioner används för att skapa sektioner med kod som är designad för att utföra vissa uppgifter.</p>
+<pre><code>function helloWorld() {
+    alert("Hello World!");
+}</code></pre>
+        <p>För att köra kod som ligger i en funktion så måste man anropa funktionen. Funktionen anropas sedan genom att skriva:</p>
+        <code>helloWorld();</code>
+        <p>Funktioner kan ta emot argument, vilket är variabler som man möjligtvis vill att funktionen ska använda sig av.</p>
+<pre><code>function helloWorld(var1, var2) {
+    alert(var1 + var2);
+}</code></pre>
+        <p>Argumenten måste skickas med när man anropar funktionen. ("World" kommer att få variabelnamnet "var2" i funktionen.)</p>
+<pre><code>var var1 = "Hello";
+helloWorld(var1, "World");</code></pre>
+
+        <h2>Reguljära uttryck</h2>
+        <p>Reguljära uttryck eller RegExp används för att skapa sökmönster för text. Ett RegExp består av en sekvens med bokstäver och tecken och kan bestå av allt från en simpel bokstav till mera avancerade mönster.</p>
+<pre><code>var quote = "For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much — the wheel, New York, wars and so on — whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man — for precisely the same reasons.";
+var pattern = /dolphins/ig;
+var result = quote.replace(pattern, "mices");</code></pre>
+        <p>
+            Uttrycket <code>/dolphins/ig</code> kommer att hitta allting som matchar "dolphins" och
+            byta ut det mot "mices". <code>i</code> som står för "insensitive" betyder att
+            stora och små bokstäver inte ska spela någon roll och <code>g</code> står för "global"
+            och definierar att alla matchningar ska ersättas med "mices" och inte bara den första
+            matchningen som hittas.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

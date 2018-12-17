@@ -1,0 +1,62 @@
+#wrapper img {
+    width:100%;
+    height:auto;
+    overflow:auto;
+}
+
+div.canvasApp {
+    width:100%;
+    overflow:auto;
+}
+
+div.canvasApp-toolbox {
+    width:20%;
+    height:500px;
+    border:2px solid darkgray;
+    box-shadow: 0 3px 10px 1px rgba(0,0,0,0.3);
+    margin:1%;
+    padding:1%;
+    overflow:auto;
+}
+
+h3.toolbox-title { margin:0 0 10px 0; }
+
+fieldset.buttonGroup {
+    padding:5px;
+    margin:0 0 10px 0;
+}
+
+div.canvasApp-canvasbox {
+    height:500px;
+    border:2px solid darkgray;
+    box-shadow: 0 3px 10px 1px rgba(0,0,0,0.3);
+    margin:1%;
+}
+canvas.canvasbox-canvas:hover {
+    cursor: pointer;
+}
+
+h3.canvasbox-title {
+    margin:0;
+    position:absolute;
+}
+
+.buttonGroup-button { padding:3px; border:2px solid gray; background-color:darkgray; font-size:12px; }
+.buttonGroup-button:hover {
+    border:2px solid black;
+    background-color: #d1d1d1;
+    cursor:pointer;
+}
+
+.button--long { width:100%; margin: 0 0 10px 0; }
+.button--small { width:25px; height:25px; text-align:center; padding:4px 0; overflow:hidden; }
+
+.red { color:red; }
+.yellow { color:yellow; }
+.green { color:green; }
+.blue { color:blue; }
+
+.active {
+    border:2px solid black;
+    background-color:#d1d1d1;
+}

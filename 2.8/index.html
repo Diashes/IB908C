@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.8 Anpassning till olika enheter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-screen.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="style-print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="style-handheld.css" rel="stylesheet" type="text/css" media="handheld">
+</head>
+<body>
+
+<header>
+    <h1>2.8 Anpassning till olika enheter</h1>
+</header>
+
+<div class="container">
+
+    <aside>
+        <div class="bluebox"><a href="index.html">Enhetsspecifik stilsättningd</a></div>
+        <div class="bluebox"><a href="responsive.html">Responsiv stilsättning</a></div>
+        <div class="bluebox"><a href="prefix.html">Webbläsarspecifik stilsättning</a></div>
+    </aside>
+
+    <article>
+        <h2>Enhetsspecifik stilsättning</h2>
+        <h3>Separata stilmallar för olika mediatyper</h3>
+
+        <p>För att optimera visningen av en webbsida för användaren så kan så kallada mediatyper användas.
+            Syftet med dessa är att specifisera ett visst medium för en viss stilsättning av webbsidan och
+            på så sätt göra det möjligt att justera utseendet på webbsidan beroende på vilken enhet som
+            används för att få bästa möjliga användarupplevelse.</p>
+
+        <p>Den här webbsidan har konstruerats för tre olika mediatyper.</p>
+
+        <div class="row">
+            <h4>HTML Mediatyper</h4>
+            <div class="box">
+                <div class="value"><code>media="screen"</code></div>
+                <div class="description">
+                    Webbläsare har vanligen <code>screen</code> som standardläge för att visa webbsidor
+                    och behöver egentligen inte specifiseras när man länkar till en stilmall.
+                </div>
+            </div>
+            <div class="box">
+                <div class="value"><code>media="print"</code></div>
+                <div class="description">
+                    Mediatypen <code>print</code> används vanligen av webbläsaren om användaren vill skriva ut en webbsida.
+                    Webbläsaren kan då använda en mer utskriftsvänlig layout om en sådan finns specifiserad.
+                </div>
+            </div>
+            <div class="box">
+                <div class="value"><code>media="handheld"</code></div>
+                <div class="description">
+                    Enheter som applicerar <code>handheld</code>-läget har ofta väldigt små skärmar
+                    som oftast skiftar mellan i porträtt- eller landskapsläge. Mediatypen kan specifiseras
+                    om det finns en klar tanke hur webbsidan bör se ut på enheter med mindre skärmar.
+                </div>
+            </div>
+        </div>
+
+        <h4>Exempel</h4>
+
+        <p>I exemplet finns tre olika länkar till olika stilmallar.
+            Beroende på vilken enhet som används så kommer den specifika
+            stilmallen för den mediatypen att användas.</p>
+
+<div class="code"><pre><samp>
+&lt;head&gt;
+    &lt;link href=&quot;2.8_style-screen.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;2.8_style-print.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;link href=&quot;2.8_style-handheld.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;handheld&quot;&gt;
+&lt;/head&gt;
+</samp></pre></div>
+
+
+
+        <h3>CSS-konstruktioner för skrivare</h3>
+
+        <p>För skrivare finns speciella CSS-konstruktioner som kan vara användbara när man designar
+            layouter som ska vara utskriftsvänliga.</p>
+
+        <h4>@page-regeln</h4>
+            <div class="box">
+                <div class="value"><code>@page</code></div>
+                <div class="description">
+                    Är en regel som appliceras på utskriftslayouter. Regeln är inte implementerad i Firefox, men stöds av
+                    de senaste versionerna av Chrome, Internet Explorer, Opera och Safari.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@page {
+    margin: 0.5cm;
+}
+</samp></pre></div>
+
+        <h4>Sidbaserade egenskaper</h4>
+        <div class="row">
+            <div class="box">
+                <div class="value"><code>page-break-after</code></div>
+                <div class="description">
+                    Definierar om en sidbrytning ska ske efter ett specifikt element.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@media print {
+    footer { page-break-after: always; }
+}
+</samp></pre></div>
+
+            <div class="box">
+                <div class="value"><code>page-break-before</code></div>
+                <div class="description">
+                    Definierar om en sidbrytning ska ske före ett specifikt element.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@media print {
+    h1 { page-break-before: always; }
+}
+</samp></pre></div>
+
+            <!-- page-break-inside -->
+            <div class="box">
+                <div class="value"><code>page-break-inside</code></div>
+                <div class="description">
+                    Definierar om en sidbrytning kan ske inom ett specifikt element.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@media print {
+    p { page-break-inside: avoid; }
+}
+</samp></pre></div>
+
+            <!-- size -->
+            <div class="box">
+                <div class="value"><code>size</code></div>
+                <div class="description">
+                    Används för att definiera en storlek som webbsidan bör skrivas ut på för att uppnå bästa
+                    resultat.
+                </div>
+            </div>
+            <div class="code"><pre><samp>@page { <br />&nbsp;size: A4 landscape; <br />}</samp></pre></div>
+
+            <!-- orphans -->
+            <div class="box">
+                <div class="value"><code>orphans</code></div>
+                <div class="description">
+                    Om en paragraf bryts till en ny sida så måste texten innan brytningen vara minst tre rader.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@media print {
+    p { orphans: 3; }
+}
+</samp></pre></div>
+
+            <!-- widows -->
+            <div class="box">
+                <div class="value"><code>widows</code></div>
+                <div class="description">
+                    Om en paragraf bryts till en ny utskriftssida så måste texten efter brytningen vara minst tre rader.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@media print {
+    p { widow: 3; }
+}
+</samp></pre></div>
+
+            <!-- marks -->
+            <div class="box">
+                <div class="value"><code>marks</code></div>
+                <div class="description">
+                    Lägger till beskärnings- och kryssmärken där dokumentet borde kapas. Kryssmärken används för att
+                    justera placeringen av utskriftens innehåll på pappret.
+                </div>
+            </div>
+
+<div class="code"><pre><samp>
+@page {
+    marks: crop cross;
+}
+</samp></pre></div>
+
+        </div>
+
+        <footer>
+            <h2>Källor</h2>
+            <div class="bluebox"><a href="http://webdesignskolan.se/css_utskrift/css_utskrift.php">http://webdesignskolan.se/css_utskrift/css_utskrift.php</a></div>
+            <div class="bluebox"><a href="http://www.w3.org/TR/2011/REC-CSS2-20110607/media.html">http://www.w3.org/TR/2011/REC-CSS2-20110607/media.html</a></div>
+            <div class="bluebox"><a href="http://www.howtocreate.co.uk/tutorials/css/mediatypes">http://www.howtocreate.co.uk/tutorials/css/mediatypes</a></div>
+            <div class="bluebox"><a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design">http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design</a></div>
+            <div class="bluebox"><a href="http://www.tutorialspoint.com/css/css_paged_media.htm">http://www.tutorialspoint.com/css/css_paged_media.htm</a></div>
+            <div class="bluebox"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@page/marks">https://developer.mozilla.org/en-US/docs/Web/CSS/@page/marks</a></div>
+        </footer>
+
+    </article>
+
+</div>
+
+</body>
+</html>

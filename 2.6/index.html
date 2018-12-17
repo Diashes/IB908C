@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.6 Tabeller och formulär</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../base.css" />
+</head>
+<body>
+
+<header>
+    <h1>Tabeller och formulär</h1>
+</header>
+
+<div id="wrapper">
+    <div id="inner-wrapper">
+        <p>Tabellers utseende kan ändras och förbättras genom att använda CSS.</p>
+
+        <h2>Table Layout</h2>
+        <p>Table-layout egenskapen definierar layout-algoritmen som ska användas för tabellen.</p>
+
+        <table>
+            <tr>
+                <th>Värde</th>
+                <th>Beskrivning</th>
+            </tr>
+            <tr>
+                <td>auto</td>
+                <td>Automatisk tabell-layout algoritm. Används som standard.</td>
+            </tr>
+            <tr>
+                <td>fixed</td>
+                <td>Går snabbare att ladda in tabellen med värdet fixed. Den horisontella
+                    layouten beror bara på tabellens bredd, inte innehållet i tabellen.</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>Sätter värdet på egenskapen till dess standardvärde.</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>Ärver egenskapen från ett förälder-element.</td>
+            </tr>
+        </table>
+
+        <h3>Exempel</h3>
+
+<pre><code>table {
+    table-layout:fixed;
+}</code></pre>
+
+        <hr />
+
+        <h2>Border Collapse</h2>
+        <p>CSS-egenskapen border-collapse kan göra så att ramen, som i HTML-standard är dubbel,
+            kan sammanfogas till endast en ram.</p>
+
+        <table>
+            <tr>
+                <th>Värde</th>
+                <th>Beskrivning</th>
+            </tr>
+            <tr>
+                <td>separate</td>
+                <td>Ramar är åtskilda från varandra. Används som standard.</td>
+            </tr>
+            <tr>
+                <td>collapse</td>
+                <td>Ramarna sammanfogas till endast en ram.</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>Sätter värdet på egenskapen till dess standardvärde.</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>Ärver egenskapen från ett förälder-element.</td>
+            </tr>
+        </table>
+
+        <h3>Exempel</h3>
+
+<pre><code>table {
+    border-collapse: collapse;
+}</code></pre>
+
+        <hr />
+
+        <h2>Border Spacing</h2>
+        <p>Border-spacing-egenskapen används för att sätta avståndet mellan ramar
+            för närliggande celler. Kan bara användas om border-collapse: separate.</p>
+
+        <table>
+            <tr>
+                <th>Värde</th>
+                <th>Beskrivning</th>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>Specifiserar ett avstånd för närliggande cellers ramar.</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>Sätter värdet på egenskapen till dess standardvärde.</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>Ärver egenskapen från ett förälder-element.</td>
+            </tr>
+        </table>
+
+        <h3>Exempel</h3>
+
+<pre><code>table {
+    border-collapse: separate;
+    border-spacing: 10px 50px;
+}</code></pre>
+
+        <hr />
+
+        <h2>Caption Side</h2>
+        <p>Caption-side-egenskapen definierar vart placeringen av tabellbeskrivningen ska vara.</p>
+
+        <table>
+            <tr>
+                <th>Värde</th>
+                <th>Beskrivning</th>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>Beskrivningen placeras ovanför tabellen. Används som standard.</td>
+            </tr>
+            <tr>
+                <td>bottom</td>
+                <td>Beskrivningen placeras under tabellen.</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>Sätter värdet på egenskapen till dess standardvärde.</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>Ärver egenskapen från ett förälder-element.</td>
+            </tr>
+        </table>
+
+        <h3>Exempel</h3>
+
+<pre><code>caption {
+    caption-side: top;
+}</code></pre>
+
+        <hr />
+
+        <h2>Empty Cells</h2>
+        <p>Empty-cells-egenskapen specifiserar om tomma cellers ramar och bakgrunder ska
+            visas eller inte. Kan bara användas om ramarna för tabellen är separata.</p>
+
+        <table>
+            <tr>
+                <th>Värde</th>
+                <th>Beskrivning</th>
+            </tr>
+            <tr>
+                <td>show</td>
+                <td>Ramar och bakgrunder syns för tomma celler. Används som standard.</td>
+            </tr>
+            <tr>
+                <td>hide</td>
+                <td>Inga ramar eller bakgrunder syns för tomma celler.</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>Sätter värdet på egenskapen till dess standardvärde.</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>Ärver egenskapen från ett förälder-element.</td>
+            </tr>
+        </table>
+
+        <h3>Exempel</h3>
+
+<pre><code>table {
+    border-collapse: separate;
+    empty-cells: hide;
+}</code></pre>
+
+        <hr />
+
+        <h1>Formulär</h1>
+        <p>Här kommer även exempel på hur man kan designa formulär med hjälp av CSS.</p>
+
+        <h2>Exempel</h2>
+        <h3>HTML</h3>
+
+<pre><code>&lt;form&gt;
+    &lt;label&gt;Användarnamn
+        &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;
+    &lt;/label&gt;
+    &lt;label&gt;
+        Lösenord
+        &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+    &lt;/label&gt;
+    &lt;input class=&quot;btn&quot; type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Login&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+        <h3>CSS</h3>
+
+<pre><code>form {
+    border: 1px solid #c6c7cc;
+    overflow: hidden;
+    width: 240px;
+    padding:10px;
+}
+
+label {
+    color: #395870;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input {
+    background: #fff;
+    border: 1px solid #c6c7cc;
+    color: #636466;
+    padding: 6px;
+    margin-top: 6px;
+    width: 100%;
+}
+
+.btn {
+    background: #293f50;
+    border: 0;
+    color: #fff;
+    padding: 8px 16px;
+}</code></pre>
+
+        <h2>Resultat</h2>
+        <form>
+            <label>Användarnamn
+                <input type="text" name="username">
+            </label>
+            <label>
+                Lösenord
+                <input type="password" name="password">
+            </label>
+            <input class="btn" type="submit" name="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

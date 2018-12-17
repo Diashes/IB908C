@@ -1,0 +1,59 @@
+* { box-sizing: border-box; margin:0; padding:0; list-style-type: none; text-decoration: none; }
+html, body { height:100%; font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif; color: #444444; background: #F4F5F7; }
+h1, h2, h3, h4, h5, h6 { margin:10px 0 10px 0; }
+p { margin: 10px 0 10px 0; }
+code { background: #F4F5F7; }
+pre code {
+    padding:10px;
+    border:1px solid #D5D5D5;
+    background: #222;
+    color:white;
+    display:block;
+    width:100%;
+    margin:10px 0 10px 0;
+    overflow:auto;
+}
+hr { margin:10px 0 10px 0; }
+
+
+/* ========================= */
+
+.clear { clear:both; }
+.pullLeft { float:left; }
+.pullRigth { float:right; }
+.pullCenter { margin: 0 auto; }
+
+/* ========================= */
+
+header {
+    text-align: center;
+    margin:0 0 50px 0;
+    height:400px;
+    width:100%;
+    background:darkgray;
+    background:linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.7)
+    ), url('http://i566.photobucket.com/albums/ss103/diashes/congruent_pentagon_zps7hjt2u5h.png');
+    background-attachment: fixed;
+}
+
+header h1 {
+    margin:0;
+    line-height: 400px;
+    font-size:3em;
+    color:white;
+}
+
+#wrapper {
+    width:70%;
+    margin:0 auto;
+}
+
+#inner-wrapper {
+    padding:10px;
+    border:1px solid #d5d5d5;
+    background:white;
+}
+
+#inner-wrapper p { margin:5px 0 15px 0; }

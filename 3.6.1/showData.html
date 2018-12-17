@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" media="all" href="../base.css">
+	<title>Webblagring - Visa data</title>
+</head>
+<body>
+
+<header><h1>Webblagring</h1></header>
+
+<div id="wrapper">
+	<div id="inner-wrapper">
+
+		<h2>Visa data</h2>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<table class="table" id="localStorageTable">
+					<tr><th>LocalStorage</th></tr>
+					<tr><td id="localStorageMessage"></td></tr>
+				</table>
+			</div>
+
+			<div class="col-sm-6">
+				<table class="table" id="sessionStorageTable">
+					<tr><th>SessionStorage</th></tr>
+					<tr><td id="sessionStorageMessage"></td></tr>
+				</table>
+			</div>
+
+			<div class="col-sm-12">
+				<table class="table" id="jsonStorageTable">
+					<tr><th>JSON</th></tr>
+					<tr><td id="jsonStorageMessage"></td></tr>
+				</table>
+			</div>
+		</div>
+
+		<button type="button" id="deleteButton" class="btn btn-danger">Radera data</button>
+
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="showData.js"></script>
+
+</body>
+</html>

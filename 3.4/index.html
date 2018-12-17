@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Amanda Stensland">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="../base.css">
+    <title>3.4 Webbläsar-objekt</title>
+</head>
+<body>
+
+<header>
+    <h1>Webbläsar-objekt</h1>
+</header>
+
+<div id="wrapper">
+    <div id="inner-wrapper">
+        <h2>Window</h2>
+
+        <h3>Egenskaper</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>navigator</td>
+                <td id="navigator"></td>
+                <td><button id="navigator-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>screen</td>
+                <td id="screen"></td>
+                <td><button id="screen-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td id="location"> </td>
+                <td><button id="location-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>defaultStatus</td>
+                <td id="defaultStatus"></td>
+                <td><button id="defaultStatus-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td id="status"></td>
+                <td><button id="status-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>screenLeft</td>
+                <td id="screenLeft"></td>
+                <td><button id="screenLeft-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>screenTop</td>
+                <td id="screenTop"></td>
+                <td><button id="screenTop-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>screenX</td>
+                <td id="screenX"></td>
+
+                <td><button id="screenX-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>screenY</td>
+                <td id="screenY"></td>
+
+                <td><button id="screenY-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>innerHeight</td>
+                <td id="innerHeight"></td>
+
+                <td><button id="innerHeight-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>innerWidth</td>
+                <td id="innerWidth"></td>
+
+                <td><button id="innerWidth-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>outerHeight</td>
+                <td id="outerHeight"></td>
+
+                <td><button id="outerHeight-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>outerWidth</td>
+                <td id="outerWidth"></td>
+
+                <td><button id="outerWidth-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>pageXOffset</td>
+                <td id="pageXOffset"></td>
+
+                <td><button id="pageXOffset-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>pageYOffset</td>
+                <td id="pageYOffset"></td>
+
+                <td><button id="pageYOffset-Example" disabled>Finns ej</button></td>
+            </tr>
+        </table>
+
+        <h3>Metoder</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>alert</td>
+                <td id="alert">-</td>
+                <td><button id="alert-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>confirm</td>
+                <td id="confirm">-</td>
+
+                <td><button id="confirm-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>prompt</td>
+                <td id="prompt">-</td>
+
+                <td><button id="prompt-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>open</td>
+                <td id="open">-</td>
+
+                <td><button id="open-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>close</td>
+                <td id="close">-</td>
+
+                <td><button id="close-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>focus</td>
+                <td id="focus">-</td>
+
+                <td><button id="focus-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>blur</td>
+                <td id="blur">-</td>
+
+                <td><button id="blur-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>setInterval</td>
+                <td id="setInterval">-</td>
+
+                <td><button id="setInterval-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>clearInterval</td>
+                <td id="clearInterval">-</td>
+
+                <td><button id="clearInterval-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>setTimeout</td>
+                <td id="setTimeout">-</td>
+
+                <td><button id="setTimeout-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>clearTimeout</td>
+                <td id="clearTimeout">-</td>
+
+                <td><button id="clearTimeout-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>moveBy</td>
+                <td id="moveBy">-</td>
+
+                <td><button id="moveBy-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>moveTo</td>
+                <td id="moveTo">-</td>
+
+                <td><button id="moveTo-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>resizeBy</td>
+                <td id="resizeBy">-</td>
+
+                <td><button id="resizeBy-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>resizeTo</td>
+                <td id="resizeTo">-</td>
+
+                <td><button id="resizeTo-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>scroll (Deprecated)</td>
+                <td id="scroll">-</td>
+                <td><button id="scroll-Example" disabled>Visa</button></td>
+            </tr>
+            <tr>
+                <td>scrollBy</td>
+                <td id="scrollBy">-</td>
+
+                <td><button id="scrollBy-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>scrollTo</td>
+                <td id="scrollTo">-</td>
+
+                <td><button id="scrollTo-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>print</td>
+                <td id="print">-</td>
+
+                <td><button id="print-Example">Visa</button></td>
+            </tr>
+        </table>
+
+
+        <br /><hr />
+
+        <h2>Navigator</h2>
+
+        <h3>Egenskaper</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>appCodeName</td>
+                <td id="appCodeName"></td>
+
+                <td><button id="appCodeName-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>appName</td>
+                <td id="appName"></td>
+
+                <td><button id="appName-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>appVersion</td>
+                <td id="appVersion"> </td>
+
+                <td><button id="appVersion-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>platform</td>
+                <td id="platform"></td>
+
+                <td><button id="platform-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>userAgent</td>
+                <td id="userAgent"></td>
+
+                <td><button id="userAgent-Example" disabled>Finns ej</button></td>
+            </tr>
+        </table>
+
+        <br /><hr />
+
+        <h2>Screen</h2>
+
+        <h3>Egenskaper</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td id="width"></td>
+
+                <td><button id="width-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td id="height"></td>
+
+                <td><button id="height-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>availWidth</td>
+                <td id="availWidth"></td>
+
+                <td><button id="availWidth-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>availHeight</td>
+                <td id="availHeight"></td>
+
+                <td><button id="availHeight-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>colorDepth</td>
+                <td id="colorDepth"></td>
+
+                <td><button id="colorDepth-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>pixelDepth</td>
+                <td id="pixelDepth"></td>
+
+                <td><button id="pixelDepth-Example" disabled>Finns ej</button></td>
+            </tr>
+        </table>
+
+        <br /><hr />
+
+        <h2>Location</h2>
+
+        <h3>Egenskaper</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>host</td>
+                <td id="host"></td>
+
+                <td><button id="host-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>hostname</td>
+                <td id="hostname"></td>
+
+                <td><button id="hostname-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>port</td>
+                <td id="port"></td>
+
+                <td><button id="port-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td id="href"></td>
+
+                <td><button id="href-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>protocol</td>
+                <td id="protocol"></td>
+
+                <td><button id="protocol-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>pathname</td>
+                <td id="pathname"></td>
+
+                <td><button id="pathname-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>hash</td>
+                <td id="hash"></td>
+
+                <td><button id="hash-Example" disabled>Finns ej</button></td>
+            </tr>
+            <tr>
+                <td>search</td>
+                <td id="search"></td>
+
+                <td><button id="search-Example" disabled>Finns ej</button></td>
+            </tr>
+        </table>
+
+        <h3>Metoder</h3>
+        <table>
+            <tr>
+                <th>Namn</th>
+                <th>Värde</th>
+
+                <th>Exempel</th>
+            </tr>
+            <tr>
+                <td>assign</td>
+                <td id="assign">-</td>
+
+                <td><button id="assign-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>reload</td>
+                <td id="reload">-</td>
+
+                <td><button id="reload-Example">Visa</button></td>
+            </tr>
+            <tr>
+                <td>replace</td>
+                <td id="replace">-</td>
+
+                <td><button id="replace-Example">Visa</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

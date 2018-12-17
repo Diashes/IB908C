@@ -1,0 +1,61 @@
+form#survey-form {
+    background:white;
+    border: 1px solid #d5d5d5;
+    padding:10px;
+}
+form#survey-form.q-label {
+    vertical-align: top;
+}
+form#survey-form input:focus { outline: none; }
+form#survey-form .textfields {
+    width:100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #d5d5d5;
+}
+form#survey-form .form-group {
+    margin-top:20px;
+}
+form#survey-form .radio-group, .checkbox-group {
+    display:block;
+}
+form#survey-form .radio, #survey-form .checkbox {
+    margin: 5px;
+}
+form#survey-form .radio-label, form#survey-form .checkbox-label {
+    margin: 3px 5px;
+}
+form#survey-form textarea {
+    border-radius: 5px;
+    padding: 5px;
+    width:100%;
+    border: 2px solid #d5d5d5;
+}
+form#survey-form textarea:focus {
+    outline: none;
+}
+form#survey-form .hint {
+}
+form#survey-form button {
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+#q-home,
+#q-about,
+#q-gallery,
+#q-contact {
+    display:none;
+}
+
+.error {
+    color:red;
+}
+
+.hide-error {
+    display:none;
+}
+
+.hideValues { display:none; }
+
+.valid { border-color: green !important; }
+.invalid { border-color: red !important; }

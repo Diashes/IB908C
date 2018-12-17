@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.5.5 Formulärhantering</title>
+    <link rel="stylesheet" media="all" href="style.css">
+    <link rel="stylesheet" media="all" href="../base.css">
+</head>
+<body>
+
+<header>
+    <h1>Formulärhantering</h1>
+</header>
+
+<div id="wrapper">
+    <form id="survey-form">
+        <h2>Exempel</h2>
+
+        <hr />
+        <div id="submittedFormData"></div>
+        <hr />
+
+        <div class="form-group" id="q-name">
+            <label class="q-label" for="name">Namn*:</label>
+            <input type="text" name="name" class="textfields" id="name" autofocus />
+            <span class="error hide-error">Skriv ett namn.</span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-email">
+            <label class="q-label" for="email">E-mail*:</label>
+            <input type="email" name="email" class="textfields" id="email" />
+            <span class="error hide-error">E-mail är ej korrekt.</span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-visited">
+            <label class="q-label">Besökta sidor:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="checkbox-home" id="checkbox-home" class="checkbox valid" value="Förstasidan" /><label for="checkbox-home">Förstasidan</label>
+                <input type="checkbox" name="checkbox-about" id="checkbox-about" class="checkbox valid" value="Om mig" /><label for="checkbox-home">Om mig</label>
+                <input type="checkbox" name="checkbox-gallery" id="checkbox-gallery" class="checkbox valid" value="Galleri" /><label for="checkbox-home">Galleri</label>
+                <input type="checkbox" name="checkbox-contact" id="checkbox-contact" class="checkbox valid" value="Kontakta mig"/><label for="checkbox-home">Kontakta mig</label>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-home">
+            <label class="q-label">Betygsätt Förstasidan:</label>
+            <div class="radio-group valid">
+                (Sämst)<input type="radio" name="home" class="radio valid" value="1" />1
+                <input type="radio" name="home" class="radio valid" value="2" />2
+                <input type="radio" name="home" class="radio valid" value="3" />3
+                <input type="radio" name="home" class="radio valid" value="4" />4
+                <input type="radio" name="home" class="radio valid" value="5" />5 (Bäst)
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-about">
+            <label class="q-label">Betygsätt Om mig:</label>
+            <div class="radio-group">
+                (Sämst)<input type="radio" name="about" class="radio valid" value="1" />1
+                <input type="radio" name="about" class="radio valid" value="2" />2
+                <input type="radio" name="about" class="radio valid" value="3" />3
+                <input type="radio" name="about" class="radio valid" value="4" />4
+                <input type="radio" name="about" class="radio valid" value="5" />5 (Bäst)
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-gallery">
+            <label class="q-label">Betygsätt Galleri:</label>
+            <div class="radio-group">
+                (Sämst)<input type="radio" name="gallery" class="radio valid" value="1" />1
+                <input type="radio" name="gallery" class="radio valid" value="2" />2
+                <input type="radio" name="gallery" class="radio valid" value="3" />3
+                <input type="radio" name="gallery" class="radio valid" value="4" />4
+                <input type="radio" name="gallery" class="radio valid" value="4" />5 (Bäst)
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-contact">
+            <label class="q-label">Betygsätt Kontakta mig:</label>
+            <div class="radio-group">
+                (Sämst)<input type="radio" name="contact" class="radio valid" value="1" />1
+                <input type="radio" name="contact" class="radio valid" value="2" />2
+                <input type="radio" name="contact" class="radio valid" value="3" />3
+                <input type="radio" name="contact" class="radio valid" value="4" />4
+                <input type="radio" name="contact" class="radio valid" value="4" />5 (Bäst)
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group" id="q-feedback">
+            <label class="q-label" for="feedback">Feedback*:</label>
+            <textarea name="feedback" id="feedback" rows="5"></textarea>
+            <span class="error hide-error">Feedback-fältet är ej ifyllt.</span>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-group">
+            <button type="button" name="submit" id="submit">Skicka</button>
+        </div>
+
+        <div class="clear"></div>
+    </form>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

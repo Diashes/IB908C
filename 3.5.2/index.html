@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Amanda Stensland">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../base.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Bildhantering</title>
+</head>
+<body>
+
+<header>
+    <h1>Bildhantering</h1>
+</header>
+
+<div id="wrapper">
+    <div id="inner-wrapper">
+
+        <h2>Dynamisk grafik med elementet canvas</h2>
+
+        <p>HTML-elementet &lt;canvas&gt; används för att rita ut grafik på en webbsida.</p>
+
+        <div class="canvasApp">
+            <div class="canvasApp-toolbox pullLeft">
+                <h3 class="toolbox-title">TOOLBOX</h3>
+                <div class="buttonGroup">
+                    <button id="clear" type="button" class="buttonGroup-button button--long">Rensa</button>
+                </div>
+                <fieldset class="buttonGroup" id="toolButtons">
+                    <legend>Verktyg</legend>
+                    <button type="button" id="pencil" value="pencil" class="buttonGroup-button button--small active"><span class="fa fa-pencil"></span></button>
+                    <button type="button" id="eraser" value="eraser" class="buttonGroup-button button--small"><span class="fa fa-eraser"></span></button>
+                    <button type="button" id="path" value="path" class="buttonGroup-button button--small s">~</button>
+                    <button type="button" id="line" value="line" class="buttonGroup-button button--small"> / </button>
+                    <button type="button" id="text" value="text" class="buttonGroup-button button--small"> T </button>
+                    <button type="button" id="circle" value="circle" class="buttonGroup-button button--small"><span class="fa fa-circle"></span></button>
+                    <button type="button" id="square" value="square" class="buttonGroup-button button--small"><span class="fa fa-square"></span></button>
+                </fieldset>
+                <fieldset class="buttonGroup" id="sizeButtons">
+                    <legend>Storlek</legend>
+                    <button type="button" id="xs" value="2" class="buttonGroup-button button--small">1</button>
+                    <button type="button" id="s" value="5" class="buttonGroup-button button--small active">2</button>
+                    <button type="button" id="m" value="11" class="buttonGroup-button button--small">3</button>
+                    <button type="button" id="l" value="17" class="buttonGroup-button button--small">4</button>
+                </fieldset>
+                <fieldset class="buttonGroup" id="colorButtons">
+                    <legend>Färg</legend>
+                    <button type="button" id="red" value="#FF0000" class="buttonGroup-button"><span class="fa fa-stop red"></span></button>
+                    <button type="button" id="black" value="#000000" class="buttonGroup-button active"><span class="fa fa-stop"></span></button>
+                    <button type="button" id="yellow" value="#FFFF00" class="buttonGroup-button"><span class="fa fa-stop yellow"></span></button>
+                    <button type="button" id="green" value="#008000" class="buttonGroup-button"><span class="fa fa-stop green"></span></button>
+                    <button type="button" id="blue" value="#0000FF" class="buttonGroup-button"><span class="fa fa-stop blue"></span></button>
+                </fieldset>
+                <fieldset class="buttonGroup" id="imageButtons">
+                    <legend>Bilder & Mönster</legend>
+                    <input type="button" id="pattern" value="Infoga mönster" class="buttonGroup-button">
+                    <input type="button" id="image" value="Infoga bild" class="buttonGroup-button">
+                </fieldset>
+                <fieldset class="buttonGroup" id="effectButtons">
+                    <legend>Effekter</legend>
+                    <input id="gradient" value="gradient" type="checkbox"> <label for="gradient">Gradient</label><br />
+                    <input id="transparency" value="transparency" type="checkbox"> <label for="transparency">Transparens</label><br />
+                    <input id="shadow" value="shadow" type="checkbox"> <label for="shadow">Skugga</label>
+                </fieldset>
+                <div class="buttonGroup">
+                    <a id="download" class="buttonGroup-button">Ladda ner</a>
+                </div>
+            </div>
+            <div class="canvasApp-canvasbox pullLeft">
+                <canvas id="canvas" class="canvasbox-canvas" width="600" height="496"></canvas>
+            </div>
+        </div>
+
+
+        <hr /> <!-- ======================================================= -->
+
+
+        <h2>Ändra bild med attribut-taggen</h2>
+
+        <p>Klicka på bilden för att se nästa.</p>
+        <img alt="pic1" src="http://i566.photobucket.com/albums/ss103/diashes/20150807_210823-2_zpsanzsgfdd.jpg" class="switch"/>
+        <p>Håll musen över bilden för att se en annan.</p>
+        <img alt="alt2" src="http://i566.photobucket.com/albums/ss103/diashes/20150717_233624_zpsxxr9pe1v.jpg" class="rollover"/>
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="drawingApp.js"></script>
+<script src="images.js"></script>
+
+</body>
+</html>

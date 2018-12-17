@@ -1,0 +1,43 @@
+#wrapper #content section {
+    float:left;
+    width:100%;
+    border:1px solid #d5d5d5;
+    padding: 5px;
+    background: white;
+    margin-bottom:20px;
+}
+
+#wrapper #content section h2 {
+    margin:10px;
+}
+
+#wrapper #content section li {
+    padding:10px;
+}
+
+#wrapper #content section li:nth-child(odd) {
+    background:#F4F5F7;
+}
+
+#wrapper #content section a {
+    color:black;
+}
+
+#wrapper #content section a:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+#wrapper #content section a:hover + .description {
+    display:block;
+}
+
+#wrapper #content section .description {
+    float:left;
+    display:none;
+    padding:5px;
+    position:absolute;top:auto;left:auto;
+    width:40%;
+    background:white;
+    border:1px solid gray;
+    margin:10px 0 0 0;
+}

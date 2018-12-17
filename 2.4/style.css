@@ -1,0 +1,58 @@
+h2, h3, p {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+    background-image: url('../images/rain.jpg');
+    color:white;
+    padding:10px;
+}
+
+ul li {
+    margin-left:20px;
+    list-style-type: circle;
+}
+
+fieldset {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    background-image: url('../images/rain.jpg');
+}
+
+.bg-color {
+    height:200px;
+    width:200px;
+    background-color: #b0c4de;
+}
+
+.bg-image {
+    height:200px;
+    width:200px;
+    background-image: url('../images/rain.jpg');
+}
+
+.bg-position {
+    height:200px;
+    background-repeat: no-repeat;
+    background-image: url('../images/rain.jpg');
+    background-position: center;
+}
+
+.bg-repeat {
+    height:200px;
+    width:100%;
+    background-repeat: no-repeat;
+    background-image: url('../images/rain.jpg');
+}
+
+.float img {
+    width:200px;
+    float:right;
+    margin:10px;
+}
+
+.float h2 {
+    clear:both;
+}

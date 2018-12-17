@@ -33,4 +33,10 @@ function handleImageFiles( files ) {
 
 function handleURL( url ) {
   console.log("url", url);
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener( "load", function( response ) {
+    console.log("answer!", response);
+  } );
+  oReq.open( "GET", "https://raw.githubusercontent.com/Diashes/IB908C/master/3.5.2.file-1.txt" );
+  oReq.send();
 }

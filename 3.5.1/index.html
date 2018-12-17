@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Amanda Stensland">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="general.css" rel="stylesheet" type="text/css" media="all">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="script.js"></script>
+    <title>3.5.1 Effekter och animationer</title>
+</head>
+<body>
+
+<aside>
+    <h2>Navigation</h2>
+    <a href="#">Hem</a>
+    <a href="#">Gästbok</a>
+    <a href="#">Information</a>
+    <a href="#">Saker</a>
+</aside>
+
+<div class="wrapper">
+    <header>
+        <span class="trigger-menu">
+            <i class="glyphicon glyphicon-th-list"></i>
+            <i class="glyphicon glyphicon-remove"></i>
+        </span>
+        <h1>Effekter och animationer</h1>
+    </header>
+
+    <article>
+
+        <section>
+            <div class="section-text">
+                <h2>Visa & Göm Element</h2>
+                <p>För att visa och gömma menyn så används metoderna <code>.hide</code> och <code>.show</code>.</p>
+
+                <h3>HTML</h3>
+                <p>Kod för att skapa menyn och länkar.</p>
+<pre>&lt;aside&gt;
+        &lt;h2&gt;Navigation&lt;/h2&gt;
+        &lt;a href=&quot;#&quot;&gt;Hem&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;G&auml;stbok&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Information&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Saker&lt;/a&gt;
+&lt;/aside&gt;</pre>
+                <p>Kod för ikonen som triggar menyn. I detta exempel används ikoner från Bootstrap.
+                För att använda dessa ikoner måste en länk till Bootstraps CSS-fil läggas till i <code>&lt;head&gt;</code>
+                    -taggen. Till exempel <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;</code></p>
+<pre>&lt;span class=&quot;trigger-menu&quot;&gt;
+    &lt;i class=&quot;glyphicon glyphicon-th-list&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</pre>
+
+                <h3>CSS</h3>
+                <p>Kod för att skapa meny-layouten.</p>
+<pre>aside {
+    background: #293f50;
+    position:fixed;left:0;top:0;
+    width:15%;
+    height:100%;
+    color: white;
+    overflow: auto;
+    display:none;
+}
+
+aside h2 { margin:0.5em; }
+aside a {
+    display:block;
+    color:white;
+    margin:1em;
+    border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}</pre>
+                <p>Kod för ikonen som triggar menyn.</p>
+<pre>.trigger-menu {
+    display: inline-block;
+    font-size: 26px;
+    margin: 2px 30px 0 0;
+    float: left;
+}</pre>
+
+                <h3>JavaScript</h3>
+            </div>
+            <button type="button" class="btnClose">Stäng</button>
+            <button type="button" class="btnOpen">Läs mer</button>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2>Toggla Element</h2>
+                <h3>HTML</h3>
+                <p></p>
+                <h3>CSS</h3>
+                <h3>JavaScript</h3>
+            </div>
+            <button type="button" class="btnClose">Stäng</button>
+            <button type="button" class="btnOpen">Läs mer</button>
+        </section>
+
+        <section>
+            <div class="section-text">
+                <h2>Fadea in och ut Element</h2>
+                <h3>HTML</h3>
+                <p></p>
+                <h3>CSS</h3>
+                <h3>JavaScript</h3>
+            </div>
+            <button type="button" class="btnClose">Stäng</button>
+            <button type="button" class="btnOpen">Läs mer</button>
+        </section>
+
+        <section class="row-2">
+            <div class="section-text">
+                <h2>Förändra Stilsättning av Element</h2>
+                <h3>HTML</h3>
+                <p></p>
+                <h3>CSS</h3>
+                <h3>JavaScript</h3>
+            </div>
+            <button type="button" class="btnOpen">Läs mer</button>
+            <button type="button" class="btnClose">Stäng</button>
+        </section>
+
+        <div class="expanded-sections"></div>
+
+    </article>
+</div>
+
+</body>
+</html>

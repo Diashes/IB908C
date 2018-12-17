@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.7 Sidlayout - Fixerad</title>
+    <link rel="stylesheet" type="text/css" href="column.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <header><h1>2.7 Sidlayout - Flytande</h1></header>
+    <aside id="left">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="fixerad.html">Fixerad Layout</a></li>
+            <li><a href="flytande.html">Flytande Layout</a></li>
+            <li><a href="elastisk.html">Elastisk Layout</a></li>
+            <li><a href="column.html">Kolumnbaserad Layout</a></li>
+        </ul>
+    </aside>
+    <article>
+        <div id="column">
+            <h2>Fixerad VS. flytande VS. elastisk layout</h2>
+            <p>
+                Tabeller har tidigare använts för att skapa layouter som strukturerar upp information.
+                Nackdelen är att tabeller inte är gjorda för att skapa layouter.
+                Därför är det bättre att använda sig av div-element, som fungerar bättre för att skapa layouter och dessutom så blir koden mer strukturerad
+                och lättläst.
+            </p>
+
+            <br />
+
+            <h3>Fixerad Layout</h3>
+            <p>En fixerad layout identifieras av att layouten har en fixerad bredd. Layouten kommer därför inte förändras
+                oavsett vilken storlek på fönstret eller skärmen man har.</p>
+
+            <br />
+
+            <h3>Flytande Layout</h3>
+            <p>En flytande layout identifieras av att layouten har en varierande bredd i procent. Beroende på vilken storlek
+                man har på fönstret eller skärmen så kommer layouten alltid att ta upp en viss procent.</p>
+
+            <br />
+
+            <h3>Elastisk Layout</h3>
+            <p>En elastisk layout är en blandning av fixerad- och flytande layout. Det huvudsakliga syftet är att
+                innehållet ska anpassas bättre till användarens inställningar och skärm.</p>
+
+            <br />
+
+            <h2>Egenskaper</h2>
+            <p></p>
+
+            <h3>Position</h3>
+            <p>Definierar vilken typ av metod som används för att positionera elementet. Det finns fyra olika metoder som kan
+                användas:</p>
+            <ul>
+                <li><strong>static</strong> - Positioneras enligt det normala flödet av en hemsida, alltså inte på något speciellt sätt. Element placeras enligt
+                    denna metod som standard.</li>
+                <li><strong>relative</strong> - Elementet positioneras i relation till den plats den skulle haft i det normala flödet.</li>
+                <li><strong>fixed</strong> - Elementet positioneras utifrån det övre vänstra hörnet för fönstret som visar sidan. Elementet följer med
+                    fönstret när användaren scrollar.</li>
+                <li><strong>absolute</strong> - Elementet är positionerat i relation till närmaste förälder-element.</li>
+            </ul>
+
+            <br />
+
+            <h4>Top, Left, Bottom, Right</h4>
+            <p>Positioneringsmetoderna som nämnts för position-egenskapen använder egenskaperna typ, left, bottom, right för
+                att positionera element. Dessa egenskaper fungerar endast när position-egenskapen har satts. Har elementet inga förälder-
+                element så placeras den utifrån body-elementet.</p>
+
+            <br />
+
+            <h4>Z-index</h4>
+            <p>Z-index definierar i vilken ordning som elementen ska ligga. Ett element med ett högre värde på Z-index
+                ligger högre upp än ett element med lägre Z-index. Z-index fungerar bra på element med position-egenskapen satt.</p>
+
+            <br />
+
+            <h4>Float</h4>
+            <p>Float-egenskapen definierar om elementet ska tas från det naturliga flödet av element på sidan och istället placeras
+                på den högre eller den vänstra sidan av elementen som har standardpositionering.</p>
+
+            <br />
+
+            <h4>Clear</h4>
+            <p>En egenskap som används för att kontrollera positionen av floatade element.</p>
+
+            <br />
+
+            <h3>Storlek</h3>
+            <p>Med egenskaperna <code>width</code> och <code>height</code> går det att bestämma bredden och höjden på element.
+            Dessa egenskaper kommer att hålla denna höjd och bredd, vilket betyder att användaren kommer att behöva scrolla om
+            denne använder en mindre skärm än elementets bredd. För att lösa detta kan <code>max-width</code> och <code>max-height</code>
+            användas. Det gör att elementet anpassar sig till skärmen om skärmen skulle vara mindre än elementets bredd. Det finns
+            även <code>min-width</code> och <code>min-height</code> som hindrar att elementet blir mindre än det definierade värdet.</p>
+            <p><code>Vertical-align</code> specifiserar elementets vertikala placering.</p>
+
+        </div>
+    </article>
+    <aside id="right">
+        <h2>Källor</h2>
+        <ul>
+            <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="http://glish.com/css/">Glish</a></li>
+            <li><a href="http://www.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/">Smashing Magazine</a></li>
+            <li><a href="http://maxdesign.com.au/articles/liquid/">MaxDesign</a></li>
+        </ul>
+    </aside>
+    <footer>Footer | Amanda Stensland</footer>
+</div>
+
+</body>
+</html>

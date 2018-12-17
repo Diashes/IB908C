@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.8 Anpassning till olika enheter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-responsive.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<header>
+    <h1>2.8 Anpassning till olika enheter</h1>
+</header>
+
+<div class="container">
+
+    <aside class="col-4">
+        <div class="bluebox"><a href="index.html">Enhetsspecifik stilsättningd</a></div>
+        <div class="bluebox"><a href="responsive.html">Responsiv stilsättning</a></div>
+        <div class="bluebox"><a href="prefix.html">Webbläsarspecifik stilsättning</a></div>
+    </aside>
+
+    <article class="col-8">
+        <h2>Responsiv stilsättning</h2>
+
+        <p>Eftersom antalet användare som använder mobiltelefoner och mindre enheter för att visa innehåll
+            från internet, ökar kravet på att en webbsida ska kunna anpassa sig till även dom minsta skärmarna.</p>
+
+        <h3>Gemensam stilmall med @media-regeln</h3>
+        <p>
+            <code>@media</code> är en CSS regel som är ett sätt att inkludera och utesluta kod i
+            stilmallen beroende på vilken enhet eller fönsterstorlek som används.
+            Då behövs det bara en stilmall för att anpassa webbsidan till
+            olika layouter. Den här metoden är ett bättre alternativ för mobila enheter
+            då mindre HTTP-föfrågningar behöver göras.
+        </p>
+        <div class="row">
+            <h4>CSS Mediatyper</h4>
+            <div class="box">
+                <div class="value"><code>@media all</code></div>
+                <div class="description">
+                    Används för alla typer av enheter.
+                </div>
+            </div>
+            <div class="box">
+                <div class="value"><code>@media screen</code></div>
+                <div class="description">
+                    Används för datorskärmar.
+                </div>
+            </div>
+            <div class="box">
+                <div class="value"><code>@media print</code></div>
+                <div class="description">
+                    Används för skrivare.
+                </div>
+            </div>
+            <div class="box">
+                <div class="value"><code>@media handheld</code></div>
+                <div class="description">
+                    Används för enheter som är mobila eller har små skärmar.
+                </div>
+            </div>
+        </div>
+        <h4>Exempel</h4>
+        <p>
+            I exemplet kommer bakgrunden på webbsidan att vara blå om webbläsaren
+            befinner sig i datorskärmsläge och röd om webbläsaren befinner sig
+            i utskriftsläge.
+        </p>
+
+<div class="code"><pre><samp>
+@media screen {
+    body {
+        background-color: blue;
+    }
+}
+
+@media print {
+    body {
+        background-color: red;
+    }
+}
+</samp></pre></div>
+
+        <footer>
+            <h2>Källor</h2>
+            <div class="bluebox"><a href="http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design">http://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design</a></div>
+        </footer>
+
+    </article>
+
+</div>
+
+</body>
+</html>

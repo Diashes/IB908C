@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" media="all" href="../base.css">
+	<title>Webblagring</title>
+</head>
+<body>
+
+<header><h1>Webblagring</h1></header>
+
+<div id="wrapper">
+	<div id="inner-wrapper">
+
+		<h2>Web Storage API</h2>
+
+		<p>Med HTML5 LocalStorage och SessionStorage kan data sparas lokalt i användarens webbläsare. LocalStorage och SessionStorage är ett mer säkert alternativ till cookies. I LocalStorage går det att spara större
+		mängder av data, utan att det påverkar webbläsarens prestanda. Vid användning av LocalStorage så överförs inte informationen till servern. LocalStorage lagrar datan utan någon
+			satt tidpunkt att försvinna. SessionStorage lagrar endast data under en session. Det lagrade datat försvinner när webbläsaren eller tabben stängs.</p>
+
+		<h3>Exempel</h3>
+
+		<form id="form">
+			<input type="text" id="localStorageMessage" placeholder="Local Storage" class="form-control" /><br />
+			<input type="text" id="sessionStorageMessage" placeholder="Session Storage" class="form-control" /><br />
+			<input type="text" id="jsonStorageMessage" placeholder="JSON" class="form-control" />
+			<br />
+			<a href="showData.html" target="_blank" class="btn btn-info">Visa data</a>
+		</form>
+
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="saveData.js"></script>
+
+</body>
+</html>

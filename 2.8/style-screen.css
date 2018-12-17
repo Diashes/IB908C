@@ -1,0 +1,93 @@
+* { box-sizing: border-box; margin:0; padding:0; }
+h2, h3, h4, h5 { margin: 1em 0 0.5em 0; }
+p { margin: 0.8em 0; }
+h1 { font-size: 2em; padding: 0.5em; color:white; }
+h2 { font-size: 1.8em; }
+h3 { border-top: 0.1em solid gray; padding-top: 1em; font-size: 1.4em; }
+h4 { font-size: 1.2em; }
+article li { margin: 0.5em 0 0 2em; }
+
+html, body {
+    color:#444444;
+    font-size: 0.9em;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.bluebox {
+    list-style-type: none;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 0.9em;
+}
+.bluebox:hover {
+    background-color: #0099cc;
+}
+.bluebox a {
+    text-decoration: none;
+    color:white;
+}
+
+header { background-color: #0099cc; }
+
+aside { width: 30%; }
+article { width: 70%; }
+aside, article {
+    float: left;
+    padding: 15px;
+}
+
+code {
+    background-color:papayawhip;
+    color:black;
+    font-size: 1.3em;
+}
+
+.code {
+    overflow: auto;
+    margin: 0.3em 0;
+    padding:0.5em;
+    border: 0.1em solid gray;
+    border-left: 0.3em solid #0099cc;
+}
+
+.box {
+    margin: 0.3em 0;
+    float:left;
+    width:100%;
+    border: 0.1em solid gray;
+}
+
+.value {
+    overflow: auto;
+    font-weight: bold;
+    width:32%;
+}
+
+.description {
+    width: 68%;
+}
+
+.value, .description {
+    padding:0.5em;
+    float:left;
+}
+
+.container {
+    width:90%;
+    margin:0 auto;
+}
+
+.container:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}

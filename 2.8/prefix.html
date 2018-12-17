@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.8 Anpassning till olika enheter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-prefix.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<header>
+    <h1>2.8 Anpassning till olika enheter</h1>
+</header>
+
+<div class="container">
+
+    <aside class="col-4">
+        <div class="bluebox"><a href="index.html">Enhetsspecifik stilsättningd</a></div>
+        <div class="bluebox"><a href="responsive.html">Responsiv stilsättning</a></div>
+        <div class="bluebox"><a href="prefix.html">Webbläsarspecifik stilsättning</a></div>
+    </aside>
+
+    <article class="col-8">
+        <h2>Webbläsarspecifik stilsättning</h2>
+
+        <p>Utvecklare bakom webbläsare kan implementera nya experimentella stilsättningsinställningar för CSS
+        i sina webbläsare i en testperiod där stilsättningen kanske ännu inte stöds bland andra webbläsare.
+        För att använda dessa experimentella stilsättningar används så kallade prefix framför CSS-egenskapen.
+        CSS prefix som används är:</p>
+
+        <ul>
+            <li>-webkit- (Android, Chrome, Safari, iOS)</li>
+            <li>-moz- (Firefox)</li>
+            <li>-ms- (Internet Explorer)</li>
+            <li>-o- (Opera)</li>
+        </ul>
+
+        <p>Vissa webbläsare förstår alltså inte vissa experimentella CSS-egenskaper utan prefix och
+        det kan därför behövas läggas till prefix framför egenskapen för att den ska kunna fungera.
+        Att skriva samma egenskap flera gånger fast med olika prefix framför är något som bara är temporärt
+        och kommer att ersättas med egenskapen utan prefix när webbläsaren förbättras och får mer stöd för
+        nya CSS-egenskaper.</p>
+
+        <h3>Exempel 1</h3>
+        <p>För ett par år sedan så behövde man skriva:</p>
+
+        <div class="code"><pre><samp>
+.example {
+    -moz-border-radius: 10px 5px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-radius: 10px 5px;
+}</samp></pre></div>
+
+        <p>Webbläsarna har idag förbättrat sitt stöd för CSS-egenskapen och man behöver idag bara skriva:</p>
+
+<div class="code"><pre><samp>
+.example {
+    border-radius: 10px 5px;
+}</samp></pre></div>
+
+        <h3>Exempel 2</h3>
+        <p>Den här koden roterar ett element 5 grader.</p>
+
+<div class="code"><pre><samp>
+.example {
+    -webkit-transform: rotate(5deg); /* Ch &lt;36, Saf 5.1+, iOS, An =&lt;4.4.4 */
+    -ms-transform: rotate(5deg); /* IE 9 */
+    transform: rotate(5deg); /* IE 10, Fx 16+, Op 12.1+ */
+}</samp></pre></div>
+
+        <h4>Resultat</h4>
+        <br /><br />
+        <div class="example">Resultat</div>
+
+        <footer>
+            <h2>Källor</h2>
+                <div class="bluebox"><a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm</a></div>
+        </footer>
+
+    </article>
+
+</div>
+
+</body>
+</html>

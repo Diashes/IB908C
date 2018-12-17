@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid gray;
+    width:100%;
+    border-collapse: collapse;
+}
+
+button {
+    width:6em;
+}
+
+td:first-child, th:first-child {
+    width:25%;
+}

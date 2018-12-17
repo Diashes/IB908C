@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Navigering</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!-- HEADER ============= -->
+
+<header id="header">
+
+    <div class="navBar">
+
+        <div class="container">
+            <div class="navBar-title">
+                <h1 class="title-name">Navigering</h1>
+            </div>
+
+            <nav class="navHorizontal">
+                <ul class="navHorizontal-list">
+                    <li class="navHorizontal-list-item"><a href="#target1" id="target1">Exempellänk</a></li>
+                    <li class="navHorizontal-list-item"><a href="#target2" id="target2">Exempellänk</a></li>
+                    <li class="navHorizontal-list-item"><a href="#target3" id="target3">Exempellänk</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- MAIN ============= -->
+
+<div id="main" class="container">
+
+
+    <!-- NAV LEFT ============= -->
+    <nav class="navVertical pullLeft">
+        <ul class="navVertical-list">
+            <li class="navVertical-list-item"><a href="#target4" id="target4">Exempellänk</a></li>
+            <li class="navVertical-list-item"><a href="#target5" id="target5">Exempellänk</a></li>
+            <li class="navVertical-list-item"><a href="#target6" id="target6">Exempellänk</a></li>
+        </ul>
+    </nav>
+
+    <!-- ARTICLE ============= -->
+    <article class="article pullLeft">
+        <h2>Länktillstånd</h2>
+        <p>
+            Länkar kan bli stylade olika beroende på vilket länktillstånd som länken befinner sig i.
+            Det finns fyra tillstånd som en länk kan befinna sig i.
+        </p>
+        <ul>
+            <li>a:link -  en normal, obesökt länk</li>
+            <li>a:visited - en länk som användaren har besökt</li>
+            <li>a:hover - en länk när användaren har musen på den</li>
+            <li>a:active - en länk som användaren klickar</li>
+        </ul>
+        <p>
+            Cursor-egenskapen specifiserar muspekarens utseende vid pekande på ett element
+            och kan till exempel användas i kombination med länkar för att förstärka länktillstånden.
+        </p>
+
+        <h2>Exempel</h2>
+        <code class="code">
+            a:link { <br />
+            color: black; <br />
+            } <br />
+            <br />
+            a:visited {<br />
+            color: grey;<br />
+            }<br />
+            <br />
+            a:hover {<br />
+            color: red;<br />
+            cursor: crosshair; <br />
+            }<br />
+            <br />
+            a:active {<br />
+            color: yellow;<br />
+            }
+        </code>
+    </article>
+
+    <!-- NAV RIGHT ============= -->
+    <nav class="navVertical pullLeft">
+        <a href="../images/exampleImage.png"><img class="image" src="../images/exampleImage.png" alt="Example Image" /></a>
+    </nav>
+
+</div>
+
+</body>
+</html>

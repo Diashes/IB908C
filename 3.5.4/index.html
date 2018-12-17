@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Stensland">
+    <link href="style.css" rel="stylesheet" media="all">
+    <link href="../base.css" rel="stylesheet">
+    <title>3.5.4 Utvidgbara gränssnitt</title>
+</head>
+<body>
+
+<header>
+    <h1>Utvidgbara gränssnitt</h1>
+</header>
+
+<section id="container">
+    <!-- Tab Menu -->
+    <div id="tabbed-panel">
+
+        <!-- Image Slider -->
+        <div id="slider">
+            <ul class="slides">
+                <li class="slide"><img class="show-tooltip" title="Tooltip text 1." alt="1" src="http://i566.photobucket.com/albums/ss103/diashes/20648340096_6a2b05bf57_z_zps3i1cqvc2.jpg" /></li>
+                <li class="slide"><img class="show-tooltip" title="Tooltip text 2." alt="2" src="http://i566.photobucket.com/albums/ss103/diashes/20665442592_94f98d26b0_z_zpss5cxltve.jpg" /></li>
+                <li class="slide"><img class="show-tooltip" title="Tooltip text 3." alt="3" src="http://i566.photobucket.com/albums/ss103/diashes/20674710715_efdef7e967_z_zpsxunlk744.jpg" /></li>
+                <li class="slide"><img class="show-tooltip" title="Tooltip text 1." alt="1" src="http://i566.photobucket.com/albums/ss103/diashes/20648340096_6a2b05bf57_z_zps3i1cqvc2.jpg" /></li>
+            </ul>
+        </div>
+
+        <!-- Menu -->
+        <ul class="tabs">
+            <li class="tab active-tab" rel="panel1">Tabbar</li>
+            <li class="tab" rel="panel2">Tooltip</li>
+            <li class="tab" rel="panel3">Image Slider</li>
+        </ul>
+
+        <!-- Panel 1 -->
+        <div class="panel active-panel" id="panel1">
+            <h2>Tabbar</h2>
+            <p>Tabbarna är skapade med hjälp av CSS, HTML, jQuery och JavaScript.</p>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="panel" id="panel2">
+            <h2>Tooltip</h2>
+            <p>Håll musen över bilden för att se ett animerat tooltip.</p>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="panel" id="panel3">
+            <h2>Image Slider</h2>
+            <p>Bilderna har animerats som en slider med hjälp av jQuery och JavaScript. Håller man muspekaren över bilden så stannar slidern.</p>
+        </div>
+    </div>
+
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="imageSlider.js"></script>
+<script src="tabbedPanel.js"></script>
+<script src="tooltips.js"></script>
+</body>
+</html>

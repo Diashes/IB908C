@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="1.1 Grunderna i HTML5">
+	<meta name="keywords" content="1.1, Grunderna, HTML5">
+	<meta name="author" content="Amanda Stensland">
+	<meta name="generator" content="Sublime Text 3">
+	<meta http-equiv="refresh" content="30">
+	<meta name="robots" content="index, follow">
+	<title>1.3 Semantiska element för text</title>
+</head>
+<body>
+
+	<form action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+		<fieldset>
+			<legend>Formulär</legend>
+			<fieldset>
+				<legend>Enrads textbox</legend>
+				<input type="text" name="Text" placeholder="Namn" autofocus required />
+				<input type="password" name="Password" placeholder="Lösenord" />
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Flerrads textbox</legend>
+				<label for="textarea">Beskrivning:</label><br />
+				<textarea name="Textarea" id="textarea"></textarea>
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Checkboxar</legend>
+				<input type="checkbox" name="Alternativ1" id="alternativ1" /><label for="alternativ1">Alternativ 1</label><br />
+				<input type="checkbox" name="Alternativ2" id="alternativ2" /><label for="alternativ2">Alternativ 2</label><br />
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Radio-knappar</legend>
+				<input type="radio" name="Radio" id="alt1"><label for="alt1">Alternativ 1</label><br />
+				<input type="radio" name="Radio" id="alt2"><label for="alt2">Alternativ 2</label>
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Knappar</legend>
+				<input type="submit" name="Submit" value="Submit" /><br />
+				<input type="image" name="Image" alt="image" /><br />
+				<input type="reset" name="Reset" /><br />
+				<input type="button" name="Button" value="Knapp" />
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Lista</legend>
+				<select name="select" >
+					<optgroup label="Svenska bilar">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+					</optgroup>
+					<optgroup label="Tyska bilar">
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</optgroup>
+				</select>
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>Enrads textbox:</legend>
+				<input type="email" placeholder="email" name="email" pattern="[a-z]{10}" title="Pattern [a-z]"/>
+				<input type="url" placeholder="url" name="url" />
+				<input type="number" min="0" max="10" step="2" placeholder="nr" name="number" />
+				<input type="range" min="0" max="10" step="2" name="range" />
+				<input type="datetime" name="datetime" />
+				<input type="date" name="date" />
+				<input type="month" name="month" />
+				<input type="week" name="week" />
+				<input type="time" name="time" />
+				<keygen name="security" />
+				<input list="browsers" placeholder="lista" name="list" />
+				<datalist id="browsers">
+					<option>Internet Explorer</option>
+					<option>Firefox</option>
+					<option>Chrome</option>
+					<option>Opera</option>
+					<option>Safari</option>
+				</datalist>
+			</fieldset>
+			<br />
+			<input type="submit" name="submit" value="Skicka formulär" />.
+		</fieldset>
+	</form>
+
+	<br />
+
+	<form method="post" enctype="multipart/form-data" action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+		<fieldset>
+			<legend>Uppladdning av fil</legend>
+			<input type="file" name="file" />
+			<input type="submit" name="submit" value="Ladda upp fil" />
+		</fieldset>
+	</form>
+
+</body>
+</html>

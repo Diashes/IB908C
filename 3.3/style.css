@@ -1,0 +1,79 @@
+div {
+    margin:1em 0em;
+}
+
+#example1 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+#example2 {
+    height:2em;
+    width:8em;
+    background:yellow;
+}
+
+#example3 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+#example4 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+#example5 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+#example6 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+#example7 {
+    height:2em;
+    width:2em;
+    background:yellow;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+#example9 {
+    height:2em;
+    width:2em;
+    background:yellow;
+    position:absolute;
+    left:8px;
+}
+
+#example10-button1, #example10-button2 {
+    padding:10px;
+    text-align:center;
+    border:1px solid gray;
+    border-radius: 10px;
+    height:auto;
+    width:8em;
+    background:yellow;
+}
+
+#example10-text1, #example10-text2 {
+    display: none;
+    border:1px solid gray;
+}
+
+#example13-div {
+    border:1px solid gray;
+    height:2em;
+    width:6em;
+    background:yellow;
+}

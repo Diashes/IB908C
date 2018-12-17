@@ -1,0 +1,134 @@
+body, html { background-color: #F4F5F7; padding:0; margin:0; height:100%; font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif; }
+a { text-decoration: none; }
+ul { list-style-type: none; margin:0; padding:0; }
+h1, h2 { margin:0; padding:0; }
+
+
+.image {
+    width:100%;
+}
+
+.code {
+    color:white;
+    padding:10px;
+    display:block;
+    background:#222222;
+}
+
+.container {
+    width:80%;
+    margin:0 auto;
+}
+
+.pullLeft { float:left; }
+.pullRight { float:right; }
+.center { margin:0 auto; }
+
+
+/* NavBar =========================== */
+
+div.navBar {
+    color:white;
+    background-color: #222222;
+    padding:5px 0;
+    height:40px;
+}
+
+div.navBar-title {
+    float:left;
+}
+
+/* Article =========================== */
+
+article.article {
+    background-color:white;
+    width:62%;
+    height:100%;
+    padding:1%;
+    margin:1%;
+}
+
+article.article h2 {
+    margin:0 0 15px 0;
+}
+
+
+/* Nav Vertical =========================== */
+
+nav.navVertical {
+    height:100%;
+    width:15%;
+    padding:1%;
+    margin:1% 0;
+    background-color:white;
+}
+
+li.navVertical-list-item { }
+
+li.navVertical-list-item a {
+    display:block;
+    margin:0 0 10px 0;
+    padding:5px;
+    background: cornflowerblue;
+    color:white;
+    border: 1px solid white;
+}
+
+li.navVertical-list-item a:visited {
+    border: 1px solid gray;
+}
+
+li.navVertical-list-item a:hover {
+    background-color:darkorange;
+    cursor: crosshair;
+}
+
+li.navVertical-list-item a:active {
+    background-color:darkorange;
+}
+
+li.navVertical-list-item a:target {
+    background-color:darkorange;
+}
+
+
+/* Nav Horizontal =========================== */
+
+nav.navHorizontal {
+    margin:10px 0;
+    float:right;
+}
+
+li.navHorizontal-list-item {
+    display:inline;
+}
+
+li.navHorizontal-list-item a {
+    background: cornflowerblue;
+    padding:5px;
+    margin:10px 0 10px 10px;
+    color:white;
+    border: 1px solid black;
+}
+
+li.navHorizontal-list-item a:visited {
+    border: 1px solid gray;
+}
+
+li.navHorizontal-list-item a:hover {
+    background-color:darkorange;
+    cursor: crosshair;
+}
+
+li.navHorizontal-list-item a:active {
+    background-color:darkorange;
+}
+
+li.navHorizontal-list-item a:target {
+    background-color:darkorange;
+}
+
+
+
+
+
