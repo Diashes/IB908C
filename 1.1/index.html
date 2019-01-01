@@ -1,122 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <title>1.1 Grunderna i HTML5</title>
 </head>
+
 <body>
   <h1>Uppgift 1.1 Grunderna i HTML5 </h1>
-
-  <h2>Doctype</h2>
-  <p>
-    Ett html-dokument börjar alltid med raden <code>&lt;!DOCTYPE html></code> som berättar för webbläsaren att dokumentet kommer att innehålla HTML5 kod.
-  </p>
-
-  <h2>Teckenkod</h2>
-  <p>
-    Teckenkod är ett sätt för datorn att förstå hur olika slags tecken ska sparas och sedan kunna läsas för att kunna visas korrekt. Den vanligaste teckenkodningen idag kallas UTF-8 och innehåller stöd för alla tecken man någonsin skulle behöva.
-  </p>
-
-  <h2>Språk</h2>
-  <p>
-    Du kan specifisera språket genom att lägga till <code><b>lang="en"</b></code> i en tagg, vanligast är html-taggen. Det hjälper t.ex. sökmotorer och skärmläsare att identifiera rätt språk på innehållet.
-  </p>
-
-  <h2>Validering</h2>
-  <p>
-    För att validera att du skrivit korrekt html så finns det html-valideringsverktyg som kan berätta om det finns fel i koden. Du kan t.ex. använda <a href="http://validator.w3.org">http://validator.w3.org.</a>
-  </p>
-
-  <h2>Hur ett HTML-dokument är uppbyggt</h2>
-  <p>
-    Ett HTML-dokument är uppbyggt med något som kallas taggar. Taggar används för att skapa olika slags information om HTML-dokumentet. Men innan man kan börja använda taggar så måste man inkludera <code>&lt;!DOCTYPE html></code> för att berätta för webbläsaren att man vill använda HTML5. En tagg består ofta av en start-tagg och en slut-tagg och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. Det enklaste HTML-dokumentet som går att skapa:
-  </p>
-  <pre>
-    &lt;!DOCTYPE html>
-    &lt;title>Ett HTML-dokument&lt;/title>
-    &lt;p>En paragraf.&lt;/p>
-  </pre>
-  <p>
-    Men det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code> för synligt innehåll för HTML-dokumentet:
-  </p>
-  <pre>
-    &lt;!DOCTYPE html>
-    &lt;html>
-    &lt;head>
-      &lt;title>A Sample Webpage&lt;/title>
-    &lt;/head>
-    &lt;body>
-    &lt;p>En paragraf.&lt;/p>
-    &lt;/body>
-    &lt;/html>
-  </pre>
-
-  <h2>Struktur</h2>
-
-  <h3>&lt;body></h3>
-  <p>Defines the body of the document and it's content.</p>
-  <pre>
-    &lt;html>
-      <b>&lt;body></b>
-        <i>&lt;!-- innehåll för body --></i>
-      <b>&lt;/body></b>
-    &lt;/html>
-  </pre>
-
-  <h3>&lt;head></h3>
-  <p>
-    Is a container for metadata and is placed beside the &lt;body> tag. Metadata is not displayed in the document.
-  </p>
-  <pre>
-    &lt;html>
-      <b>&lt;head></b>
-        &lt;title&gt;Min Titel&lt;/title&gt;
-      <b>&lt;/head></b>
-    &lt;/html>
-  </pre>
-
-  <h3>&lt;html></h3>
-  <p>
-    This tag tells the browser that this document is a HTML document.
-  </p>
-  <pre>
-    <b>&lt;html></b>
-      <i>&lt;!-- innehåll för html --></i>
-    <b>&lt;/html></b>
-  </pre>
-
-  <h3>&lt;title></h3>
-  <p>Defines the title of the document.</p>
-  <pre>
-    &lt;html>
-      &lt;head>
-        <b>&lt;title></b>
-            <i>&lt;!-- innehåll för title --></i>
-        <b>&lt;/title></b>
-      &lt;/head>
-    &lt;/html>
-  </pre>
-
-  <h2>Metainformation</h2>
-
-  <h3>author</h3>
-  <p></p>
-  <code>&lt;meta name="author" content="..."></code>
-
-  <h3>description</h3>
-  <p></p>
-  <code>&lt;meta name="description" content="..."></code>
-
-  <h3>generator</h3>
-  <p></p>
-  <code>&lt;meta name="generator" content="..."></code>
-
-  <h3>keywords</h3>
-  <p>Definiera nyckelord för sökmotorer.</p>
-  <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"></code>
-
-  <h3>robots</h3>
-  <p></p>
-  <code>&lt;meta name="robots" content="..."></code>
+  <section>
+    <h2>Doctype</h2>
+    <p>
+      Ett html-dokument börjar alltid med raden <code>&lt;!DOCTYPE html></code> som berättar för webbläsaren att
+      dokumentet kommer att innehålla HTML5 kod.
+    </p>
+  </section>
+  <section>
+    <h2>Teckenkod</h2>
+    <p>
+      Teckenkod är ett sätt för datorn att förstå hur olika slags tecken ska sparas och sedan kunna läsas för att kunna
+      visas korrekt. Den vanligaste teckenkodningen idag kallas UTF-8 och innehåller stöd för alla tecken man någonsin
+      skulle behöva.
+    </p>
+  </section>
+  <section>
+    <h2>Språk</h2>
+    <p>
+      Du kan specifisera språket genom att lägga till <code><b>lang="en"</b></code> i en tagg, vanligast är
+      html-taggen. Det hjälper t.ex. sökmotorer och skärmläsare att identifiera rätt språk på innehållet.
+    </p>
+  </section>
+  <section>
+    <h2>Validering</h2>
+    <p>
+      För att validera att du skrivit korrekt html så finns det html-valideringsverktyg som kan berätta om det finns
+      fel i koden. Du kan t.ex. använda <a href="http://validator.w3.org">http://validator.w3.org.</a>
+    </p>
+  </section>
+  <section>
+    <h2>Hur ett HTML-dokument är uppbyggt</h2>
+    <p>
+      Ett HTML-dokument är uppbyggt med något som kallas taggar. Taggar används för att skapa olika slags information
+      om HTML-dokumentet. Men innan man kan börja använda taggar så måste man inkludera <code>&lt;!DOCTYPE html></code>
+      för att berätta för webbläsaren att man vill använda HTML5. En tagg består ofta av en start-tagg och en slut-tagg
+      och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. Det enklaste
+      HTML-dokumentet som går att skapa:
+    </p>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;title&gt;Ett HTML-dokument&lt;/title&gt;
+      &lt;p&gt;En paragraf.&lt;/p&gt;
+    </pre>
+    <p>
+      Men det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code>
+      för synligt innehåll för HTML-dokumentet:
+    </p>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;A Sample Webpage&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;p&gt;En paragraf.&lt;/p&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+  </section>
+  <section>
+    <h2>Struktur</h2>
+    <section>
+      <h3>&lt;body></h3>
+      <p>Defines the body of the document and it's content.</p>
+      <code>
+        &lt;html>
+          <b>&lt;body></b>
+            <i>&lt;!-- innehåll för body --></i>
+          <b>&lt;/body></b>
+        &lt;/html>
+      </code>
+    </section>
+    <section>
+      <h3>&lt;head></h3>
+      <p>Is a container for metadata and is placed beside the &lt;body> tag. Metadata is not displayed in the document.</p>
+      <pre>
+        <code>
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;Min Titel&lt;/title&gt;
+            &lt;/head&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </section>
+    <section>
+      <h3>&lt;html></h3>
+      <p>This tag tells the browser that this document is a HTML document.</p>
+      <pre>
+        &lt;html&gt;
+          &lt;!-- innehåll för html --&gt;
+        &lt;/html&gt;
+      </pre>
+    </section>
+    <section>
+      <h3>&lt;title></h3>
+      <p>Defines the title of the document.</p>
+      <pre>
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;&lt;!-- innehåll för title --&gt;&lt;/title&gt;
+          &lt;/head&gt;
+        &lt;/html&gt;
+      </pre>
+    </section>
+  </section>
+  <section>
+    <h2>Metainformation</h2>
+    <section>
+      <h3>author</h3>
+      <p></p>
+      <code>&lt;meta name="author" content="..."&gt;</code>
+    </section>
+    <section>
+      <h3>description</h3>
+      <p></p>
+      <code>&lt;meta name="description" content="..."></code>
+    </section>
+    <section>
+      <h3>generator</h3>
+      <p></p>
+      <code>&lt;meta name="generator" content="..."></code>
+    </section>
+    <section>
+      <h3>keywords</h3>
+      <p>Definiera nyckelord för sökmotorer.</p>
+      <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"></code>
+    </section>
+    <section>
+      <h3>robots</h3>
+      <p></p>
+      <code>&lt;meta name="robots" content="..."></code>
+    </section>
+    <section>
+      <h3>http-equiv</h3>
+      <p></p>
+      <code>&lt;meta name="robots" content="..."></code>
+    </section>
+    <h2>Text</h2>
+    <section>
+      <h3>blockquote</h3>
+    </section>
+    <section>
+      <h3>h1</h3>
+    </section>
+    <section>
+      <h3>p</h3>
+    </section>
+    <section>
+      <h3>pre</h3>
+    </section>
+    <section>
+      <h3>span</h3>
+    </section>
+  </section>
+  <section>
+    <h2>Hypertext &lt;a&el;</h2>
+    <h3>Relativ och absolut länk</h3>
+    <h3>Länk till ankare</h3>
+    <h3>Bild-länk</h3>
+    <h3>Länk till olika protokoll (exempelvis ftp)</h3>
+    <h3>Mailto-länk</h3>
+  </section>
+  <section>
+    <h2>Oordnad, ordnad och beskriven lista</h2>
+    <h3>dl</h3>
+    <h3>dt</h3>
+    <h3>dd</h3>
+    <h3>ol</h3>
+    <h3>ul</h3>
+    <h3>li</h3>
+  </section>
+  <section>
+    <h2>Tabell</h2>
+    <h3>caption</h3>
+    <h3>table</h3>
+    <h3>td</h3>
+    <h3>th</h3>
+    <h3>tr</h3>
+  </section>
+  <section>
+    <h2>Bildkartor</h2>
+    <h3>area</h3>
+    <h3>map</h3>
+  </section>
 </body>
+
 </html>
