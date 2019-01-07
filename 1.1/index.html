@@ -43,125 +43,84 @@
       Ett HTML-dokument är uppbyggt med något som kallas taggar. Taggar används för att skapa olika slags information
       om HTML-dokumentet. Men innan man kan börja använda taggar så måste man inkludera <code>&lt;!DOCTYPE html></code>
       för att berätta för webbläsaren att man vill använda HTML5. En tagg består ofta av en start-tagg och en slut-tagg
-      och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. Det enklaste
-      HTML-dokumentet som går att skapa:
+      och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. 
+      Det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code>
+      för synligt innehåll för HTML-dokumentet.
     </p>
-    <pre>
-      &lt;!DOCTYPE html&gt;
-      &lt;title&gt;Ett HTML-dokument&lt;/title&gt;
-      &lt;p&gt;En paragraf.&lt;/p&gt;
-    </pre>
-    <p>
-      Men det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code>
-      för synligt innehåll för HTML-dokumentet:
-    </p>
-    <pre>
-      &lt;!DOCTYPE html&gt;
-      &lt;html&gt;
-      &lt;head&gt;
-        &lt;title&gt;A Sample Webpage&lt;/title&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-      &lt;p&gt;En paragraf.&lt;/p&gt;
-      &lt;/body&gt;
-      &lt;/html&gt;
-    </pre>
   </section>
   <section>
     <h2>Struktur</h2>
-    <section>
-      <h3>&lt;body></h3>
-      <p>Defines the body of the document and it's content.</p>
-      <code>
-        &lt;html>
-          <b>&lt;body></b>
-            <i>&lt;!-- innehåll för body --></i>
-          <b>&lt;/body></b>
-        &lt;/html>
-      </code>
-    </section>
-    <section>
-      <h3>&lt;head></h3>
-      <p>Is a container for metadata and is placed beside the &lt;body> tag. Metadata is not displayed in the document.</p>
-      <pre>
-        <code>
-          &lt;html&gt;
-            &lt;head&gt;
-              &lt;title&gt;Min Titel&lt;/title&gt;
-            &lt;/head&gt;
-          &lt;/html&gt;
-        </code>
-      </pre>
-    </section>
-    <section>
-      <h3>&lt;html></h3>
-      <p>This tag tells the browser that this document is a HTML document.</p>
-      <pre>
-        &lt;html&gt;
-          &lt;!-- innehåll för html --&gt;
-        &lt;/html&gt;
-      </pre>
-    </section>
-    <section>
-      <h3>&lt;title></h3>
-      <p>Defines the title of the document.</p>
-      <pre>
-        &lt;html&gt;
-          &lt;head&gt;
-            &lt;title&gt;&lt;!-- innehåll för title --&gt;&lt;/title&gt;
-          &lt;/head&gt;
-        &lt;/html&gt;
-      </pre>
-    </section>
+      <p>
+        <code>&lt;html&gt;</code> berättar för webbläsaren att dokumentet är ett html-dokument.
+        <code>&lt;head&gt;</code> innerhåller allt metadata för html-dokumentet och är inte något som visas på sidan.
+        <code>&lt;title&gt;</code> är en metadata-tagg som placeras inuti <code>&lt;head&gt;</code> och definierar titeln på html-dokumentet.
+        <code>&lt;body></code> innehåller det synliga innehållet av html-dokumentet.
+      </p>
+      <details>
+        <summary>Visa exempel</summary>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;Min hemsida&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt;Min hemsida&lt;/h1&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+      </details>
   </section>
   <section>
     <h2>Metainformation</h2>
-    <section>
-      <h3>author</h3>
-      <p></p>
-      <code>&lt;meta name="author" content="..."&gt;</code>
-    </section>
-    <section>
-      <h3>description</h3>
-      <p></p>
-      <code>&lt;meta name="description" content="..."></code>
-    </section>
-    <section>
-      <h3>generator</h3>
-      <p></p>
-      <code>&lt;meta name="generator" content="..."></code>
-    </section>
-    <section>
-      <h3>keywords</h3>
-      <p>Definiera nyckelord för sökmotorer.</p>
-      <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"></code>
-    </section>
-    <section>
-      <h3>robots</h3>
-      <p></p>
-      <code>&lt;meta name="robots" content="..."></code>
-    </section>
-    <section>
-      <h3>http-equiv</h3>
-      <p></p>
-      <code>&lt;meta name="robots" content="..."></code>
-    </section>
+    <p>
+      <code>&lt;author&gt;</code>
+      <code>&lt;description&gt;</code>
+      <code>&lt;generator&gt;</code>
+      <code>&lt;keywords&gt;</code>
+      <code>&lt;robots&gt;</code>
+      <code>&lt;http-equiv&gt;</code>
+    </p>
+    <details>
+      <summary>Visa exempel</summary>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;meta name="author" content="..."&gt;
+              &lt;meta name="description" content="..."&gt;
+              &lt;meta name="generator" content="..."&gt;
+              &lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;
+              &lt;meta name="robots" content="..."&gt;
+              &lt;title&gt;Min hemsida&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Min hemsida&lt;/h1&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </details>
+  </section>
+  <section>
     <h2>Text</h2>
-    <section>
-      <h3>blockquote</h3>
-    </section>
-    <section>
-      <h3>h1</h3>
-    </section>
-    <section>
-      <h3>p</h3>
-    </section>
-    <section>
-      <h3>pre</h3>
-    </section>
-    <section>
-      <h3>span</h3>
-    </section>
+    <p>
+      <code>&lt;blockquote&gt;</code> används för att citera texter.
+      <code>&lt;h1&gt;</code>, 
+      <code>&lt;h2&gt;</code>, 
+      <code>&lt;h3&gt;</code>,
+      <code>&lt;h4&gt;</code>,
+      <code>&lt;h5&gt;</code>,
+      <code>&lt;h6&gt;</code> används för att skapa rubriker, där 
+      <code>&lt;h1&gt;</code> är den viktigaste rubriken och
+      <code>&lt;h6&gt;</code> är den minst viktiga rubriken.
+      <code>&lt;p&gt;</code> skapar paragrafer.
+      <code>&lt;pre&gt;</code> kommer att visa allt exakt som det skrivs i koden.
+      <code>&lt;span&gt;</code> används för att grupperna inline-element.
+    </p>
   </section>
   <section>
     <h2>Hypertext &lt;a&el;</h2>
@@ -173,25 +132,104 @@
   </section>
   <section>
     <h2>Oordnad, ordnad och beskriven lista</h2>
-    <h3>dl</h3>
-    <h3>dt</h3>
-    <h3>dd</h3>
-    <h3>ol</h3>
-    <h3>ul</h3>
-    <h3>li</h3>
+    <p>
+      <code>&lt;dl&gt;</code>
+      <code>&lt;dt&gt;</code>
+      <code>&lt;dd&gt;</code>
+      <code>&lt;ol&gt;</code>
+      <code>&lt;ul&gt;</code>
+      <code>&lt;li&gt;</code>
+    </p>
   </section>
   <section>
     <h2>Tabell</h2>
-    <h3>caption</h3>
-    <h3>table</h3>
-    <h3>td</h3>
-    <h3>th</h3>
-    <h3>tr</h3>
+    <p>
+      <code>&lt;table&gt;</code> skapar en tabell. 
+      <code>&lt;caption&gt;</code> definierar en beskrivning av tabellen.
+      <code>&lt;td&gt;</code>
+      <code>&lt;th&gt;</code>
+      <code>&lt;tr&gt;</code>
+    </p>  
+  </section>
+  <section>
+    <h2>Bild</h2>
+    <p><code>&lt;img&gt;</code> gör det möjligt att visa bilder.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <p><code>&lt;img src="../images/exampleImage.png" alt="exampleImage.png"&gt;</code></p>
+      <img src="../images/exampleImage.png" alt="exampleImage.png">
+    </details>
   </section>
   <section>
     <h2>Bildkartor</h2>
-    <h3>area</h3>
-    <h3>map</h3>
+    <p><code>&lt;map&gt;</code> används tillsammans med &lt;area&gt; för att skapa bilder med klickbara länk-områden.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <pre>
+        <code>
+          &lt;map name="infographic"&gt;
+            &lt;area 
+              shape="rect" 
+              coords="10,10,150,130"
+              href="#"
+              target="_blank" 
+              alt="HTML" /&gt;
+            &lt;area 
+              shape="rect" 
+              coords="160,10,310,130"
+              href="#"
+              target="_blank" 
+              alt="CSS" /&gt;
+            &lt;area 
+              shape="rect" 
+              coords="10,310,240,140"
+              href="#"
+              target="_blank" 
+              alt="JavaScript" /&gt;
+            &lt;area 
+              shape="rect" 
+              coords="250,140,310,310"
+              href="#"
+              target="_blank" 
+              alt="JavaScript" /&gt;
+          &lt;/map&gt;
+          &lt;img 
+            usemap="#infographic" 
+            src="../images/colors.gif" 
+            alt="My infographic" /&gt;
+        </code>
+      </pre>
+      <map name="infographic">
+        <area 
+          shape="rect" 
+          coords="10,10,150,130"
+          href="#"
+          target="_blank" 
+          alt="HTML" />
+        <area 
+          shape="rect" 
+          coords="160,10,310,130"
+          href="#"
+          target="_blank" 
+          alt="CSS" />
+        <area 
+          shape="rect" 
+          coords="10,310,240,140"
+          href="#"
+          target="_blank" 
+          alt="JavaScript" />
+        <area 
+          shape="rect" 
+          coords="250,140,310,310"
+          href="#"
+          target="_blank" 
+          alt="JavaScript" />
+      </map>
+      <img 
+        usemap="#infographic" 
+        src="../images/colors.gif" 
+        alt="My infographic" />
+    </details>
   </section>
 </body>
 
