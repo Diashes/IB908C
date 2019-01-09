@@ -58,43 +58,42 @@
       </p>
       <details>
         <summary>Visa exempel</summary>
-        <pre>
-          <code>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;head&gt;
-                &lt;title&gt;Min hemsida&lt;/title&gt;
-              &lt;/head&gt;
-              &lt;body&gt;
-                &lt;h1&gt;Min hemsida&lt;/h1&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
-        </pre>
+        <hr>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Min hemsida&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Min hemsida&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <hr>
       </details>
   </section>
   <section>
     <h2>Metainformation</h2>
     <p>
-      <code>&lt;author&gt;</code>
-      <code>&lt;description&gt;</code>
-      <code>&lt;generator&gt;</code>
-      <code>&lt;keywords&gt;</code>
-      <code>&lt;robots&gt;</code>
-      <code>&lt;http-equiv&gt;</code>
+      <code>&lt;meta name="author" content="John Doe"&gt;</code> definierar en författare för webbsidan.
+      <code>&lt;meta name="description" content="Min hemsida"&gt;</code> definierar en beskrivning av webbsidan.
+      <code>&lt;meta name="generator" content="FrontPage 4.0"&gt;</code> definierar vilken mjukvara som genererat html-dokumentet.
+      <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;</code> definierar nyckelord relevanta för webbsidan.
+      <code>&lt;meta name="robots" content="index|noindex|follow|nofollow|..."&gt;</code> styr hur hemsidan ska bli indexerad av sökmotorer.
+      <code>&lt;meta http-equiv="content-type|refresh|..." content="text/html;charset=UTF-8|300|..."&gt;</code> är ett sätt att specifisera olika typer av HTTP headers, t.ex. <code>content-type</code> definierar teckenkodning, <code>refresh</code> definierar antalet sekunder tills sidan ska laddas om.
     </p>
     <details>
       <summary>Visa exempel</summary>
+      <hr>
       <pre>
         <code>
           &lt;!DOCTYPE html&gt;
           &lt;html&gt;
             &lt;head&gt;
-              &lt;meta name="author" content="..."&gt;
-              &lt;meta name="description" content="..."&gt;
-              &lt;meta name="generator" content="..."&gt;
+              &lt;meta name="author" content="John Doe"&gt;
+              &lt;meta name="description" content="Min hemsida"&gt;
+              &lt;meta name="generator" content="FrontPage 4.0"&gt;
               &lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;
-              &lt;meta name="robots" content="..."&gt;
+              &lt;meta name="robots" content="noindex"&gt;
               &lt;title&gt;Min hemsida&lt;/title&gt;
             &lt;/head&gt;
             &lt;body&gt;
@@ -103,6 +102,7 @@
           &lt;/html&gt;
         </code>
       </pre>
+      <hr>
     </details>
   </section>
   <section>
@@ -123,41 +123,192 @@
     </p>
   </section>
   <section>
-    <h2>Hypertext &lt;a&el;</h2>
-    <h3>Relativ och absolut länk</h3>
-    <h3>Länk till ankare</h3>
-    <h3>Bild-länk</h3>
-    <h3>Länk till olika protokoll (exempelvis ftp)</h3>
-    <h3>Mailto-länk</h3>
+    <h2>Hypertext</h2>
+    <p><code>&lt;a&gt;</code> skapar hyperlänkar till andra webbsidor, filer, platser, email-adresser, inom samma sida eller vilken annan tänkbar URL.</p>
+    <p>Det finns <i>relativa och absoluta länkar</i>. Du märker om en länk är <i>relativ</i> om den saknar <code>http://</code> eller <code>https://</code> i början av URL:en.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+      <code>&lt;a href="index.html"&gt;Gå till startsida&lt;/a&gt;</code>
+      <hr>
+      <a href="index.html">Gå till startsida</a>
+      <hr>
+    </details>
+    <p>En absolut länk innehåller <code>http://</code> eller <code>https://</code>.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+      <code>&lt;a href="https://dsv.su.se"&gt;Gå till startsida&lt;/a&gt;</code>
+      <hr>
+      <a href="https://dsv.su.se">Gå till DSV</a>
+      <hr>
+    </details>
+    <p>En ankarlänk länkar till ett element som finns på samma sida som länken.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+<pre><code>&lt;h2 id="kapitel-1"&gt;Kapitel 1&lt;/h2&gt;
+&lt;a href="#kapitel-1"&gt;Gå till Kapitel 1&lt;/a&gt;</code></pre>
+      <hr>
+      <h2 id="kapitel-1">Kapitel 1</h2>
+      <a href="#kapitel-1">Gå till Kapitel 1</a>
+      <hr>
+    </details>
+    <p>Man kan också skapa <i>bild-länkar</i>.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+<pre><code>&lt;a href="../images/exampleImage.png"&gt;
+  &lt;img src="../images/exampleImage.png" alt="En katt"&gt;
+&lt;a/&gt;</code></pre>
+      <hr>
+      <a href="../images/exampleImage.png">
+        <img src="../images/exampleImage.png" alt="En katt">
+      </a>
+      <hr>
+    </details>
+    <p>Det går även att <i>länka till olika protokoll (exempelvis ssh)</i>.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+      <code>&lt;a href="ssh://triton.dsv.su.se/"&gt;Länk till Triton&lt;/a&gt;</code>
+      <hr>
+      <a href="ssh://triton.dsv.su.se/" target="_top">Länk till Triton</a>
+      <hr>
+    </details>
+    <p>En <i>mailto-länk</i> länkar till en email-adress.</p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+      <code>&lt;a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top"&gt;Skicka mail&lt;/a&gt;</code>
+      <hr>
+      <a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top">Skicka mail</a>
+      <hr>
+    </details>
   </section>
   <section>
     <h2>Oordnad, ordnad och beskriven lista</h2>
     <p>
-      <code>&lt;dl&gt;</code>
-      <code>&lt;dt&gt;</code>
-      <code>&lt;dd&gt;</code>
-      <code>&lt;ol&gt;</code>
-      <code>&lt;ul&gt;</code>
-      <code>&lt;li&gt;</code>
-    </p>
+      <p>En beskrivnings-lista kan skapas med elementen <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> och <code>&lt;dd&gt;</code>, och visas som en indenterad lista.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+<pre><code>&lt;dl&gt;
+  &lt;dt&gt;Kaffe&lt;/dt&gt;
+  &lt;dd&gt;- en varm svart dryck&lt;/dd&gt;
+  &lt;dt&gt;Bullar&lt;/dt&gt;
+  &lt;dd&gt;- mjuk välsmakande ätbar deg&lt;/dd&gt;
+  &lt;dt&gt;Kakor&lt;/dt&gt;
+  &lt;dd&gt;- krispig välsmakande ätbar deg&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        <hr>
+        <dl>
+          <dt>Kaffe</dt>
+          <dd>- en varm svart dryck</dd>
+          <dt>Bullar</dt>
+          <dd>- mjuk välsmakande ätbar deg</dd>
+          <dt>Kakor</dt>
+          <dd>- krispig välsmakande ätbar deg</dd>
+        </dl>
+        <hr>
+      </details>
+      <p>En ordnad lista kan skapas med <code>&lt;ol&gt;</code> och <code>&lt;li&gt;</code> och visas som en numrerad lista.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;Kaffe&lt;/li&gt;
+  &lt;li&gt;Bullar&lt;/li&gt;
+  &lt;li&gt;Kakor&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        <hr>
+        <ol>
+          <li>Kaffe</li>
+          <li>Bullar</li>
+          <li>Kakor</li>
+        </ol>
+        <hr>
+      </details>
+      <p>En oordnad lista kan skapas med elementen <code>&lt;ul&gt;</code> och <code>&lt;li&gt;</code> och visas som en punkt lista.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Kaffe&lt;/li&gt;
+  &lt;li&gt;Bullar&lt;/li&gt;
+  &lt;li&gt;Kakor&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <hr>
+        <ul>
+          <li>Kaffe</li>
+          <li>Bullar</li>
+          <li>Kakor</li>
+        </ul>
+        <hr>
+      </details>
   </section>
   <section>
     <h2>Tabell</h2>
     <p>
       <code>&lt;table&gt;</code> skapar en tabell. 
       <code>&lt;caption&gt;</code> definierar en beskrivning av tabellen.
-      <code>&lt;td&gt;</code>
-      <code>&lt;th&gt;</code>
-      <code>&lt;tr&gt;</code>
-    </p>  
+      <code>&lt;td&gt;</code> skapar en ny datacell.
+      <code>&lt;th&gt;</code> skapar ett nytt tabellhuvud.
+      <code>&lt;tr&gt;</code> skapar en ny rad i tabellen.
+    </p>
+    <details>
+      <summary>Visa exempel</summary>
+      <hr>
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;Adressbok&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Förnamn&lt;/th&gt;
+    &lt;th&gt;Efternamn&lt;/th&gt;
+    &lt;th&gt;Ålder&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+    &lt;td&gt;35&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+    &lt;td&gt;33&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <hr>
+        <table>
+          <caption>Adressbok</caption>
+          <tr>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Ålder</th>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>33</td>
+          </tr>
+        </table>
+      <hr>
+    </details>  
   </section>
   <section>
     <h2>Bild</h2>
-    <p><code>&lt;img&gt;</code> gör det möjligt att visa bilder.</p>
+    <p><code>&lt;img&gt;</code> definierar och visar bilder.</p>
     <details>
       <summary>Visa exempel</summary>
-      <p><code>&lt;img src="../images/exampleImage.png" alt="exampleImage.png"&gt;</code></p>
+      <hr>
+      <code>&lt;img src="../images/exampleImage.png" alt="exampleImage.png"&gt;</code>
+      <hr>
       <img src="../images/exampleImage.png" alt="exampleImage.png">
+      <hr>
     </details>
   </section>
   <section>
@@ -165,70 +316,70 @@
     <p><code>&lt;map&gt;</code> används tillsammans med &lt;area&gt; för att skapa bilder med klickbara länk-områden.</p>
     <details>
       <summary>Visa exempel</summary>
-      <pre>
-        <code>
-          &lt;map name="infographic"&gt;
-            &lt;area 
-              shape="rect" 
-              coords="10,10,150,130"
-              href="#"
-              target="_blank" 
-              alt="HTML" /&gt;
-            &lt;area 
-              shape="rect" 
-              coords="160,10,310,130"
-              href="#"
-              target="_blank" 
-              alt="CSS" /&gt;
-            &lt;area 
-              shape="rect" 
-              coords="10,310,240,140"
-              href="#"
-              target="_blank" 
-              alt="JavaScript" /&gt;
-            &lt;area 
-              shape="rect" 
-              coords="250,140,310,310"
-              href="#"
-              target="_blank" 
-              alt="JavaScript" /&gt;
-          &lt;/map&gt;
-          &lt;img 
-            usemap="#infographic" 
-            src="../images/colors.gif" 
-            alt="My infographic" /&gt;
-        </code>
-      </pre>
+      <hr>
+<pre><code>&lt;map name="bildkarta"&gt;
+  &lt;area 
+    shape="rect" 
+    coords="10,10,150,130"
+    href="index.html"
+    target="_blank" 
+    alt="Röd" /&gt;
+  &lt;area 
+    shape="rect" 
+    coords="160,10,310,130"
+    href="index.html"
+    target="_blank" 
+    alt="Grön" /&gt;
+  &lt;area 
+    shape="rect" 
+    coords="10,310,240,140"
+    href="index.html"
+    target="_blank" 
+    alt="Gul" /&gt;
+  &lt;area 
+    shape="rect" 
+    coords="250,140,310,310"
+    href="index.html"
+    target="_blank" 
+    alt="Blå" /&gt;
+&lt;/map&gt;
+
+&lt;img 
+  usemap="#bildkarta" 
+  src="../images/colors.gif" 
+  alt="Min bildkarta" /&gt;</code></pre>
+      <hr>
       <map name="infographic">
         <area 
           shape="rect" 
           coords="10,10,150,130"
-          href="#"
+          href="index.html"
           target="_blank" 
-          alt="HTML" />
+          alt="Röd" />
         <area 
           shape="rect" 
           coords="160,10,310,130"
-          href="#"
+          href="index.html"
           target="_blank" 
-          alt="CSS" />
+          alt="Grön" />
         <area 
           shape="rect" 
-          coords="10,310,240,140"
-          href="#"
+          coords="10,140,240,310"
+          href="index.html"
           target="_blank" 
-          alt="JavaScript" />
+          alt="Gul" />
         <area 
           shape="rect" 
           coords="250,140,310,310"
-          href="#"
+          href="index.html"
           target="_blank" 
-          alt="JavaScript" />
+          alt="Blå" />
       </map>
       <img 
         usemap="#infographic" 
         src="../images/colors.gif" 
         alt="My infographic" />
+      <hr>
     </details>
   </section>
 </body>
