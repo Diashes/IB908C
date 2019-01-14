@@ -1,52 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="1.1 Grunderna i HTML5">
-	<meta name="keywords" content="1.1, Grunderna, HTML5">
-	<meta name="author" content="Amanda Stensland">
-	<meta name="generator" content="Sublime Text 3">
-	<meta http-equiv="refresh" content="30">
-	<meta name="robots" content="index, follow">
-	<title>1.3 Semantiska element för text</title>
+	<title>1.4 Formulär</title>
 </head>
 <body>
-
-	<form action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+	<h1>1.4 Formulär</h1>
+	<h2>GET</h2>
+	<form method="get" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
 		<fieldset>
 			<legend>Formulär</legend>
 			<fieldset>
 				<legend>Enrads textbox</legend>
-				<input type="text" name="Text" placeholder="Namn" autofocus required />
-				<input type="password" name="Password" placeholder="Lösenord" />
+				<label for="text">Text:</label><br>
+				<input type="text" name="Text" id="text" placeholder="Text" autofocus required /><br>
+				<label for="password">Lösenord:</label><br>
+				<input type="password" name="Password" id="password" placeholder="Lösenord" /><br>
 			</fieldset>
-			<br />
 			<fieldset>
 				<legend>Flerrads textbox</legend>
-				<label for="textarea">Beskrivning:</label><br />
+				<label for="textarea">Beskrivning:</label><br>
 				<textarea name="Textarea" id="textarea"></textarea>
 			</fieldset>
-			<br />
 			<fieldset>
-				<legend>Checkboxar</legend>
-				<input type="checkbox" name="Alternativ1" id="alternativ1" /><label for="alternativ1">Alternativ 1</label><br />
-				<input type="checkbox" name="Alternativ2" id="alternativ2" /><label for="alternativ2">Alternativ 2</label><br />
+				<legend>Checkbox</legend>
+				<input type="checkbox" name="Alternativ1" id="alternativ1" /><label for="alternativ1">Alternativ 1</label><br>
+				<input type="checkbox" name="Alternativ2" id="alternativ2" /><label for="alternativ2">Alternativ 2</label><br>
 			</fieldset>
-			<br />
 			<fieldset>
-				<legend>Radio-knappar</legend>
-				<input type="radio" name="Radio" id="alt1"><label for="alt1">Alternativ 1</label><br />
+				<legend>Radio-knapp</legend>
+				<input type="radio" name="Radio" id="alt1"><label for="alt1">Alternativ 1</label><br>
 				<input type="radio" name="Radio" id="alt2"><label for="alt2">Alternativ 2</label>
 			</fieldset>
-			<br />
 			<fieldset>
-				<legend>Knappar</legend>
-				<input type="submit" name="Submit" value="Submit" /><br />
-				<input type="image" name="Image" alt="image" /><br />
-				<input type="reset" name="Reset" /><br />
+				<legend>Knapp</legend>
+				<input type="submit" name="Submit" value="Submit" /><br>
+				<input type="image" name="Image" alt="image" src="../images/button.png"/><br>
+				<input type="reset" name="Reset" /><br>
 				<input type="button" name="Button" value="Knapp" />
 			</fieldset>
-			<br />
 			<fieldset>
 				<legend>Lista</legend>
 				<select name="select" >
@@ -60,20 +52,28 @@
 					</optgroup>
 				</select>
 			</fieldset>
-			<br />
 			<fieldset>
 				<legend>Enrads textbox:</legend>
-				<input type="email" placeholder="email" name="email" pattern="[a-z]{10}" title="Pattern [a-z]"/>
-				<input type="url" placeholder="url" name="url" />
-				<input type="number" min="0" max="10" step="2" placeholder="nr" name="number" />
-				<input type="range" min="0" max="10" step="2" name="range" />
-				<input type="datetime" name="datetime" />
-				<input type="date" name="date" />
-				<input type="month" name="month" />
-				<input type="week" name="week" />
-				<input type="time" name="time" />
-				<keygen name="security" />
-				<input list="browsers" placeholder="lista" name="list" />
+				<label for="email">Email:</label><br>
+				<input type="email" id="email" placeholder="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Pattern [a-z]"/><br>
+				<label for="url">URL:</label><br>
+				<input type="url" id="url" placeholder="url" name="url" /><br>
+				<label for="number">Number:</label><br>
+				<input type="number" id="number" min="0" max="10" step="2" placeholder="nr" name="number" /><br>
+				<label for="range">Range:</label><br>
+				<input type="range" id="range" min="0" max="10" step="2" name="range" /><br>
+				<label for="datetime-local">Datetime-local:</label><br>
+				<input type="datetime-local" id="datetime-local" name="datetime-local" /><br>
+				<label for="date">Date:</label><br>
+				<input type="date" id="date" name="date" /><br>
+				<label for="month">Month:</label><br>
+				<input type="month" id="month" name="month" /><br>
+				<label for="week">Week:</label><br>
+				<input type="week" id="week" name="week" /><br>
+				<label for="time">Time:</label><br>
+				<input type="time" id="time" name="time" /><br>
+				<label for="datalist">Datalist:</label><br>
+				<input list="browsers" id="datalist" placeholder="lista" name="list" /><br>
 				<datalist id="browsers">
 					<option>Internet Explorer</option>
 					<option>Firefox</option>
@@ -82,20 +82,16 @@
 					<option>Safari</option>
 				</datalist>
 			</fieldset>
-			<br />
-			<input type="submit" name="submit" value="Skicka formulär" />.
+			<input type="submit" name="submit" value="Skicka formulär" />
 		</fieldset>
 	</form>
-
-	<br />
-
-	<form method="post" enctype="multipart/form-data" action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+	<h2>POST</h2>
+	<form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
 		<fieldset>
 			<legend>Uppladdning av fil</legend>
 			<input type="file" name="file" />
 			<input type="submit" name="submit" value="Ladda upp fil" />
 		</fieldset>
 	</form>
-
 </body>
 </html>
