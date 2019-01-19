@@ -1,9 +1,6 @@
 *
 {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
-    list-style-type: none;
     text-decoration: none;
 }
 html, body
@@ -27,14 +24,14 @@ code
 }
 pre code 
 {
-    padding:10px;
-    border:1px solid #D5D5D5;
+    padding: 10px;
+    border: 1px solid #D5D5D5;
     background: #222;
-    color:white;
-    display:block;
-    width:100%;
-    margin:10px 0 10px 0;
-    overflow:auto;
+    color: white;
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    overflow: auto;
 }
 hr
 {
@@ -90,12 +87,16 @@ h2
     padding:10px;
     border:1px solid #d5d5d5;
     background:white;
+    overflow: hidden;
 }
-#inner-wrapper p
+#inner-wrapper section:not(:last-child)
 {
-    margin:5px 0 15px 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid gray;
 }
-td
+details
 {
-    padding-right: 1rem;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
 }

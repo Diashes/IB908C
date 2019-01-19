@@ -1,122 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <title>2.2 Text och listor</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="../base.css">
 </head>
 <body>
-
 <header>
-    <h1>Text och listor</h1>
+    <h1>2.2 Text och listor</h1>
 </header>
-
-<div id="wrapper">
-    <div id="inner-wrapper">
-        <h2>Fontfamiljer</h2>
-        <ul>
-            <li><strong>Serif: </strong><span class="serif">Fonten har små linjer på bokstavskanterna.</span></li>
-            <li><strong>Sans-Serif: </strong><span class="sans-serif">Har inga linjer på bokstavskanterna.</span></li>
-            <li><strong>Monospace: </strong><span class="monospace">Alla monospace-bokstäver har samma breli.</span></li>
-        </ul>
-
-        <hr />
-
-        <h2>Enheter</h2>
-        <ul>
-            <li><code>p { font-size: [value] }</code></li>
-        </ul>
-        <ul>
-            <li><strong>xx-small: </strong><span class="xx-small">Väldigt liten text.</span></li>
-            <li><strong>x-small: </strong><span class="x-small">Ännu mindre text.</span></li>
-            <li><strong>small: </strong><span class="small">Liten text.</span></li>
-            <li><strong>medium: </strong><span class="medium">Medium text.</span></li>
-            <li><strong>large: </strong><span class="large">Stor text.</span></li>
-            <li><strong>x-large: </strong><span class="x-large">Ännu större text.</span></li>
-            <li><strong>xx-large: </strong><span class="xx-large">Väldigt stor text.</span></li>
-            <li><strong>%: </strong><span class="percent">Textens storlek visad i %.</span></li>
-            <li><strong>em: </strong><span class="em">Textens storlek visad em.</span></li>
-        </ul>
-
-        <hr />
-
-        <h2>Färg</h2>
-        <ul>
-            <li><span class="custom-color">En egen definierad färg.</span></li>
-            <li><code>p { font-color: red; }</code></li>
-            <li><span class="pre-color">Fördefinierad färg.</span></li>
-            <li><code>p { font-color: #B4D455; }</code></li>
-        </ul>
-
-        <hr />
-
-        <h2>Teckensnitt</h2>
-        <ul>
-            <li><strong>font-family: </strong><span class="font-family">Font-family egenskapen anger teckensnittet för ett element.</span></li>
-            <li><code>p { font-family: "Arial", "Helvetica"; }</code></li>
-            <li><strong>font-stretch: </strong><span class="font-stretch">Med font-stretch egenskapen kan du göra texten bredare eller smalare.</span></li>
-            <li><code>p { font-stretch: expanded; }</code></li>
-            <li><strong>font-size: </strong><span class="font-size">Ändrar storleken på texten.</span></li>
-            <li><code>p { font-size: 3em; }</code></li>
-            <li><strong>font-size-adjust: </strong><span class="font-size-adjust">Webbläsaren justerar textstorleken så att den är samma oavsett vilken font som används.</span></li>
-            <li><code>p { font-size-adjust: 0.58; }</code></li>
-            <li><strong>font-style: </strong><span class="font-style">Stylar texten.</span></li>
-            <li><code>p { font-style: italic; }</code></li>
-            <li><strong>font-variant: </strong><span class="font-variant">Konverterar lowercase till små uppercase-bokstäver.</span></li>
-            <li><code>p { font-variant: small-caps; }</code></li>
-            <li><strong>font-weight: </strong><span class="font-weight">Definierar hur tjocka bokstäverna ska vara.</span></li>
-            <li><code>p { font-weight: bold; }</code></li>
-        </ul>
-
-        <hr />
-
-        <h2>Text</h2>
-        <ul>
-            <li><strong>letter-spacing: </strong><span class="font-family">Sätter avståndet mellan bokstäverna.</span></li>
-            <li><code>p { letter-spacing: 2px; }</code></li>
-            <li><strong>word-spacing: </strong><span class="font-family">Sätter avståndet mellan ord.</span></li>
-            <li><code>p { word-spacing: 10px; }</code></li>
-            <li><strong>line-height: </strong><span class="font-family">Sätter avståndet till nästa textrad.</span></li>
-            <li><code>p { line-height: 10px; }</code></li>
-            <li><strong>text-align: </strong><span class="font-family">Sätter textens justering.</span></li>
-            <li><code>p { text-align: center; }</code></li>
-            <li><strong>text-decoration: </strong><span class="font-family">Sätter dekoration på texten.</span></li>
-            <li><code>p { text-decoration: underline; }</code></li>
-            <li><strong>text-shadow: </strong><span class="font-family">Lägger till en skugga bakom texten.</span></li>
-            <li><code>p { text-shadow: 2px 2px #B4D455; }</code></li>
-            <li><strong>text-indent: </strong><span class="font-family">Indenterar den första raden av texten.</span></li>
-            <li><code>p { text-indent: 50px; }</code></li>
-            <li><strong>text-transform: </strong><span class="font-family">Transformerar texten mellan stora och små bokstäver.</span></li>
-            <li><code>p { text-transform: uppercase; }</code></li>
-            <li><strong>white-space: </strong><span class="font-family">Specifiserar om texten ska brytas till nästa rad eller inte.</span></li>
-            <li><code>p { white-space: ; }</code></li>
-        </ul>
-
-        <hr />
-
-        <h2>Stycken</h2>
-        <ul>
-            <li><strong>p:first-line </strong><span class="font-family">Markerar den första linjen av varje p-element.</span></li>
-            <li><code>p:first-line { text-transform: uppercase; }</code></li>
-            <li><strong>p:first-letter </strong><span class="font-family">Markerar den första bokstaven av varje p-element.</span></li>
-            <li><code>p:first-letter { text-transform: uppercase; }</code></li>
-        </ul>
-
-        <hr />
-
-        <h2>Listor</h2>
-        <ul>
-            <li><strong>list-style-image: </strong><span class="font-family">Specifisera en bild istället för den vanliga listmarkeraren.</span></li>
-            <li><code>p { list-style-image: url('image.gif); }</code></li>
-            <li><strong>list-style-position: </strong><span class="font-family">Specifiserar om listmarkerarna ska visas inuti eller utanför textflödet.</span></li>
-            <li><code>p { list-style-position: "Arial", "Helvetica"; }</code></li>
-            <li><strong>list-style-type: </strong><span class="font-family">Sätter stilen på listmarkeraren.</span></li>
-            <li><code>p { list-style-type: upper-roman; }</code></li>
-        </ul>
-    </div>
-</div>
-
-
+<main id="wrapper">
+    <article id="inner-wrapper">
+        <h2>2.2 Text och listor</h2>
+        <section>
+            <h3>Fontfamiljer</h3>
+            <p><strong>Serif: </strong><span class="serif">Fonten har små linjer på bokstavskanterna.</span></p>
+            <p><strong>Sans-Serif: </strong><span class="sans-serif">Har inga linjer på bokstavskanterna.</span></p>
+            <p><strong>Monospace: </strong><span class="monospace">Alla monospace-bokstäver har samma breli.</span></p>
+        </section>
+        <section>
+            <h3>Enheter</h3>
+            <details>
+                <summary><b>xx-small</b>: Extra extra liten text.</summary>
+                <p class="xx-small">Extra extra liten text.</p>
+                <pre><code>p { font-size: xx-small; }</code></pre>
+            </details>
+            <details>
+                <summary><b>x-small</b>: Extra liten text.</summary>
+                <p class="x-small">Extra liten text.</p>
+                <pre><code>p { font-size: x-small; }</code></pre>
+            </details>
+            <details>
+                <summary><b>small</b>: Liten text.</summary>
+                <p class="small">Liten text.</p>
+                <pre><code>p { font-size: small; }</code></pre>
+            </details>
+            <details>
+                <summary><b>medium</b>: Medium text.</summary>
+                <p class="medium">Medium text.</p>
+                <pre><code>p { font-size: medium; }</code></pre>
+            </details>
+            <details>
+                <summary><b>large</b>: Stor text.</summary>
+                <p class="large">Stor text.</p>
+                <pre><code>p { font-size: large; }</code></pre>
+            </details>
+            <details>
+                <summary><b>x-large</b>: Extra stor text.</summary>
+                <p class="x-large">Extra stor text.</p>
+                <pre><code>p { font-size: x-large; }</code></pre>
+            </details>
+            <details>
+                <summary><b>xx-large</b>: Extra extra stor text.</summary>
+                <p class="xx-large">Extra extra stor text.</p>
+                <pre><code>p { font-size: xx-large; }</code></pre>
+            </details>
+            <details>
+                <summary><b>%</b>: Textens storlek visad i procent.</summary>
+                <p class="percent-70">Textens storlek visad i procent.</p>
+                <pre><code>p { font-size: 70%; }</code></pre>
+            </details>
+            <details>
+                <summary><b>em</b>: Textens storlek visad em.</summary>
+                <p class="em-1-5">Textens storlek visad em.</p>
+                <pre><code>p { font-size: 1.5em; }</code></pre>
+            </details>
+        </section>
+        <section>
+            <h3>Färg</h3>
+            <details>
+                <summary><b>Fördefinierad färg</b>: Definierar hur tjocka bokstäverna ska vara.</summary>
+                <p style="color: burlywood;">Fördefinierad färg.</p>
+                <pre><code>p { color: burlywood;&quot;&gt;Fördefinierad färg.&lt;/p&gt;</code></pre>
+            </details>
+            <details>
+                <summary><b>Egen färg</b>: Du kan även definiera egna färger genom att skriva en hexdecimalt format, RGB-format eller RGBA-format.</summary>
+                <p style="color: #bada55;">Hexadecimalt format färg.</p>
+                <pre><code>p { color: #bada55;&quot;&gt;Fördefinierad färg.&lt;/p&gt;</code></pre>
+                <p style="color: rgb(100, 150, 80);">RGB-format färg.</p>
+                <pre><code>p { color: rgb(100, 150, 80);&quot;&gt;RGB-format färg.&lt;/p&gt;</code></pre>
+                <p style="color: rgba(100, 150, 80, 0.2);">RGBA-format färg.</p>
+                <pre><code>p { color: rgb(100, 150, 80, 0.2);&quot;&gt;RGBA-format färg.&lt;/p&gt;</code></pre>
+            </details>
+        </section>
+        <section>
+            <h3>Teckensnitt</h3>
+                <details>
+                    <summary><b>font-family</b>: Anger vilken teckensnittsfamilj som används.</summary>
+                    <p style="font-family: 'Comic Sans MS', cursive, sans-serif;">Anger vilken teckensnittsfamilj som används.</p>
+                    <pre><code>p { font-family: "Comic Sans MS", cursive, sans-serif; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-stretch</b>: Med font-stretch egenskapen kan du göra texten bredare eller smalare.</summary>
+                    <p style="font-stretch: expanded;">Med font-stretch egenskapen kan du göra texten bredare eller smalare.</p>
+                    <pre><code>p { font-stretch: expanded; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-size</b>: Ändrar storleken på texten.</summary>
+                    <p style="font-size: 3em;">Ändrar storleken på texten.</p>
+                    <pre><code>p { font-size: 3em; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-size-adjust</b>: Webbläsaren justerar textstorleken så att den är samma oavsett vilken font som används.</summary>
+                    <p style="font-size-adjust: 0.58;">Webbläsaren justerar textstorleken så att den är samma oavsett vilken font som används.</p>
+                    <pre><code>p { font-size-adjust: 0.58; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-style</b>: Stylar texten på diverse olika sätt.</summary>
+                    <p style="font-style: italic;">Stylar texten på diverse olika sätt.</p>
+                    <pre><code>p { font-style: italic; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-variant</b>: Konverterar lowercase till små uppercase-bokstäver.</summary>
+                    <p style="font-variant: small-caps;">Konverterar lowercase till små uppercase-bokstäver.</p>
+                    <pre><code>p { font-variant: small-caps; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font-weight</b>: Definierar hur tjocka bokstäverna ska vara.</summary>
+                    <p style="font-weight: bold;">Definierar hur tjocka bokstäverna ska vara.</p>
+                    <pre><code>p { font-weight: bold; }</code></pre>
+                </details>
+                <details>
+                    <summary><b>font</b>: Specifiserar <code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>, <code>font-size</code>/<code>line-height</code> och <code>font-family</code> i samma egenskap.</summary>
+                    <p class="font">Specifiserar <code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>, <code>font-size</code>/<code>line-height</code> och <code>font-family</code> i samma egenskap.</p>
+                    <pre><code>p { font: italic bold 16px/25px monospace; }</code></pre>
+                </details>
+        </section>
+        <section>
+            <h3>Text</h3>
+            <details>
+                <summary><b>letter-spacing</b>: Sätter avståndet mellan bokstäverna.</summary>
+                <p style="letter-spacing: 2px;">Sätter avståndet mellan bokstäverna.</p>
+                <pre><code>p { letter-spacing: 2px; }</code></pre>
+            </details>
+            <details>
+                <summary><b>word-spacing</b>: Sätter avståndet mellan ord.</summary>
+                <p style="word-spacing: 10px;">Sätter avståndet mellan ord.</p>
+                <pre><code>p { word-spacing: 10px; }</code></pre>
+            </details>
+            <details>
+                <summary><b>line-height</b>: Sätter avståndet till nästa textrad.</summary>
+                <p style="line-height: 10px;">Sätter avståndet till nästa textrad.</p>
+                <pre><code>p { line-height: 10px; }</code></pre>
+            </details>
+            <details>
+                <summary><b>text-align</b>: Sätter textens justering.</summary>
+                <p style="text-align: center;">Sätter avståndet mellan bokstäverna.</p>
+                <pre><code>p { text-align: center; }</code></pre>
+            </details>
+            <details>
+                <summary><b>text-decoration</b>: Sätter dekoration på texten.</summary>
+                <p style="text-decoration: underline;">Sätter dekoration på texten.</p>
+                <pre><code>p { text-decoration: underline; }</code></pre>
+            </details>
+            <details>
+                <summary><b>text-shadow</b>: Lägger till en skugga bakom texten.</summary>
+                <p style="text-shadow: 2px 2px #B4D455;">Lägger till en skugga bakom texten.</p>
+                <pre><code>p { text-shadow: 2px 2px #B4D455; }</code></pre>
+            </details>
+            <details>
+                <summary><b>text-indent</b>: Indenterar den första raden av texten.</summary>
+                <p style="text-indent: 50px;">Indenterar den första raden av texten.</p>
+                <pre><code>p { text-indent: 50px; }</code></pre>
+            </details>
+            <details>
+                <summary><b>text-transform</b>: Transformerar texten mellan stora och små bokstäver.</summary>
+                <p style="text-transform: uppercase;">Transformerar texten mellan stora och små bokstäver.</p>
+                <pre><code>p { text-transform: uppercase; }</code></pre>
+            </details>
+            <details>
+                <summary><b>white-space</b>: Specifiserar om texten ska brytas till nästa rad eller inte.</summary>
+                <p style="white-space: pre-wrap;">Specifiserar om texten ska brytas till nästa rad eller inte.</p>
+                <pre><code>p { white-space: nowrap; }</code></pre>
+            </details>
+        </section>
+        <section>
+            <h3>Stycken</h3>
+            <details>
+                <summary><b>p:first-line</b>: Markerar den första linjen av varje p-element.</summary>
+                <div class="p-first-line">
+                    <p>Markerar den första linjen av varje p-element. Markerar den första linjen av varje p-element. Markerar den första linjen av varje p-element. Markerar den första linjen av varje p-element.</p>
+                </div>
+                <pre><code>p:first-line { text-transform: uppercase; }</code></pre>
+            </details>
+            <details>
+                <summary><b>p:first-letter</b>: Markerar den första bokstaven av varje p-element.</summary>
+                <div class="p-first-letter">
+                    <p>Markerar den första bokstaven av varje p-element.</p>
+                </div>
+                <pre><code>p:first-letter { font-size: 2rem; }</code></pre>
+            </details>
+        </section>
+        <section>
+            <h3>Listor</h3>
+            <details>
+                <summary><b>list-style-image</b>: Specifisera en bild istället för den vanliga listmarkeraren.</summary>
+                <ul class="list-style-image">
+                    <li>Alternativ 1</li>
+                    <li>Alternativ 2</li>
+                    <li>Alternativ 3</li>
+                </ul>
+                <pre><code>ul { list-style-image: url('image.gif); }</code></pre>
+            </details>
+            <details>
+                <summary><b>list-style-position</b>: Specifiserar om listmarkerarna ska visas inuti eller utanför textflödet.</summary>
+                <ul class="list-style-position">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet mauris in massa dignissim, eget mattis nulla congue. Nunc ornare mauris vel tincidunt feugiat.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet mauris in massa dignissim, eget mattis nulla congue. Nunc ornare mauris vel tincidunt feugiat.</li>
+                </ul>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet mauris in massa dignissim, eget mattis nulla congue. Nunc ornare mauris vel tincidunt feugiat.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet mauris in massa dignissim, eget mattis nulla congue. Nunc ornare mauris vel tincidunt feugiat.</li>
+                </ul>
+                <pre><code>ul { list-style-position: inside|outside; }</code></pre>
+            </details>
+            <details>
+                <summary><b>list-style-type</b>: Sätter stilen på listmarkeraren.</summary>
+                <ul class="list-style-type">
+                    <li>Alternativ 1</li>
+                    <li>Alternativ 2</li>
+                    <li>Alternativ 3</li>
+                </ul>
+                <pre><code>ul { list-style-type: upper-roman|circle|square|lower-alpha; }</code></pre>
+            </details>
+        </section>
+    </article>
+</main>
 </body>
 </html>

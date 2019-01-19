@@ -1,0 +1,85 @@
+dt
+{
+    text-decoration: underline;
+    margin-top:10px;
+}
+.serif
+{
+    font-family: "Times New Roman", Times, serif;
+}
+.sans-serif
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.monospace
+{
+    font-family: "Courier New", Courier, monospace;
+}
+.xx-small
+{
+    font-size: xx-small;
+}
+.x-small
+{
+    font-size: x-small;
+}
+.small
+{
+    font-size: small;
+}
+.medium
+{
+    font-size: medium;
+}
+.large
+{
+    font-size: large;
+}
+.x-large
+{
+    font-size: x-large;
+}
+.xx-large
+{
+    font-size: xx-large;
+}
+.percent-70
+{
+    font-size: 70%;
+}
+.em-1-5
+{
+    font-size: 1.5em;
+}
+.custom-color
+{
+    color: #d6f93e;
+}
+.pre-color
+{
+    color: green;
+}
+.p-first-line p:first-line
+{
+    text-transform: uppercase;
+}
+.p-first-letter p:first-letter
+{
+    font-size: 2rem;
+}
+.list-style-image
+{
+    list-style-image: url('../images/green-blob.gif');
+}
+.list-style-position
+{
+    list-style-position: inside;
+}
+.list-style-type
+{
+    list-style-type: upper-roman;
+}
+.font
+{
+    font: italic bold 16px/25px monospace;
+}
