@@ -1,63 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Amanda Stensland">
-    <title>2.1 Grunderna i CSS 3</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>2.1 Grundernai CSS3</title>
+    <link href="../base.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-
-    <aside>
-        <div id="goback"><a href="http://people.dsv.su.se/~amst8501">Gå till hemsidan</a></div>
-        <ul>
-            <li><hr /></li>
-            <li><h2><a href="navigation.html" target="iframe">Innehåll</a></h2></li>
-            <li><hr /></li>
-            <li><h2><a href="#HTML">HTML</a></h2>
-                <ul>
-                    <li><a href="../1.1/index.html" target="iframe">1.1 Grunderna i HTML5</a></li>
-                    <li><a href="../1.2/index.html" target="iframe">1.2 Semantiska element för struktur</a></li>
-                    <li><a href="../1.3/index.html" target="iframe">1.3 Semantiska element för text</a></li>
-                    <li><a href="../1.4/index.html" target="iframe">1.4 Formulär</a></li>
-                    <li><a href="../1.6.2/index.html" target="iframe">1.6.2 Progressivt nerladdad media</a></li>
-                </ul>
-            </li>
-            <li><h2><a href="#CSS">CSS</a></h2>
-                <ul>
-                    <li><a href="grunderna.html" target="iframe">2.1 Grunderna i CSS 3</a></li>
-                    <li><a href="../2.2/index.html" target="iframe">2.2 Text och listor</a></li>
-                    <li><a href="../2.3/index.html" target="iframe">2.3 Marginaler kantlinjer och paddning</a></li>
-                    <li><a href="../2.4/index.html" target="iframe">2.4 Bilder och bakgrunder</a></li>
-                    <li><a href="../2.5/index.html" target="iframe">2.5 Navigering</a></li>
-                    <li><a href="../2.6/index.html" target="iframe">2.6 Tabeller och formulär</a></li>
-                    <li><a href="../2.7/fixerad.html" target="iframe">2.7 Sidlayout</a></li>
-                    <li><a href="../2.8/index.html" target="iframe">2.8 Anpassning till olika enheter</a></li>
-                </ul>
-            </li>
-            <li><h2><a href="#JavaScript">JavaScript</a></h2>
-                <ul>
-                    <li><a href="../3.1/index.html" target="iframe">3.1 Grunderna i JavaScript</a></li>
-                    <li><a href="../3.2/index.html" target="iframe">3.2 JavaScript-objekt</a></li>
-                    <li><a href="../3.3/index.html" target="iframe">3.3 DOM-objekt och jQuery</a></li>
-                    <li><a href="../3.4/index.html" target="iframe">3.4 Webbläsar-objekt</a></li>
-                    <li><a href="../3.5.1/index.html" target="iframe">3.5.1 Effekter och animationer</a></li>
-                    <li><a href="../3.5.2/index.html" target="iframe">3.5.2 Bildhantering</a></li>
-                    <li><a href="../3.5.3/index.html" target="iframe">3.5.3 Navigering</a></li>
-                    <li><a href="../3.5.4/index.html" target="iframe">3.5.4 Utvidgbara gränssnitt</a></li>
-                    <li><a href="../3.5.5/index.html" target="iframe">3.5.5 Formulärhantering</a></li>
-                </ul>
-            </li>
-        </ul>
-    </aside>
-
-    <div id="iframe-container">
-        <iframe src="navigation.html" name="iframe"></iframe>
-    </div>
-
-<footer></footer>
-
+    <header>
+        <h1>Grunderna i CSS 3</h1>
+    </header>
+    <main id="wrapper">
+        <article id="inner-wrapper">
+            <h2>Grunderna i CSS 3</h2>
+            <section>
+                <h3>Externt länkad CSS-fil och dess fördelar</h3>
+                <p>
+                    En externt länkad CSS-fil gör det möjligt att hålla HTML- och CSS-kod separerade. En extern fil har också fördelen att den går att länka till flera olika HTML-dokument,
+                    vilket möjliggör att samma stil kan appliceras på flera HTML-dokument utan att upprepa CSS-koden.
+                </p>
+                <p>
+                    <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;2.1_Grunderna_i_CSS_3.css&quot;&gt;</code>
+                </p>
+            </section>
+            <hr />
+            <section>
+                <h3>Arv</h3>
+                <p>Många av CSS-reglerna som finns går automatiskt i arv till barn-element av ett föräldra-element.</p>
+            </section>
+            <hr />
+            <section>
+                <h3>Cascade</h3>
+                <p>
+                    CSS är Cascading Style Sheet, vilket gör det möjligt att definiera en CSS-regel flera gånger för samma element.
+                    Om reglerna säger emot varandra så löser CSS det genom att granska rangordningen för reglerna och applicerar den
+                    som har högst prioritet. Rangordningen brukar kallas "kaskadordning".
+                </p>
+            </section>
+            <hr />
+            <section>
+                <h3>Selektorer</h3>
+                <p>
+                    Selektorer används för att CSS ska hitta och kunna manipulera HTML-element.
+                    Det finns olika slags selektorer, bland annat id-, tagg-, klass- och barn-selektorer.
+                </p>
+                <p>
+                    Tagg / Element-selektorn markerar alla element som är av en viss typ. Det går att markera alla &lt;p&gt; genom att använda taggen som selektor.
+                </p>
+<pre><code>p {
+    color: #B4D455;
+}</code></pre>
+                <p>
+                    Id-selektorn använder sig av HTML-attributet id för att identifiera ett element. Id-element används oftast för att unikt kunna identiera ett element på en sida,
+                    vilket betyder att det oftast inte finns flera element med samma id-namn. Ett id går till exempel att specifisera genom att skriva <code>&lt;div id=&quot;container&quot;&gt;</code>.
+                </p>
+<pre><code>#container {
+    background: #B4D455;
+}</code></pre>
+                <p>
+                    Klass-selektorn liknar id-selektorn och gör det möjligt att definiera klasser för element. Till skillnad från id-selektorn så behöver inte klass-selektorn vara unik för ett element utan kan appliceras på många. Det går att definiera en klass för ett element genom att skriva
+                    <code>&lt;div class=&quot;post&quot;&gt;</code>.
+                </p>
+<pre><code>.post {
+    background: #B4D455;
+}</code></pre>
+                <p>
+                    Barn-selektorn markerar alla element av en viss typ som ligger inuti ett annat element. För att markera alla barn-element inom ett viss element så kan man skriva som nedan. 
+                    Koden markerar alla &lt;p&gt; som ligger inuti elementet med klassen '.post'.
+                </p>
+<pre><code>.post p {
+    color: #B4D455;
+}</code></pre>
+            </section>
+            <hr />
+            <section>
+                <h3>Enheter</h3>
+                <p>
+                    CSS stödjer användandet av olika enheter för längd. Längdenheter används till exempel för att definiera regler som 'margin', 'width', 'font-size', m.m.
+                    Vissa regler tillåter även negativa längder. Det finns två typer av längder; relativa och absoluta längder.
+                </p>
+                <h4>Relativa längder</h4>
+                <table>
+                    <tr><td>em</td><td>Relativt till rot-storleken på texten (4em är 4 gånger så stort som rot-storleken).</td></tr>
+                    <tr><td>ex</td><td>Relativt till höjden av texten.</td></tr>
+                    <tr><td>px</td><td>Relativt till skärmens upplösning.</td></tr>
+                    <tr><td>%</td><td>Relativt till höjden och bredden av omgivningen.</td></tr>
+                </table>
+                <h4>Absoluta längder</h4>
+                <table>
+                    <tr><td>cm</td><td>Centimeter.</td></tr>
+                    <tr><td>mm</td><td>Millimeter.</td></tr>
+                    <tr><td>in</td><td>Inches.</td></tr>
+                    <tr><td>pt</td><td>Points.</td></tr>
+                    <tr><td>pc</td><td>Picas.</td></tr>
+                </table>
+            </section>
+            <hr />
+            <section>
+                <h3>Hur ett CSS-dokument är uppbyggt</h3>
+                <p>För att skriva ett CSS-dokument så måste man veta hur CSS-regler byggs upp.</p>
+<pre><code>[selektor] {
+    [egenskap]: [värde];
+}</code></pre>
+                <table>
+                    <tr>
+                        <td>[selektor]</td>
+                        <td>
+                            Här skrivs selektorn för det element man vill manipulera. Några exempel på selektorer är <code>.min-selektor</code> (klass-selektor), <code>#min-selektor</code> (id-selektor), <code>div</code> (tagg/element-selektor).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>[egenskap]</td>
+                        <td>Här definieras egenskapen som du vill manipulera hos elementet.</td>
+                    </tr>
+                    <tr>
+                        <td>[värde]</td>
+                        <td> Här skriver du vilket värde den egenskapen ska ha, istället för standardvärdet.</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+    </main>
 </body>
-
 </html>
