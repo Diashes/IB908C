@@ -75,7 +75,9 @@ header h1
 }
 h2
 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed gray;
 }
 #wrapper
 {
@@ -93,10 +95,13 @@ h2
 {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px dashed gray;
 }
 details
 {
     margin: 10px 0 10px 0;
+}
+details summary
+{
     cursor: pointer;
 }

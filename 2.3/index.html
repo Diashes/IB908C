@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="sv">
+<head>
     <meta charset="UTF-8">
     <title>2.3 Marginaler och kantlinjer</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../index.css" />
 </head>
 <body>
-
 <header>
-    <h1>CSS Boxmodellen</h1>
+    <h1>2.3 CSS Boxmodellen</h1>
 </header>
-
-<div id="wrapper">
-    <div id="inner-wrapper">
+<main id="wrapper">
+    <article id="inner-wrapper">
+        <h2>2.3 CSS Boxmodellen</h2>
         <p>I CSS kan boxmodellen användas när man pratar om design
             och layout. Boxmodellen omsluter HTML-element som
             möjliggör användandet av marginaler,
@@ -24,274 +23,278 @@
             <li><strong>Border: </strong>En ram som går runt paddningen och innehållet.</li>
             <li><strong>Margin: </strong>Ökar avståndet utanför boxen till innehållet runtomkring.</li>
         </ul>
-
-        <h2>Marginaler</h2>
-        <p>Marginaler gör området runt elementet större till elementen runtomkring.</p>
-        <fieldset>
-            <h3>Exempel:</h3>
-            <code>
-                div {<br />
-                margin-top: 50px;<br />
-                margin-right: 5px;<br />
-                margin-bottom: 20px;<br />
-                margin-left: 15px;<br />
-                background: #B4D455;
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="marginaler">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Border</h2>
-        <p>Border-egenskapen definierar en ram som ska synas runt elementet.</p>
-        <fieldset>
-            <h3>Exempel:</h3>
-            <code>
-                div {<br />
-                border-top: 10px solid black;<br />
-                border-right: 3px dashed red;<br />
-                border-bottom: 5px dotted green;<br />
-                border-left: 20px double yellow;<br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="border">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Border color</h2>
-        <p>Egenskapen border-color används för att sätta färgen på en ram.
-            Färgen kan sättas genom:</p>
-        <ul>
-            <li>name - specifisera namnet på färgen, såsom "yellow"</li>
-            <li>RGB - specifisera ett RGB-värde, såsom "rgb(255,255,0)"</li>
-            <li>Hex - specifisera ett hex-värde, såsom "#fff000"</li>
-            <li>transparent - sätt färgen till genomskinlig</li>
-        </ul>
-        <p>Egenskapen border-color fungerar inte enskilt, utan man måste först sätta värdet på egenskapen border-style.</p>
-
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                div {<br />
-                border-style: solid; <br />
-                border-top-color: black; <br />
-                border-right-color: red; <br />
-                border-bottom-color: green; <br />
-                border-left-color: yellow; <br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="border-color">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Border style</h2>
-        <p>
-            Border-style-egenskapen specifiserar vilken slags ram som ska visas.
-            Värden som egenskapen border-style kan ha är:</p>
-        <ul>
-            <li>none - ingen ram visas</li>
-            <li>dashed - definierar en streckad ram</li>
-            <li>solid - definierar en solid ram</li>
-            <li>double - definierar en dubbel ram</li>
-            <li>groove - definierar en ram med 3D-effekt</li>
-            <li>Med mera...</li>
-        </ul>
-        <p>Om inte border-style-egenskapen sätts så kommer ingen ram att visas.</p>
-
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                div {<br />
-                border-style: dashed; <br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="border-style">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Border width</h2>
-        <p>
-            Border-width används för att sätta tjockleken på ramen.
-            Tjockleken kan definieras genom pixlar eller någon av de fördefinierade värdena;
-            thin, medium, thick. Observera att innan border-width kan användas så måste
-            border-style sättas.
-        </p>
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                div {<br />
-                border-style: solid;<br />
-                border-width: 22px; <br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="border-width">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Paddning</h2>
-        <p>
-            Paddning definierar mellanrummet mellan elementets innehåll och elementets kant.
-        </p>
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                div {<br />
-                padding-top: 22px;<br />
-                padding-right: 10px;<br />
-                padding-bottom:1px;<br />
-                paddning-left:31px;<br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="paddning">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Outlines</h2>
-        <p>
-            Outline används för att visa en linje utanför elementets kanter.
-            Outline liknar border väldigt mycket men den huvudsakliga skillnaden är att
-            outline inte räknas in som en del av elementets storlek.
-        </p>
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                div {<br />
-                outline-color: red;<br />
-                outline-style: solid;<br />
-                outline-width: 15px;<br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="outlines">
-                A div element.
-            </div>
-        </fieldset>
-
-        <h2>Synlighet</h2>
-        <p>
-            HTML-element har olika standardvärden för synlighet beroende på vilket element det är.
-            De flesta element har värden som block och inline.
-            Synligheten av ett element kan definieras av flera olika CSS egenskaper. Till exempel..
-        </p>
-        <h4>Display - specifiserar hur ett element ska visas:</h4>
-        <ul>
-            <li>block - visar elementet på nästa rad</li>
-            <li>inline - visar elementet på samma rad</li>
-            <li>none - gömmer elementet helt</li>
-        </ul>
-        <h4>Visibility:</h4>
-        <ul>
-            <li>visible - standardvärdet, elementet är synligt</li>
-            <li>hidden - gömmer elementet men tar fortfarande upp samma plats</li>
-        </ul>
-        <h4>Andra:</h4>
-        <ul>
-            <li>clip - specifiserar en rektangel som klipper ett element med absolut position
-                till en viss storlek</li>
-            <li>overflow - specifiserar vad som händer om innehållet är större än elementets storlek</li>
-        </ul>
-
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                .div1 {<br />
-                display: none;<br />
-                }<br />
-                <br />
-                .div2 {<br />
-                visibility: hidden;<br />
-                }<br />
-                <br />
-                .div3 {<br />
-                position:absolute;<br />
-                rect(0px,60px,200px,0px);<br />
-                }<br />
-                <br />
-                .div4 {<br />
-                width: 50px;<br />
-                height: 50px;<br />
-                overflow: scroll;<br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="synlighet-div1">
-                Div1 element.
-            </div>
-            <div class="synlighet-div2">
-                Div2 element.
-            </div>
-            <div class="synlighet-div3">
-                Div3 element.
-            </div><br /><br />
-            <div class="synlighet-div4">
-                Div4 element.
-            </div>
-        </fieldset>
-
-        <h2>Design</h2>
-        Designen kan även ändras med hjälp av dessa egenskaper:
-        <ul>
-            <li>opacity - sätter opaciteten för det valda elementet.</li>
-            <li>rgba - ett sätt att bestämma en färg och opaciteten på färgen.</li>
-            <li>border-radius - rundar hörnen på det valda elementet.</li>
-            <li>background-image - denna egenskap tillåter användandet av flera bakgrundsbilder,
-                som läggs på varandra där den första bilden hamnar längst upp.</li>
-            <li>box-shadow - lägger till en skugga bakom det valda elementet.</li>
-            <li>linear-gradient, radial-gradient - gör det möjligt att skapa en mjuk övergång
-                av färger, linjärt eller diagonalt.</li>
-        </ul>
-        <fieldset>
-            <h3>Exempel</h3>
-            <code>
-                .div1 {<br />
-                opacity: 0.5;<br />
-                width:250px;<br />
-                height:250px;<br />
-                background-image: url(http://lorempixel.com/100/100), url(http://lorempixel.com/100/100), url(http://lorempixel.com/250/250);<br />
-                background-position: right top, left bottom, left top;<br />
-                background-repeat: no-repeat;<br />
-                border-radius: 10px;<br />
-                box-shadow: 10px 10px 5px #888888;<br />
-                }<br />
-                <br />
-                .div2 {<br />
-                width:250px;<br />
-                height:250px;<br />
-                background: linear-gradient(red, rgba(0,0,255,0.3));<br />
-                }
-            </code>
-            <hr />
-            <h3>Resultat: </h3>
-            <div class="design">
-                Ett div element.<br /><br />
-            </div>
-            <br />
-            <div class="design-gradient">
-                Ett till div element.<br /><br />
-            </div>
-        </fieldset>
-    </div>
-</div>
+        <hr>
+        <section>
+            <h3>Marginaler</h3>
+            <p>Marginaler gör området runt elementet större till elementen runtomkring.</p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    margin: 60px;
+    background: #B4D455;
+}</code></pre>
+                <div class="marginaler">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Border</h3>
+            <p>Border-egenskapen definierar en ram som ska synas runt elementet.</p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    border: 1px solid black;
+}</code></pre>
+                <div class="border">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Border color</h3>
+            <p>Egenskapen border-color används för att sätta färgen på en ram.
+                Färgen kan sättas genom:</p>
+            <ul>
+                <li><b>name</b>: specifisera namnet på färgen, såsom "yellow"</li>
+                <li><b>RGB</b>: specifisera ett RGB-värde, såsom "rgb(255,255,0)"</li>
+                <li><b>Hex</b>: specifisera ett hex-värde, såsom "#fff000"</li>
+                <li><b>transparent</b>: sätt färgen till genomskinlig</li>
+            </ul>
+            <p>Egenskapen border-color fungerar inte enskilt, utan man måste först sätta värdet på egenskapen border-style.</p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    border-style: solid; 
+    border-color: green; 
+}</code></pre>
+                <div class="border-color">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Border style</h3>
+            <p>
+                Border-style-egenskapen specifiserar vilken slags ram som ska visas.
+                Värden som egenskapen border-style kan ha är:</p>
+            <ul>
+                <li><b>none</b>: ingen ram visas</li>
+                <li><b>dashed</b>: definierar en streckad ram</li>
+                <li><b>solid</b>: definierar en solid ram</li>
+                <li><b>double</b>: definierar en dubbel ram</li>
+                <li><b>groove</b>: definierar en ram med 3D-effekt</li>
+                <li>m.m...</li>
+            </ul>
+            <p>Om inte border-style-egenskapen sätts så kommer ingen ram att visas.</p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    border-style: dashed; 
+}</code></pre>
+                <div class="border-style">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Border width</h3>
+            <p>
+                Border-width används för att sätta tjockleken på ramen.
+                Tjockleken kan definieras genom pixlar eller någon av de fördefinierade värdena;
+                thin, medium, thick. Observera att innan border-width kan användas så måste
+                border-style sättas.
+            </p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    border-style: solid;
+    border-width: 22px; 
+}</code></pre>
+                <div class="border-width">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Paddning</h3>
+            <p>
+                Paddning definierar mellanrummet mellan elementets innehåll och elementets kant.
+            </p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div
+{
+    padding: 60px;
+    background: #B4D455;
+}</code></pre>
+                <div class="paddning">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Outlines</h3>
+            <p>
+                Outline används för att visa en linje utanför elementets kanter.
+                Outline liknar border väldigt mycket men den huvudsakliga skillnaden är att
+                outline inte räknas in som en del av elementets storlek. Det medför att ramen du kan "flyta ut" över andra element.
+            </p>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    outline: red solid 15px;
+}</code></pre>
+                <div class="outlines">
+                    A div element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Synlighet</h3>
+            <p>
+                HTML-element har olika standardvärden för synlighet beroende på vilket element det är.
+                De flesta element har värden som block och inline.
+                Synligheten av ett element kan definieras av flera olika CSS egenskaper. Till exempel..
+            </p>
+            <h4>Visibility:</h4>
+            <ul>
+                <li><b>visible</b>: standardvärdet, elementet är synligt</li>
+                <li><b>hidden</b>: gömmer elementet men tar fortfarande upp samma plats</li>
+            </ul>
+            <h4><b>Display</b>: specifiserar hur ett element ska visas:</h4>
+            <ul>
+                <li><b>block</b>: visar elementet på nästa rad</li>
+                <li><b>inline</b>: visar elementet på samma rad</li>
+                <li><b>none</b>: gömmer elementet helt</li>
+            </ul>
+            <h4>Andra:</h4>
+            <ul>
+                <li><b>clip</b>: specifiserar en rektangel som klipper ett element med absolut position
+                    till en viss storlek</li>
+                <li><b>overflow</b>: specifiserar vad som händer om innehållet är större än elementets storlek</li>
+            </ul>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>.div1 
+{
+    display: none;
+}
+.div2
+{
+    visibility: hidden;
+}
+.img3
+{
+    position:absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+.div4
+{
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}</code></pre>
+                <div class="synlighet-div1">
+                    Div1 element.
+                </div>
+                <div class="synlighet-div2">
+                    Div2 element.
+                </div>
+                <div class="synlighet-img3">
+                    <img src="../images/exampleImage1.png" alt="Exempelbild med attributet clip applicerat" />
+                </div>
+                <div class="synlighet-div4">
+                    Div4 element.
+                </div>
+            </details>
+        </section>
+        <section>
+            <h3>Design</h3>
+            Designen kan även ändras med hjälp av dessa egenskaper:
+            <ul>
+                <li><b>opacity</b>: sätter opaciteten för det valda elementet.</li>
+                <li><b>rgba</b>: ett sätt att bestämma en färg och opaciteten på färgen.</li>
+                <li><b>border-radius</b>: rundar hörnen på det valda elementet.</li>
+                <li><b>background-image</b>: denna egenskap tillåter användandet av flera bakgrundsbilder,
+                    som läggs på varandra där den första bilden hamnar längst upp.</li>
+                <li><b>box-shadow</b>: lägger till en skugga bakom det valda elementet.</li>
+                <li><b>linear-gradient, radial-gradient</b>: gör det möjligt att skapa en mjuk övergång
+                    av färger, linjärt eller diagonalt.</li>
+            </ul>
+            <details>
+                <summary>Visa <code>opacity</code> exempel</summary>
+                <pre><code>.div 
+{
+    opacity: 0.5;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}               </code></pre>
+                <div class="opacity">Ett div element.</div>
+            </details>
+            <details>
+                <summary>Visa <code>background-image</code> exempel</summary>
+                <pre><code>.div 
+{
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: right top, left bottom, left top;
+    background-image: url('../images/firstImage.png'), url('../images/secondImage.png'), url('../images/thirdImage.png');
+}               </code></pre>
+                <div class="background-image">Ett div element.</div>               
+            </details>
+            <details>
+                <summary>Visa <code>rgba</code> exempel</summary>
+                <pre><code>.div 
+{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 30, 0.3);
+}               </code></pre>
+                <div class="rgba">Ett div element.</div>
+            </details>
+            <details>
+                <summary>Visa <code>box-shadow</code> exempel</summary>
+                <pre><code>.div 
+{
+    width: 250px;
+    height: 250px;
+    box-shadow: 10px 10px 5px #888888;
+}               </code></pre>
+                <div class="box-shadow">Ett div element.</div>
+            </details>
+            <details>
+                <summary>Visa <code>border-radius</code> exempel</summary>
+                <pre><code>.div 
+{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 10px;
+}               </code></pre>
+                <div class="border-radius">Ett div element.</div>
+            </details>
+            <details>
+                    <summary>Visa <code>linear-gradient</code> exempel</summary>
+                    <pre><code>.div
+{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(red, rgba(0,0,255,0.3));
+}                   </code></pre>
+                    <div class="design-gradient">Ett till div element.</div>
+                </details>
+        </section>
+    </article>
+</main>
 
 </body>
 </html>
