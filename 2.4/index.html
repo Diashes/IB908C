@@ -3,170 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>2.4 Bilder och bakgrunder</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../index.css" />
 </head>
 <body>
-
 <header>
-    <h1>Bilder och bakgrunder</h1>
+    <h1>2.4 Bilder och bakgrunder</h1>
 </header>
-
-<div id="wrapper">
-    <div id="inner-wrapper">
-        <p>Bakgrounds-egenskaper används för att definiera bakgrundseffekter för ett element.</p>
-        <h3>Exempel</h3>
-        <ul>
-            <li>Punkt 1</li>
-            <li>Punkt 2</li>
-            <li>Punkt 3</li>
-            <li>Punkt 4</li>
-        </ul>
-
-        <hr />
-
-        <h2>Background-attachment</h2>
-        <p>Bestämmer om bakgrunden följer med när man skrollar på hemsidan.</p>
-        <fieldset>
-            <h3>Kod</h3>
-            <p>
-                <code>
-                    div {<br />
-                    &nbsp;background-image: url('image.jpg')<br />
-                    &nbsp;background-attachment: #b0c4de;<br />
-                    }
-                </code>
-            </p>
-        </fieldset>
-
-        <hr />
-
-        <h2>Background-color</h2>
-        <p>Specifiserar en bakgrundsfärg för elementet.</p>
-        <fieldset>
-            <h3>Kod</h3>
-            <p>
-                <code>
-                    div {<br />
-                    &nbsp;height:200px;<br />
-                    &nbsp;width:200px;<br />
-                    &nbsp;background-color: #b0c4de;<br />
-                    }
-                </code>
-            </p>
-            <hr />
-            <h3>Resultat</h3>
-            <div class="bg-color">A div-element.</div>
-        </fieldset>
-
-        <hr />
-
-        <h2>Background-image</h2>
-        <p>Specifiserar en bekgrundsbild för elementet.</p>
-        <fieldset>
-            <h3>Kod</h3>
-            <p>
-                <code>
-                    div {<br />
-                    &nbsp;height:200px;<br />
-                    &nbsp;width:200px;<br />
-                    &nbsp;background-image: url('image.jpg');<br />
-                    }
-                </code>
-            </p>
-            <hr />
-            <h3>Resultat</h3>
-            <div class="bg-image">A div-element.</div>
-        </fieldset>
-
-        <hr />
-
-        <h2>Background-position</h2>
-        <p>Sätter startpunktspositionen för en bakgrundsbild.</p>
-        <fieldset>
-            <h3>Kod</h3>
-            <p>
-                <code>
-                    div {<br />
-                    &nbsp;height:200px;<br />
-                    &nbsp;width:100%;<br />
-                    &nbsp;background-repeat: no-repeat;<br />
-                    &nbsp;background-image: url('image.jpg');<br />
-                    &nbsp;background-position: center;<br />
-                    }
-                </code>
-            </p>
-            <hr />
-            <h3>Resultat</h3>
-            <div class="bg-position">A div-element.</div>
-        </fieldset>
-
-        <hr />
-
-        <h2>Background-repeat</h2>
-        <p>Definierar om bakgrundsbilden ska upprepas eller inte.</p>
-        <fieldset>
-            <h3>Kod</h3>
-            <p>
-                <code>
-                    div {<br />
-                    &nbsp;height:200px;<br />
-                    &nbsp;width:100%;<br />
-                    &nbsp;background-repeat: no-repeat;<br />
-                    &nbsp;background-image: url('image.jpg');<br />
-                    }
-                </code>
-            </p>
-            <hr />
-            <h3>Resultat</h3>
-            <div class="bg-repeat">A div-element.</div>
-        </fieldset>
-
-        <hr />
-
-        <h2>Bild och text</h2>
-        <p>Om man vill ha bilder i en text så kan det vara användbart att använda sig av egenskapen 'float'.
-            Float gör det möjligt att positionera en bild åt höger eller vänster i texten utan att texten avbryts, den flödar istället runt bilden.</p>
-        <fieldset>
-            <h3>Kod</h3>
-        <pre><code>img {
-            float: right;
-            margin: 10px;
-            }
-            .float h2 {
-            clear:both;
-            }</code></pre>
-            <hr />
-            <h3>Resultat</h3>
-            <div class="float">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum faucibus massa mollis aliquam. Pellentesque id enim eget risus ullamcorper pellentesque.
-                    Morbi id suscipit orci. In finibus aliquet libero. Nunc nec libero euismod, malesuada sem sit amet, dignissim quam. Aliquam luctus arcu nec nisl varius aliquet.
-                    Nulla et bibendum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mattis convallis. In rhoncus eget lorem in varius. Sed ornare, nulla
-                    sed aliquam malesuada,mi elit semper lorem, sit amet convallis turpis magna non velit. Nunc et tempus tortor, vitae pharetra ex. Fusce ut egestas risus.
-                    <img alt="floated_image" src="http://i.giphy.com/OvUXjvEOJCYpy.gif" class="img-float" />
-                    Sed tristique ornare erat, sit amet aliquet nisi varius nec. Praesent pulvinar finibus mauris, vel suscipit est accumsan et. Pellentesque finibus pharetra elit, non
-                    pretium eros imperdiet a. Morbi et eros efficitur, imperdiet mauris non, feugiat arcu. Ut a odio venenatis, viverra nulla vel, fringilla tortor. Mauris feugiat
-                    placerat neque, in maximus libero. Nulla molestie sollicitudin nunc, in viverra tortor sodales sed. In ut lacinia dolor. Praesent finibus risus eu purus iaculis,
-                    vel efficitur dolor euismod. Suspendisse ultricies purus non aliquam convallis. Nulla metus orci, venenatis eget ex sit amet, auctor fermentum sem. Sed porttitor
-                    scelerisque pretium.</p>
-                <h2>Rubrik</h2>
-                <p>Curabitur elementum purus in mattis malesuada. Morbi eu sagittis elit, eu scelerisque quam. Fusce a ornare leo. Nulla non dapibus elit. Sed
-                    convallis lorem eget orci scelerisque, id ultricies diam laoreet. Suspendisse posuere sem in risus tristique, nec malesuada nibh vestibulum. Fusce id euismod est.
-                    Curabitur gravida cursus euismod. Nunc id odio sapien. Nulla et bibendum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mattis convallis.
-                    In rhoncus eget lorem in varius. Sed ornare, nulla
-                    sed aliquam malesuada,mi elit semper lorem, sit amet convallis turpis magna non velit. Nunc et tempus tortor, vitae pharetra ex. Fusce ut egestas risus.
-                    Sed tristique ornare erat, sit amet aliquet nisi varius nec. Praesent pulvinar finibus mauris, vel suscipit est accumsan et. Pellentesque finibus pharetra elit, non
-                    pretium eros imperdiet a. Morbi et eros efficitur, imperdiet mauris non, feugiat arcu. Ut a odio venenatis, viverra nulla vel, fringilla tortor. Mauris feugiat
-                    placerat neque, in maximus libero. Nulla molestie sollicitudin nunc, in viverra tortor sodales sed. In ut lacinia dolor. Praesent finibus risus eu purus iaculis,
-                    vel efficitur dolor euismod. Suspendisse ultricies purus non aliquam convallis. Nulla metus orci, venenatis eget ex sit amet, auctor fermentum sem. Sed porttitor
-                    scelerisque pretium. Curabitur elementum purus in mattis malesuada. Morbi eu sagittis elit, eu scelerisque quam. Fusce a ornare leo. Nulla non dapibus elit. Sed
-                    convallis lorem eget orci scelerisque, id ultricies diam laoreet. Suspendisse posuere sem in risus tristique, nec malesuada nibh vestibulum. Fusce id euismod est.
-                    Curabitur gravida cursus euismod. Nunc id odio sapien.
-                </p>
-            </div>
-        </fieldset>
-    </div>
-</div>
-
+<main id="wrapper">
+    <article id="inner-wrapper">
+        <h2>2.4 Bilder och bakgrunder</h2>
+        <section>
+            <h3>background</h3>
+            <p><code>bakground</code> kombinerar egenskaperna <code>background-color</code>, <code>background-image</code>, <code>background-repeat</code>, <code>background-attachment</code> och <code>background-position</code> i en och samma egenskap.</p>
+            <pre><code>background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background: #bada55 url("image.png") no-repeat right top;
+}</code></pre>
+            <div class="bg">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>background-attachment</h3>
+            <p>Bestämmer om bakgrunden följer med när man skrollar på hemsidan.</p>
+            <pre><code>background-attachment: scroll|fixed|local|initial|inherit;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background-image: url('image.jpg')
+    background-attachment: fixed;
+}</code></pre>
+            <div class="bg-attachment">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>background-color</h3>
+            <p>Specifiserar en bakgrundsfärg för elementet.</p>
+            <pre><code>background-color: color|transparent|initial|inherit;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background-color: #b0c4de;
+}</code></pre>
+                <div class="bg-color">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>background-image</h3>
+            <p>Specifiserar en bekgrundsbild för elementet.</p>
+            <pre><code>background-image: url|none|initial|inherit;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background-image: url('image.jpg');
+}</code></pre>
+                <div class="bg-image">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>background-position</h3>
+            <p>Sätter startpunktspositionen för en bakgrundsbild.</p>
+            <pre><code>background-position: value;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background-repeat: no-repeat;
+    background-image: url('image.jpg');
+    background-position: center;
+}</code></pre>
+                <div class="bg-position">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>background-repeat</h3>
+            <p>Definierar om bakgrundsbilden ska upprepas eller inte.</p>
+            <pre><code>background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;</code></pre>
+            <details>
+                <summary>Visa exempel</summary>
+                <pre><code>div {
+    background-repeat: no-repeat;
+    background-image: url('image.jpg');
+}</code></pre>
+                <div class="bg-repeat">div</div>
+            </details>
+        </section>
+        <section>
+            <h3>Bild och text</h3>
+            <p>Om man vill ha bilder i en text så kan det vara användbart att använda sig av egenskapen 'float'.
+                Float gör det möjligt att positionera en bild åt höger eller vänster i texten utan att texten avbryts, den flödar istället runt bilden.</p>
+            <details>
+                <summary>Visa exempel</summary>
+            <pre><code>img {
+float: right;
+    margin: 10px;
+}
+.float h2 {
+    clear:both;
+}</code></pre>
+                <div class="float">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum faucibus massa mollis aliquam. Pellentesque id enim eget risus ullamcorper pellentesque.
+                        Morbi id suscipit orci. In finibus aliquet libero. Nunc nec libero euismod, malesuada sem sit amet, dignissim quam. Aliquam luctus arcu nec nisl varius aliquet.
+                        Nulla et bibendum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mattis convallis. In rhoncus eget lorem in varius. Sed ornare, nulla
+                        sed aliquam malesuada,mi elit semper lorem, sit amet convallis turpis magna non velit. Nunc et tempus tortor, vitae pharetra ex. Fusce ut egestas risus.
+                        <img alt="floated_image" src="http://i.giphy.com/OvUXjvEOJCYpy.gif" class="img-float" />
+                        Sed tristique ornare erat, sit amet aliquet nisi varius nec. Praesent pulvinar finibus mauris, vel suscipit est accumsan et. Pellentesque finibus pharetra elit, non
+                        pretium eros imperdiet a. Morbi et eros efficitur, imperdiet mauris non, feugiat arcu. Ut a odio venenatis, viverra nulla vel, fringilla tortor. Mauris feugiat
+                        placerat neque, in maximus libero. Nulla molestie sollicitudin nunc, in viverra tortor sodales sed. In ut lacinia dolor. Praesent finibus risus eu purus iaculis,
+                        vel efficitur dolor euismod. Suspendisse ultricies purus non aliquam convallis. Nulla metus orci, venenatis eget ex sit amet, auctor fermentum sem. Sed porttitor
+                        scelerisque pretium.</p>
+                    <h2>Rubrik</h2>
+                    <p>Curabitur elementum purus in mattis malesuada. Morbi eu sagittis elit, eu scelerisque quam. Fusce a ornare leo. Nulla non dapibus elit. Sed
+                        convallis lorem eget orci scelerisque, id ultricies diam laoreet. Suspendisse posuere sem in risus tristique, nec malesuada nibh vestibulum. Fusce id euismod est.
+                        Curabitur gravida cursus euismod. Nunc id odio sapien. Nulla et bibendum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mattis convallis.
+                        In rhoncus eget lorem in varius. Sed ornare, nulla
+                        sed aliquam malesuada,mi elit semper lorem, sit amet convallis turpis magna non velit. Nunc et tempus tortor, vitae pharetra ex. Fusce ut egestas risus.
+                        Sed tristique ornare erat, sit amet aliquet nisi varius nec. Praesent pulvinar finibus mauris, vel suscipit est accumsan et. Pellentesque finibus pharetra elit, non
+                        pretium eros imperdiet a. Morbi et eros efficitur, imperdiet mauris non, feugiat arcu. Ut a odio venenatis, viverra nulla vel, fringilla tortor. Mauris feugiat
+                        placerat neque, in maximus libero. Nulla molestie sollicitudin nunc, in viverra tortor sodales sed. In ut lacinia dolor. Praesent finibus risus eu purus iaculis,
+                        vel efficitur dolor euismod. Suspendisse ultricies purus non aliquam convallis. Nulla metus orci, venenatis eget ex sit amet, auctor fermentum sem. Sed porttitor
+                        scelerisque pretium. Curabitur elementum purus in mattis malesuada. Morbi eu sagittis elit, eu scelerisque quam. Fusce a ornare leo. Nulla non dapibus elit. Sed
+                        convallis lorem eget orci scelerisque, id ultricies diam laoreet. Suspendisse posuere sem in risus tristique, nec malesuada nibh vestibulum. Fusce id euismod est.
+                        Curabitur gravida cursus euismod. Nunc id odio sapien.
+                    </p>
+                </div>
+            </details>
+        </section>
+    </article>
+</main>
 </body>
 </html>
