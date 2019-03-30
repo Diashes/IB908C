@@ -9,29 +9,38 @@ html, body
     font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
     color: #444444;
     background: #F4F5F7;
+    margin: 0;
+    padding: 0;
 }
 h1, h2, h3, h4, h5, h6 
 {
-    margin: 10px 0 10px 0; 
+    margin: 20px 0 10px 0; 
 }
 p 
 { 
     margin: 10px 0 10px 0; 
 }
-code 
-{ 
-    background: #F4F5F7; 
-}
-pre code 
+pre
 {
-    padding: 10px;
-    border: 1px solid #D5D5D5;
+    margin: 0;
+    padding: 0;
+}
+code pre
+{
+    padding: 0 10px;
     background: #222;
     color: white;
     display: block;
     width: 100%;
-    margin: 10px 0 10px 0;
     overflow: auto;
+}
+code pre:first-child 
+{
+    padding-top: 10px;
+}
+code pre:last-child 
+{
+    padding-bottom: 10px;
 }
 hr
 {

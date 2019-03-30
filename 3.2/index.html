@@ -3,96 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>3.2 JavaScript-objekt</title>
-    <link rel="stylesheet" type="text/css" href="../base.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body>
-
 <header>
     <h1>JavaScript-objekt</h1>
 </header>
-
-
-<div id="wrapper">
-    <div id="inner-wrapper">
-
+<main>
+    <section>
         <h2>Array</h2>
-<pre><code>var array = [];
-function arrayExample() {
-    var newItem = document.getElementById("itemTextField").value;
-    array.push(newIpretem);
-    document.getElementById("arrayResult").innerHTML = array;
-}</code></pre>
+        <code>
+            <pre>var array = [];</pre></pre>
+            <pre>function arrayExample() {</pre>
+            <pre>    var newItem = document.getElementById("itemTextField").value;</pre>
+            <pre>    array.push(newIpretem);</pre>
+            <pre>    document.getElementById("arrayResult").innerHTML = array;</pre>
+            <pre>}</pre>
+        </code>
         <p>Lägg till saker till en array.</p>
         <form name="arrayForm">
             <input type="text" id="itemTextField">
             <button type="button" onclick="arrayExample()">Lägg till</button>
             <p id="arrayResult"></p>
         </form>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>Boolean</h2>
-<pre><code>function booleanExample() {
-    var firstNumber = parseInt(document.getElementById("firstNumber").value);
-    var secondNumber = parseInt(document.getElementById("secondNumber").value);
-    document.getElementById("booleanResult").innerHTML = Boolean(firstNumber > secondNumber);
-}</code></pre>
+        <code>
+            <pre>function booleanExample() {</pre>
+            <pre>    var firstNumber = parseInt(document.getElementById("firstNumber").value);</pre>
+            <pre>    var secondNumber = parseInt(document.getElementById("secondNumber").value);</pre>
+            <pre>    document.getElementById("booleanResult").innerHTML = Boolean(firstNumber > secondNumber);</pre>
+            <pre>}</pre>
+        </code>
         <p>Jämför om det första numret är större än det andra.</p>
         <form>
             <input type="text" id="firstNumber"> > <input type="text" id="secondNumber">
             <button type="button" onclick="booleanExample()">Jämför</button>
             <p id="booleanResult"></p>
         </form>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>Date</h2>
-<pre><code>document.getElementById("dateExample").innerHTML = new Date();</code></pre>
+        <code>
+            <pre>document.getElementById("dateExample").innerHTML = new Date();</pre>
+        </code>
         <p id="dateExample"></p>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>Math</h2>
-<pre><code>document.getElementById("mathExample").innerHTML = "Math.PI: " + Math.PI;</code></pre>
+        <code>
+            <pre>document.getElementById("mathExample").innerHTML = "Math.PI: " + Math.PI;</pre>
+        </code>
         <p id="mathExample"></p>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>Number</h2>
-<pre><code>document.getElementById("numberExample").innerHTML = "Number.MAX_VALUE: " + Number.MAX_VALUE;</code></pre>
+        <code>
+            <pre>document.getElementById("numberExample").innerHTML = "Number.MAX_VALUE: " + Number.MAX_VALUE;</pre>
+        </code>
         <p id="numberExample"></p>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>String</h2>
-<pre><code>function stringExample() {
-    var word = 'i love strings';
-    document.getElementById("stringResult").innerHTML = word.split(" ");
-}</code></pre>
+        <code>
+            <pre>function stringExample() {</pre>
+            <pre>    var word = 'i love strings';</pre>
+            <pre>    document.getElementById("stringResult").innerHTML = word.split(" ");</pre>
+            <pre>}</pre>
+        </code>
         <p>Exemplet använder String-funktionen <code>.split()</code> för att returnera texten i en array.</p>
         i love strings <button type="button" onclick="return stringExample()">Omvandla till array</button><br />
         <strong>Resultat:</strong> <span id="stringResult"></span>
-
-        <hr>
-
+    </section>
+    <section>
         <h2>RegExp</h2>
-<pre><code>function regExpExample() {
-    document.getElementById("regExpResult").innerHTML = "0";
-    var textToSearch = document.getElementById("textToSearch").innerHTML;
-    var word = document.getElementById("searchString").value;
-    var regExp = textToSearch.match(new RegExp(word, "gi"));
-    document.getElementById("regExpResult").innerHTML = regExp.length;
-}</code></pre>
+        <code>
+            <pre>function regExpExample() {</pre>
+            <pre>    document.getElementById("regExpResult").innerHTML = "0";</pre>
+            <pre>    var textToSearch = document.getElementById("textToSearch").innerHTML;</pre>
+            <pre>    var word = document.getElementById("searchString").value;</pre>
+            <pre>    var regExp = textToSearch.match(new RegExp(word, "gi"));</pre>
+            <pre>    document.getElementById("regExpResult").innerHTML = regExp.length;</pre>
+            <pre>}</pre>
+        </code>
         <p id="textToSearch">"I'm singing in the rain. Just singing in the rain. Singing in the rain."</p>
         <form name="regExpForm">
             Sök efter ett bokstäver från citatet: <input type="text" id="searchString">
             <button type="button" onclick="return regExpExample()">Sök</button> (Obs: Matchar även mellanrum och bokstäver inne i ord)
         </form>
         <strong>Matchade bokstäver:</strong> <span id="regExpResult"></span>
-    </div>
-</div>
-
+    </section>
+</main>
 <script src="script.js"></script>
-
 </body>
 </html>
