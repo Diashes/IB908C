@@ -1,100 +1,406 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
+
 <head>
-    <meta charset="UTF-8">
-    <title>3.2 JavaScript-objekt</title>
-    <link rel="stylesheet" type="text/css" href="../index.css">
+  <meta charset="UTF-8">
+  <meta name="author" content="Amanda Stensland">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  <title>3.2 DOM-objekt och jQuery</title>
 </head>
+
 <body>
-<header>
-    <h1>JavaScript-objekt</h1>
-</header>
-<main>
+  <header>
+    <h1>3.2 DOM-objekt och jQuery</h1>
+  </header>
+  <main>
     <section>
-        <h2>Array</h2>
-        <code>
-            <pre>var array = [];</pre></pre>
-            <pre>function arrayExample() {</pre>
-            <pre>    var newItem = document.getElementById("itemTextField").value;</pre>
-            <pre>    array.push(newIpretem);</pre>
-            <pre>    document.getElementById("arrayResult").innerHTML = array;</pre>
-            <pre>}</pre>
-        </code>
-        <p>Lägg till saker till en array.</p>
-        <form name="arrayForm">
-            <input type="text" id="itemTextField">
-            <button type="button" onclick="arrayExample()">Lägg till</button>
-            <p id="arrayResult"></p>
-        </form>
+      <h2>Ändra en egenskap för ett HTML-elementet</h2>
+      <h3>Exempel</h3>
+      <p>Ändra egenskapen <code>background</code> från gul till röd.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+        <pre>&lt;button id="changePropertyExampleButton"&gt;Klicka för att ändra färg&lt;/button&gt;</pre>
+        <pre>&lt;div id="example1"&gt;&lt;/div&gt;</pre>
+      </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+        <pre>#changePropertyExampleDiv {</pre>
+        <pre>  height: 20px;</pre>
+        <pre>  width: 20px;</pre>
+        <pre>  background: yellow;</pre>
+        <pre>}</pre>
+      </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+        <pre>$("#changePropertyExampleButton").onclick(function() {</pre>
+        <pre>  $("#changePropertyExampleDiv").css("background", "red");</pre>
+        <pre>});</pre>
+      </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button id="changePropertyExampleButton">Klicka för att ändra färg</button>
+        <div id="changePropertyExampleDiv"></div>
+      </div>
     </section>
+
     <section>
-        <h2>Boolean</h2>
-        <code>
-            <pre>function booleanExample() {</pre>
-            <pre>    var firstNumber = parseInt(document.getElementById("firstNumber").value);</pre>
-            <pre>    var secondNumber = parseInt(document.getElementById("secondNumber").value);</pre>
-            <pre>    document.getElementById("booleanResult").innerHTML = Boolean(firstNumber > secondNumber);</pre>
-            <pre>}</pre>
-        </code>
-        <p>Jämför om det första numret är större än det andra.</p>
-        <form>
-            <input type="text" id="firstNumber"> > <input type="text" id="secondNumber">
-            <button type="button" onclick="booleanExample()">Jämför</button>
-            <p id="booleanResult"></p>
-        </form>
+      <h2>Lägga till nytt innehåll till ett HTML-elementet</h2>
+      <h3>Exempel</h3>
+      <p>Klicka på boxen för att lägga till text i den.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+        <pre>&lt;button id="changeTextExampleButton"&gt;Lägg till text&lt;/button&gt;</pre>
+        <pre>&lt;div id="changeTextExampleDiv"&gt;&lt;/div&gt;</pre>
+      </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+        <pre>#changeTextExampleDiv {</pre>
+        <pre>  height: 20px;</pre>
+        <pre>  width: 100px;</pre>
+        <pre>  background: yellow;</pre>
+        <pre>}</pre>
+      </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+        <pre>$("#changeTextExampleButton").click(function() {</pre>
+        <pre>   $("#changeTextExampleDiv").text("Hello World!");</pre>
+        <pre>});</pre>
+      </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button id="changeTextExampleButton">Lägg till text</button>
+        <div id="changeTextExampleDiv"></div>
+      </div>
     </section>
+
     <section>
-        <h2>Date</h2>
-        <code>
-            <pre>document.getElementById("dateExample").innerHTML = new Date();</pre>
-        </code>
-        <p id="dateExample"></p>
+      <h2>Ta bort ett HTML-element</h2>
+      <h3>Exempel</h3>
+      <p>Klicka för att ta bort den gula boxen.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+        <pre>&lt;button id="removeElementExampleButton"&gt;Ta bort element&lt;/button&gt;</pre>
+        <pre>&lt;div id="removeElementExampleDiv"&gt;&lt;/div&gt;</pre>
+      </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+        <pre>#removeElementExampleDiv {</pre>
+        <pre>  height: 20px;</pre>
+        <pre>  width: 20px;</pre>
+        <pre>  background: yellow;</pre>
+        <pre>}</pre>
+      </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+        <pre>$("#example3").click(function() {</pre>
+        <pre>   $(this).remove();</pre>
+        <pre>});</pre>
+      </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button id="removeElementExampleButton">Ta bort element</button>
+        <div id="removeElementExampleDiv"></div>
+      </div>
     </section>
+
     <section>
-        <h2>Math</h2>
-        <code>
-            <pre>document.getElementById("mathExample").innerHTML = "Math.PI: " + Math.PI;</pre>
-        </code>
-        <p id="mathExample"></p>
+      <h2>Utvinna information från ett HTML-element</h2>
+      <h3>Exempel</h3>
+      <h4>HTML</h4>
+      <div class="c-code">
+        <pre>&lt;button id="getInformationExampleButton"&gt;Utvinn information&lt;/button&gt;</pre>
+        <pre>&lt;div id="getInformationExampleInput"&gt;&lt;/div&gt;</pre>
+      </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+        <pre>#getInformationExampleInput {</pre>
+        <pre>  height: 20px;</pre>
+        <pre>  width: 20px;</pre>
+        <pre>  background: yellow;</pre>
+        <pre>}</pre>
+      </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+        <pre>$("#getInformationExampleButton").click(function() {</pre>
+        <pre> $("#getInformationExampleInput").addClass();</pre>
+        <pre>});</pre>
+      </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button id="getInformationExampleButton">Utvinn information</button>
+        <input id="getInformationExampleInput" type="text">
+      </div>
     </section>
+
     <section>
-        <h2>Number</h2>
-        <code>
-            <pre>document.getElementById("numberExample").innerHTML = "Number.MAX_VALUE: " + Number.MAX_VALUE;</pre>
-        </code>
-        <p id="numberExample"></p>
+      <h2>Lägga till och ta bort ett klass-attribut från ett HTML-element</h2>
+      <h3>Exempel</h3>
+      <p>Lägg till och ta bort en border runt den gula boxen med hjälp av knapparna.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;button id="addBorderExampleButton"&gt;Lägg till border&lt;/button&gt;</pre>
+          <pre>&lt;button id="removeBorderExampleButton"&gt;Ta bort border&lt;/button&gt;</pre>
+          <pre>&lt;div id="changeBorderExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#changeBorderExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#addBorderExampleButton").click(function() {</pre>
+          <pre> $("#changeBorderExampleDiv").addClass("border");</pre>
+          <pre>});</pre>
+          <pre>$("#removeBorderExampleButton").click(function() {</pre>
+          <pre> $("#changeBorderExampleDiv").removeClass("border");</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button type="button" id="addBorderExampleButton">Lägg till border</button>
+        <button type="button" id="removeBorderExampleButton">Ta bort border</button>
+        <div id="changeBorderExampleDiv"></div>
+      </div>
     </section>
+
     <section>
-        <h2>String</h2>
-        <code>
-            <pre>function stringExample() {</pre>
-            <pre>    var word = 'i love strings';</pre>
-            <pre>    document.getElementById("stringResult").innerHTML = word.split(" ");</pre>
-            <pre>}</pre>
-        </code>
-        <p>Exemplet använder String-funktionen <code>.split()</code> för att returnera texten i en array.</p>
-        i love strings <button type="button" onclick="return stringExample()">Omvandla till array</button><br />
-        <strong>Resultat:</strong> <span id="stringResult"></span>
+      <h2>Mushändelser</h2>
+      <h3>Exempel</h3>
+      <p>Håll muspekaren ovanför den gula boxen så ändrar den färg.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="mouseEventsExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#changeBorderExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#mouseEventsExampleDiv").mouseover(function() {</pre>
+          <pre> $(this).css("background", "red");</pre>
+          <pre>});</pre>
+          <pre>$("#mouseEventsExampleDiv").mouseout(function() {</pre>
+          <pre> $(this).css("background", "yellow");</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <div id="mouseEventsExampleDiv"></div>
+      </div>
     </section>
+
     <section>
-        <h2>RegExp</h2>
-        <code>
-            <pre>function regExpExample() {</pre>
-            <pre>    document.getElementById("regExpResult").innerHTML = "0";</pre>
-            <pre>    var textToSearch = document.getElementById("textToSearch").innerHTML;</pre>
-            <pre>    var word = document.getElementById("searchString").value;</pre>
-            <pre>    var regExp = textToSearch.match(new RegExp(word, "gi"));</pre>
-            <pre>    document.getElementById("regExpResult").innerHTML = regExp.length;</pre>
-            <pre>}</pre>
-        </code>
-        <p id="textToSearch">"I'm singing in the rain. Just singing in the rain. Singing in the rain."</p>
-        <form name="regExpForm">
-            Sök efter ett bokstäver från citatet: <input type="text" id="searchString">
-            <button type="button" onclick="return regExpExample()">Sök</button> (Obs: Matchar även mellanrum och bokstäver inne i ord)
-        </form>
-        <strong>Matchade bokstäver:</strong> <span id="regExpResult"></span>
+      <h2>Dokument och fönsterhändelser</h2>
+      <h3>Exempel</h3>
+      <p>När man ändrar storleken på webbläsaren så ändras värderna.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;p&gt;Fönstrets bredd: &lt;span id="windowEventWidthExampleSpan"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+          <pre>&lt;p&gt;Fönstrets höjd: &lt;span id="windowEventHeightExampleSpan"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#windowEventWidthExampleSpan").text($(window).width());</pre>
+          <pre>$("#windowEventHeightExampleSpan").text($(window).height());</pre>
+          <pre>$(window).resize(function() {</pre>
+          <pre>  $("#windowEventWidthExampleSpan").text($(window).width());</pre>
+          <pre>  $("#windowEventHeightExampleSpan").text($(window).height());</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <p>Fönstrets bredd: <span id="windowEventWidthExampleSpan"></span></p>
+        <p>Fönstrets höjd: <span id="windowEventHeightExampleSpan"></span></p>
+      </div>
     </section>
-</main>
-<script src="script.js"></script>
+
+    <section>
+      <h2>Formulärhändelser</h2>
+      <h3>Exempel</h3>
+      <p>Skrivfältets bakgrund ändrar färg när det fokuseras.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;input type="text" id="formEventsExampleInput" /&gt;</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#formEventsExampleInput").focus(function(){</pre>
+          <pre>  $(this).css("background-color", "#cccccc");</pre>
+          <pre>  $(this).blur(function(){</pre>
+          <pre>    $(this).css("background-color", "#ffffff");</pre>
+          <pre>  });</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <input type="text" id="formEventsExampleInput">
+      </div>
+    </section>
+
+    <section>
+      <h2>Tangentbordshändelser</h2>
+      <h3>Exempel</h3>
+      <p>Flytta blocket till höger eller vänster med piltangenterna.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="keyCodeEventsExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#keyCodeEventsExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>  position: absolute;</pre>
+          <pre>  left: 8px;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$(document).keydown(function(e) {</pre>
+          <pre>  if (e.keyCode == 37) $("#keyCodeEventsExampleDiv").animate({left: "-=5"}, 0);</pre>
+          <pre>  if (e.keyCode == 39) $("#keyCodeEventsExampleDiv").animate({left: "+=5"}, 0);</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example" id="keyCodeEventsExampleSamp">
+        <div id="keyCodeEventsExampleDiv"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Kombinerade jQuery händelser med hover och toggle</h2>
+      <h3>Exempel</h3>
+      <p>Håll muspekaren över den första boxen för att se ett meddelande. Klicka på den andra boxen för att se ett till
+        meddelande.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="hoverExampleButton"&gt;Hover!&lt;/div&gt;</pre>
+          <pre>&lt;div id="hoverExampleDiv"&gt;"Always have a panda. Pandas are good."&lt;/div&gt;</pre>
+          <pre>&lt;div id="toggleExampleButton"&gt;Klicka!&lt;/div&gt;</pre>
+          <pre>&lt;div id="toggleExampleDiv"&gt;"Always remember that you are absolutely unique. Just like everyone else."&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#changeBorderExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#hoverExampleButton").hover(</pre>
+          <pre>  function() { $("#hoverExampleDiv").toggle(50); },</pre>
+          <pre>  function(){ $("#hoverExampleDiv").toggle(50); }</pre>
+          <pre>);</pre>
+          <pre></pre>
+          <pre>$("#toggleExampleButton").click(function() {</pre>
+          <pre>  $("#toggleExampleDiv").toggle(50);</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <button id="hoverExampleButton">Hover!</button>
+        <div id="hoverExampleDiv">"Always have a panda. Pandas are good."</div>
+        <button id="toggleExampleButton">Klicka!</button>
+        <div id="toggleExampleDiv">"Always remember that you are absolutely unique. Just like everyone else."</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Händelse-objektet evt och någon av dess egenskaper</h2>
+      <h3>Exempel</h3>
+      <p>Koordinater för muspekaren.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="evtPropertyExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$(document).mousemove(function(e){</pre>
+          <pre>  $("#evtPropertyExampleDiv").text("Position-X: " + e.pageX + ", Position-Y: " + e.pageY);</pre>
+          <pre>});</pre>
+        </div>
+      <h4>Resultat</h4>
+      <div class="c-example">
+        <div id="evtPropertyExampleDiv"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stoppa en händelses normala beteende</h2>
+      <h3>Exempel</h3>
+      <p>Stoppar en knapps normala beteende när man klickar på den (submit, d.v.s uppdatera sidan).</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="mouseEventsExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#changeBorderExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#example12-button").click(function(e) {</pre>
+          <pre>  e.preventDefault();</pre>
+          <pre>});</pre>
+        </div>
+      <button id="example12-button">Submit</button> (Wow, ingenting händer när man klickar!)
+    </section>
+
+    <section>
+      <h2>Ta bort en händelse</h2>
+      <h3>Exempel</h3>
+      <p>Lägger till en klickfunktion till den gula boxen med hjälp av egenskapen "bind". Funktionen tas sedan bort med
+        "unbind" när man klickar på boxen.</p>
+      <h4>HTML</h4>
+      <div class="c-code">
+          <pre>&lt;div id="mouseEventsExampleDiv"&gt;&lt;/div&gt;</pre>
+        </div>
+      <h4>CSS</h4>
+      <div class="c-code">
+          <pre>#changeBorderExampleDiv {</pre>
+          <pre>  height: 20px;</pre>
+          <pre>  width: 20px;</pre>
+          <pre>  background: yellow;</pre>
+          <pre>}</pre>
+        </div>
+      <h4>JavaScript</h4>
+      <div class="c-code">
+          <pre>$("#example13-checkbox").click(function() {</pre>
+          <pre>  $("#example13-div").html("Klicka!");</pre>
+          <pre>  $("#example13-div").click(function() {</pre>
+          <pre>    alert("Klickad!");</pre>
+          <pre>    $(this).unbind("click");</pre>
+          <pre>    $("#example13-checkbox").prop("checked", false);</pre>
+          <pre>    $(this).text("Oklickbar...");</pre>
+          <pre>  });</pre>
+          <pre>});</pre>
+        </div>
+      <input type="checkbox" id="example13-checkbox"><label>Lägg till klickfunktion.</label>
+      <div id="example13-div">Oklickbar...</div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+  <script src="index.js"></script>
 </body>
+
 </html>

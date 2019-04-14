@@ -1,10 +1,10 @@
-*
-{
+/* BASE STYLES */
+
+* {
     box-sizing: border-box;
     text-decoration: none;
 }
-html, body
-{
+html, body {
     height: 100%;
     font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
     color: #444444;
@@ -12,62 +12,24 @@ html, body
     margin: 0;
     padding: 0;
 }
-h1, h2, h3, h4, h5, h6 
-{
+h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 10px 0; 
 }
-p 
-{ 
+p { 
     margin: 10px 0 10px 0; 
 }
-pre
-{
+pre {
     margin: 0;
     padding: 0;
 }
-code pre
-{
-    padding: 0 10px;
-    background: #222;
-    color: white;
-    display: block;
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    height: 400px;
     width: 100%;
-    overflow: auto;
-}
-code pre:first-child 
-{
-    padding-top: 10px;
-}
-code pre:last-child 
-{
-    padding-bottom: 10px;
-}
-hr
-{
-    margin:10px 0 10px 0;
-}
-.clear
-{
-    clear:both;
-}
-.pullLeft
-{
-    float:left;
-}
-.pullRigth
-{
-    float:right;
-}
-.pullCenter
-{
-    margin: 0 auto;
-}
-header
-{
-    text-align: center;
-    margin:0 0 50px 0;
-    height:400px;
-    width:100%;
     background:darkgray;
     background:linear-gradient(
             rgba(0, 0, 0, 0.2),
@@ -75,42 +37,83 @@ header
     ), url('http://i566.photobucket.com/albums/ss103/diashes/congruent_pentagon_zps7hjt2u5h.png');
     background-attachment: fixed;
 }
-header h1
-{
+header h1 {
     margin:0;
-    line-height: 400px;
     font-size:3em;
     color:white;
 }
-h2
-{
+h2 {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px dashed gray;
 }
-#wrapper
-{
-    width:70%;
-    margin:0 auto;
-}
-#inner-wrapper
-{
-    padding:10px;
-    border:1px solid #d5d5d5;
-    background:white;
-    overflow: hidden;
-}
-#inner-wrapper section:not(:last-child)
-{
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px dashed gray;
-}
-details
-{
+details {
     margin: 10px 0 10px 0;
 }
-details summary
-{
+details summary {
     cursor: pointer;
+}
+section {
+    background: white;
+    margin: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 10px;
+}
+table {
+    width:100%;
+}
+table td {
+    padding: 10px;
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table th {
+    color: white;
+    background-color: black;
+}
+
+
+/* COMPONENT STYLES */
+
+.c-example {
+    position: relative;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 5px 0;
+    display: block;
+}
+.c-code {
+    display: block;
+    overflow: auto;
+    background: #222;
+}
+.c-code pre {
+    padding: 0 10px;
+    background: #222;
+    color: white;
+    display: block;
+    width: 100%;
+}
+.c-code pre:first-child {
+    padding-top: 10px;
+}
+.c-code pre:last-child {
+    padding-bottom: 10px;
+}
+
+
+/* UTILITIY STYLES */
+
+.u-block {
+    display: block;
+}
+.u-top-margin {
+    margin-top: 0.5rem;
+}
+.u-relative {
+    position: relative;
 }

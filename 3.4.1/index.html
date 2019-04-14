@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../index.css">
+  <title>3.4.1 Effekter och animationer</title>
+</head>
+<body>
+  <header>
+    <h1>3.4.1 Effekter och animationer</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Visar och gömmer ett HTML-element (show, hide och toggle)</h2>
+      <h3>HTML</h3>
+      <div class="code">
+        <pre>&lt;button class="js-hide"&gt;hide()&lt;/button&gt;</pre>
+        <pre>&lt;button class="js-show"&gt;show()&lt;/button&gt;</pre>
+        <pre>&lt;button class="js-toggle"&gt;toggle()&lt;/button&gt;</pre>
+        <pre>&lt;img class="js-image-a" src="../images/exampleImage.png" alt="Rocket"&gt;</pre>
+      </div>
+      <h3>JavaScript</h3>
+      <div class="code">
+        <pre>$(".js-hide").click((event) => $(".js-image-a").hide() )</pre>
+        <pre>$(".js-show").click((event) => $(".js-image-a").show() )</pre>
+        <pre>$(".js-toggle").click((event) => $(".js-image-a").toggle() )</pre>
+      </div>
+      <h3>Resultat</h3>
+      <samp>
+        <button class="js-hide">hide()</button>
+        <button class="js-show">show()</button>
+        <button class="js-toggle">toggle()</button>
+        <img class="u-block u-top-margin js-image-a" src="../images/exampleImage.png" alt="Rocket">
+      </samp>
+    </section>
+    <section>
+        <h2>Fadar in ouch ut ett HTML-element (fadeIn, fadeOut, fadeToggle och fadeTo)</h2>
+        <h3>HTML</h3>
+        <div class="code">
+          <pre>&lt;button class="js-hide"&gt;fadeOut()&lt;/button&gt;</pre>
+          <pre>&lt;button class="js-show"&gt;fadeIn()&lt;/button&gt;</pre>
+          <pre>&lt;button class="js-toggle"&gt;fadeToggle()&lt;/button&gt;</pre>
+          <pre>&lt;img class="js-image-b" src="../images/exampleImage.png" alt="Rocket"&gt;</pre>
+        </div>
+        <h3>JavaScript</h3>
+        <div class="code">
+          <pre>$(".js-fadeOut").click((event) => $(".js-image-b").fadeOut() )</pre>
+          <pre>$(".js-fadeIn").click((event) => $(".js-image-b").fadeIn() )</pre>
+          <pre>$(".js-fadeToggle").click((event) => $(".js-image-b").fadeToggle() )</pre>
+        </div>
+        <h3>Resultat</h3>
+        <samp>
+          <button class="js-fadeOut">fadeOut()</button>
+          <button class="js-fadeIn">fadeIn()</button>
+          <button class="js-fadeToggle">fadeToggle()</button>
+          <img class="u-block u-top-margin js-image-b" src="../images/exampleImage.png" alt="Rocket">
+        </samp>
+      </section>
+      <section>
+          <h2>Gör även ett program som skapar följande animation:</h2>
+          <ul>
+            <li>Förändrar ett HTML-elements stilsättning (animate)</li>
+            <li>Easing (linear eller swing) till animationen och testa med olika hastigheter</li>
+            <li>Att en händelse sker efter animationen är klar (callback funktion)</li>
+          </ul>
+          <h3>HTML</h3>
+          <div class="code">
+            <pre>&lt;button class="js-animate">animate()&lt;/button&gt;</pre>
+            <pre>&lt;img class="js-image-c" src="../images/exampleImage.png" alt="Rocket"&gt;</pre>
+          </div>
+          <h3>JavaScript</h3>
+          <div class="code">
+            <pre>$(".js-animate").click((event) => $(".js-image-c").animate({</pre>
+            <pre>    left: [ "+=200", "swing" ],</pre>
+            <pre>    opacity: [ 0.5, "linear" ]</pre>
+            <pre>  }, 400, () => { alert("Animation done!") })</pre>
+            <pre>);</pre>
+          </div>
+          <h3>Resultat</h3>
+          <samp>
+            <button class="js-animate">animate()</button>
+            <img class="u-block u-top-margin u-relative js-image-c" src="../images/exampleImage.png" alt="Rocket">
+          </samp>
+        </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

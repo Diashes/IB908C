@@ -1,0 +1,86 @@
+div {
+    margin:1em 0em;
+}
+
+samp {
+    position: relative;
+}
+
+#changePropertyExampleDiv {
+    height: 20px;
+    width: 20px;
+    background:yellow;
+}
+
+#changeTextExampleDiv {
+    height: 20px;
+    width: 100px;
+    background: yellow;
+}
+
+#removeElementExampleDiv {
+    height: 20px;
+    width: 20px;
+    background: yellow;
+}
+
+#getInformationExampleInput {
+    height: 20px;
+}
+
+#changeBorderExampleDiv {
+    height: 20px;
+    width: 20px;
+    background: yellow;
+}
+
+#mouseEventsExampleDiv {
+    height: 20px;
+    width: 20px;
+    background: yellow;
+}
+
+#example7 {
+    height: 20px;
+    width: 20px;
+    background: yellow;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+#keyCodeEventsExampleSamp {
+    height: 50px;
+}
+
+#keyCodeEventsExampleDiv {
+    height: 20px;
+    width: 20px;
+    background: yellow;
+    position: relative;
+    left: 8px;
+}
+
+#hoverExampleButton, #toggleExampleButton {
+    padding:10px;
+    text-align:center;
+    border:1px solid gray;
+    border-radius: 10px;
+    height:auto;
+    width:8em;
+    background:yellow;
+    display: block;
+}
+
+#hoverExampleDiv, #toggleExampleDiv {
+    display: none;
+    border:1px solid gray;
+}
+
+#example13-div {
+    border:1px solid gray;
+    height:2ewm;
+    width:6em;
+    background:yellow;
+}

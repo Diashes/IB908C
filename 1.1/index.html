@@ -7,381 +7,398 @@
 </head>
 
 <body>
-  <h1>Uppgift 1.1 Grunderna i HTML5 </h1>
-  <section>
-    <h2>Doctype</h2>
-    <p>
-      Ett html-dokument börjar alltid med raden <code>&lt;!DOCTYPE html></code> som berättar för webbläsaren att
-      dokumentet kommer att innehålla HTML5 kod.
-    </p>
-  </section>
-  <section>
-    <h2>Teckenkod</h2>
-    <p>
-      Teckenkod är ett sätt för datorn att förstå hur olika slags tecken ska sparas och sedan kunna läsas för att kunna
-      visas korrekt. Den vanligaste teckenkodningen idag kallas UTF-8 och innehåller stöd för alla tecken man någonsin
-      skulle behöva.
-    </p>
-  </section>
-  <section>
-    <h2>Språk</h2>
-    <p>
-      Du kan specifisera språket genom att lägga till <code><b>lang="en"</b></code> i en tagg, vanligast är
-      html-taggen. Det hjälper t.ex. sökmotorer och skärmläsare att identifiera rätt språk på innehållet.
-    </p>
-  </section>
-  <section>
-    <h2>Validering</h2>
-    <p>
-      För att validera att du skrivit korrekt html så finns det html-valideringsverktyg som kan berätta om det finns
-      fel i koden. Du kan t.ex. använda <a href="http://validator.w3.org">http://validator.w3.org.</a>
-    </p>
-  </section>
-  <section>
-    <h2>Hur ett HTML-dokument är uppbyggt</h2>
-    <p>
-      Ett HTML-dokument är uppbyggt med något som kallas taggar. Taggar används för att skapa olika slags information
-      om HTML-dokumentet. Men innan man kan börja använda taggar så måste man inkludera <code>&lt;!DOCTYPE html></code>
-      för att berätta för webbläsaren att man vill använda HTML5. En tagg består ofta av en start-tagg och en slut-tagg
-      och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. 
-      Det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code>
-      för synligt innehåll för HTML-dokumentet.
-    </p>
-  </section>
-  <section>
-    <h2>Struktur</h2>
+  <header>
+    <h1>1.1 Grunderna i HTML5 </h1>
+  </header>
+  <main>
+    <section>
+      <h2>Doctype</h2>
       <p>
-        <code>&lt;html&gt;</code> berättar för webbläsaren att dokumentet är ett html-dokument.
-        <code>&lt;head&gt;</code> innerhåller allt metadata för html-dokumentet och är inte något som visas på sidan.
-        <code>&lt;title&gt;</code> är en metadata-tagg som placeras inuti <code>&lt;head&gt;</code> och definierar titeln på html-dokumentet.
-        <code>&lt;body></code> innehåller det synliga innehållet av html-dokumentet.
+        Ett html-dokument börjar alltid med raden <code>&lt;!DOCTYPE html></code> som berättar för webbläsaren att
+        dokumentet kommer att innehålla HTML5 kod.
+      </p>
+    </section>
+    <section>
+      <h2>Teckenkod</h2>
+      <p>
+        Teckenkod är ett sätt för datorn att förstå hur olika slags tecken ska sparas och sedan kunna läsas för att kunna
+        visas korrekt. Den vanligaste teckenkodningen idag kallas UTF-8 och innehåller stöd för alla tecken man någonsin
+        skulle behöva.
+      </p>
+    </section>
+    <section>
+      <h2>Språk</h2>
+      <p>
+        Du kan specifisera språket genom att lägga till <code><b>lang="en"</b></code> i en tagg, vanligast är
+        html-taggen. Det hjälper t.ex. sökmotorer och skärmläsare att identifiera rätt språk på innehållet.
+      </p>
+    </section>
+    <section>
+      <h2>Validering</h2>
+      <p>
+        För att validera att du skrivit korrekt html så finns det html-valideringsverktyg som kan berätta om det finns
+        fel i koden. Du kan t.ex. använda <a href="http://validator.w3.org">http://validator.w3.org.</a>
+      </p>
+    </section>
+    <section>
+      <h2>Hur ett HTML-dokument är uppbyggt</h2>
+      <p>
+        Ett HTML-dokument är uppbyggt med något som kallas taggar. Taggar används för att skapa olika slags information
+        om HTML-dokumentet. Men innan man kan börja använda taggar så måste man inkludera <code>&lt;!DOCTYPE html></code>
+        för att berätta för webbläsaren att man vill använda HTML5. En tagg består ofta av en start-tagg och en slut-tagg
+        och mellan taggarna så inkluderar man sin data, t.ex. <code>&lt;title>Min titel&lt;/title></code>. 
+        Det är rekommenderat att man även använder taggarna <code>&lt;head></code> för meta-information och <code>&lt;body></code>
+        för synligt innehåll för HTML-dokumentet.
+      </p>
+    </section>
+    <section>
+      <h2>Struktur</h2>
+        <p>
+          <code>&lt;html&gt;</code> berättar för webbläsaren att dokumentet är ett html-dokument.
+          <code>&lt;head&gt;</code> innerhåller allt metadata för html-dokumentet och är inte något som visas på sidan.
+          <code>&lt;title&gt;</code> är en metadata-tagg som placeras inuti <code>&lt;head&gt;</code> och definierar titeln på html-dokumentet.
+          <code>&lt;body></code> innehåller det synliga innehållet av html-dokumentet.
+        </p>
+        <details>
+          <summary>Visa exempel</summary>
+          <hr>
+          <div class="c-code">
+            <pre>&lt;!DOCTYPE html&gt;</pre>
+            <pre>&lt;html&gt;</pre>
+            <pre>  &lt;head&gt;</pre>
+            <pre>    &lt;title&gt;Min hemsida&lt;/title&gt;</pre>
+            <pre>  &lt;/head&gt;</pre>
+            <pre>  &lt;body&gt;</pre>
+            <pre>    &lt;h1&gt;Min hemsida&lt;/h1&gt;</pre>
+            <pre>  &lt;/body&gt;</pre>
+            <pre>&lt;/html&gt;</pre>
+          </div>
+          <hr>
+        </details>
+    </section>
+    <section>
+      <h2>Metainformation</h2>
+      <p>
+        <code>&lt;meta name="author" content="John Doe"&gt;</code> definierar en författare för webbsidan.
+        <code>&lt;meta name="description" content="Min hemsida"&gt;</code> definierar en beskrivning av webbsidan.
+        <code>&lt;meta name="generator" content="FrontPage 4.0"&gt;</code> definierar vilken mjukvara som genererat html-dokumentet.
+        <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;</code> definierar nyckelord relevanta för webbsidan.
+        <code>&lt;meta name="robots" content="index|noindex|follow|nofollow|..."&gt;</code> styr hur hemsidan ska bli indexerad av sökmotorer.
+        <code>&lt;meta http-equiv="content-type|refresh|..." content="text/html;charset=UTF-8|300|..."&gt;</code> är ett sätt att specifisera olika typer av HTTP headers, t.ex. <code>content-type</code> definierar teckenkodning, <code>refresh</code> definierar antalet sekunder tills sidan ska laddas om.
       </p>
       <details>
         <summary>Visa exempel</summary>
         <hr>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Min hemsida&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Min hemsida&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+        <div class="c-code">
+          <pre>&lt;!DOCTYPE html&gt;</pre>
+          <pre>&lt;html&gt;</pre>
+          <pre>  &lt;head&gt;</pre>
+          <pre>    &lt;meta name="author" content="John Doe"&gt;</pre>
+          <pre>    &lt;meta name="description" content="Min hemsida"&gt;</pre>
+          <pre>    &lt;meta name="generator" content="FrontPage 4.0"&gt;</pre>
+          <pre>    &lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;</pre>
+          <pre>    &lt;meta name="robots" content="noindex"&gt;</pre>
+          <pre>    &lt;title&gt;Min hemsida&lt;/title&gt;</pre>
+          <pre>  &lt;/head&gt;</pre>
+          <pre>  &lt;body&gt;</pre>
+          <pre>    &lt;h1&gt;Min hemsida&lt;/h1&gt;</pre>
+          <pre>  &lt;/body&gt;</pre>
+          <pre>&lt;/html&gt;</pre>
+        </div>
         <hr>
       </details>
-  </section>
-  <section>
-    <h2>Metainformation</h2>
-    <p>
-      <code>&lt;meta name="author" content="John Doe"&gt;</code> definierar en författare för webbsidan.
-      <code>&lt;meta name="description" content="Min hemsida"&gt;</code> definierar en beskrivning av webbsidan.
-      <code>&lt;meta name="generator" content="FrontPage 4.0"&gt;</code> definierar vilken mjukvara som genererat html-dokumentet.
-      <code>&lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;</code> definierar nyckelord relevanta för webbsidan.
-      <code>&lt;meta name="robots" content="index|noindex|follow|nofollow|..."&gt;</code> styr hur hemsidan ska bli indexerad av sökmotorer.
-      <code>&lt;meta http-equiv="content-type|refresh|..." content="text/html;charset=UTF-8|300|..."&gt;</code> är ett sätt att specifisera olika typer av HTTP headers, t.ex. <code>content-type</code> definierar teckenkodning, <code>refresh</code> definierar antalet sekunder tills sidan ska laddas om.
-    </p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <pre>
-        <code>
-          &lt;!DOCTYPE html&gt;
-          &lt;html&gt;
-            &lt;head&gt;
-              &lt;meta name="author" content="John Doe"&gt;
-              &lt;meta name="description" content="Min hemsida"&gt;
-              &lt;meta name="generator" content="FrontPage 4.0"&gt;
-              &lt;meta name="keywords" content="HTML,CSS,JavaScript"&gt;
-              &lt;meta name="robots" content="noindex"&gt;
-              &lt;title&gt;Min hemsida&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-              &lt;h1&gt;Min hemsida&lt;/h1&gt;
-            &lt;/body&gt;
-          &lt;/html&gt;
-        </code>
-      </pre>
-      <hr>
-    </details>
-  </section>
-  <section>
-    <h2>Text</h2>
-    <p>
-      <code>&lt;blockquote&gt;</code> används för att citera texter.
-      <code>&lt;h1&gt;</code>, 
-      <code>&lt;h2&gt;</code>, 
-      <code>&lt;h3&gt;</code>,
-      <code>&lt;h4&gt;</code>,
-      <code>&lt;h5&gt;</code>,
-      <code>&lt;h6&gt;</code> används för att skapa rubriker, där 
-      <code>&lt;h1&gt;</code> är den viktigaste rubriken och
-      <code>&lt;h6&gt;</code> är den minst viktiga rubriken.
-      <code>&lt;p&gt;</code> skapar paragrafer.
-      <code>&lt;pre&gt;</code> kommer att visa allt exakt som det skrivs i koden.
-      <code>&lt;span&gt;</code> används för att grupperna inline-element.
-    </p>
-  </section>
-  <section>
-    <h2>Hypertext</h2>
-    <p><code>&lt;a&gt;</code> skapar hyperlänkar till andra webbsidor, filer, platser, email-adresser, inom samma sida eller vilken annan tänkbar URL.</p>
-    <p>Det finns <i>relativa och absoluta länkar</i>. Du märker om en länk är <i>relativ</i> om den saknar <code>http://</code> eller <code>https://</code> i början av URL:en.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <code>&lt;a href="index.html"&gt;Gå till startsida&lt;/a&gt;</code>
-      <hr>
-      <a href="index.html">Gå till startsida</a>
-      <hr>
-    </details>
-    <p>En absolut länk innehåller <code>http://</code> eller <code>https://</code>.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <code>&lt;a href="https://dsv.su.se"&gt;Gå till startsida&lt;/a&gt;</code>
-      <hr>
-      <a href="https://dsv.su.se">Gå till DSV</a>
-      <hr>
-    </details>
-    <p>En ankarlänk länkar till ett element som finns på samma sida som länken.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-<pre><code>&lt;h2 id="kapitel-1"&gt;Kapitel 1&lt;/h2&gt;
-&lt;a href="#kapitel-1"&gt;Gå till Kapitel 1&lt;/a&gt;</code></pre>
-      <hr>
-      <h2 id="kapitel-1">Kapitel 1</h2>
-      <a href="#kapitel-1">Gå till Kapitel 1</a>
-      <hr>
-    </details>
-    <p>Man kan också skapa <i>bild-länkar</i>.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-<pre><code>&lt;a href="../images/exampleImage.png"&gt;
-  &lt;img src="../images/exampleImage.png" alt="En katt"&gt;
-&lt;a/&gt;</code></pre>
-      <hr>
-      <a href="../images/exampleImage.png">
-        <img src="../images/exampleImage.png" alt="En katt">
-      </a>
-      <hr>
-    </details>
-    <p>Det går även att <i>länka till olika protokoll (exempelvis ssh)</i>.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <code>&lt;a href="ssh://triton.dsv.su.se/"&gt;Länk till Triton&lt;/a&gt;</code>
-      <hr>
-      <a href="ssh://triton.dsv.su.se/" target="_top">Länk till Triton</a>
-      <hr>
-    </details>
-    <p>En <i>mailto-länk</i> länkar till en email-adress.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <code>&lt;a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top"&gt;Skicka mail&lt;/a&gt;</code>
-      <hr>
-      <a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top">Skicka mail</a>
-      <hr>
-    </details>
-  </section>
-  <section>
-    <h2>Oordnad, ordnad och beskriven lista</h2>
-    <p>
-      <p>En beskrivnings-lista kan skapas med elementen <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> och <code>&lt;dd&gt;</code>, och visas som en indenterad lista.</p>
+    </section>
+    <section>
+      <h2>Text</h2>
+      <p>
+        <code>&lt;blockquote&gt;</code> används för att citera texter.
+        <code>&lt;h1&gt;</code>, 
+        <code>&lt;h2&gt;</code>, 
+        <code>&lt;h3&gt;</code>,
+        <code>&lt;h4&gt;</code>,
+        <code>&lt;h5&gt;</code>,
+        <code>&lt;h6&gt;</code> används för att skapa rubriker, där 
+        <code>&lt;h1&gt;</code> är den viktigaste rubriken och
+        <code>&lt;h6&gt;</code> är den minst viktiga rubriken.
+        <code>&lt;p&gt;</code> skapar paragrafer.
+        <code>&lt;pre&gt;</code> kommer att visa allt exakt som det skrivs i koden.
+        <code>&lt;span&gt;</code> används för att grupperna inline-element.
+      </p>
+    </section>
+    <section>
+      <h2>Hypertext</h2>
+      <p><code>&lt;a&gt;</code> skapar hyperlänkar till andra webbsidor, filer, platser, email-adresser, inom samma sida eller vilken annan tänkbar URL.</p>
+      <p>Det finns <i>relativa och absoluta länkar</i>. Du märker om en länk är <i>relativ</i> om den saknar <code>http://</code> eller <code>https://</code> i början av URL:en.</p>
       <details>
         <summary>Visa exempel</summary>
         <hr>
-<pre><code>&lt;dl&gt;
-  &lt;dt&gt;Kaffe&lt;/dt&gt;
-  &lt;dd&gt;- en varm svart dryck&lt;/dd&gt;
-  &lt;dt&gt;Bullar&lt;/dt&gt;
-  &lt;dd&gt;- mjuk välsmakande ätbar deg&lt;/dd&gt;
-  &lt;dt&gt;Kakor&lt;/dt&gt;
-  &lt;dd&gt;- krispig välsmakande ätbar deg&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+        <code>&lt;a href="index.html"&gt;Gå till startsida&lt;/a&gt;</code>
         <hr>
-        <dl>
-          <dt>Kaffe</dt>
-          <dd>- en varm svart dryck</dd>
-          <dt>Bullar</dt>
-          <dd>- mjuk välsmakande ätbar deg</dd>
-          <dt>Kakor</dt>
-          <dd>- krispig välsmakande ätbar deg</dd>
-        </dl>
+        <a href="index.html">Gå till startsida</a>
         <hr>
       </details>
-      <p>En ordnad lista kan skapas med <code>&lt;ol&gt;</code> och <code>&lt;li&gt;</code> och visas som en numrerad lista.</p>
+      <p>En absolut länk innehåller <code>http://</code> eller <code>https://</code>.</p>
       <details>
         <summary>Visa exempel</summary>
         <hr>
-<pre><code>&lt;ol&gt;
-  &lt;li&gt;Kaffe&lt;/li&gt;
-  &lt;li&gt;Bullar&lt;/li&gt;
-  &lt;li&gt;Kakor&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+        <code>&lt;a href="https://dsv.su.se"&gt;Gå till startsida&lt;/a&gt;</code>
         <hr>
-        <ol>
-          <li>Kaffe</li>
-          <li>Bullar</li>
-          <li>Kakor</li>
-        </ol>
+        <a href="https://dsv.su.se">Gå till DSV</a>
         <hr>
       </details>
-      <p>En oordnad lista kan skapas med elementen <code>&lt;ul&gt;</code> och <code>&lt;li&gt;</code> och visas som en punkt lista.</p>
+      <p>En ankarlänk länkar till ett element som finns på samma sida som länken.</p>
       <details>
         <summary>Visa exempel</summary>
         <hr>
-<pre><code>&lt;ul&gt;
-  &lt;li&gt;Kaffe&lt;/li&gt;
-  &lt;li&gt;Bullar&lt;/li&gt;
-  &lt;li&gt;Kakor&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+        <div class="c-code">
+          <pre>&lt;h2 id="kapitel-1"&gt;Kapitel 1&lt;/h2&gt;</pre>
+          <pre>&lt;a href="#kapitel-1"&gt;Gå till Kapitel 1&lt;/a&gt;</pre>
+        </div>
         <hr>
-        <ul>
-          <li>Kaffe</li>
-          <li>Bullar</li>
-          <li>Kakor</li>
-        </ul>
+        <h2 id="kapitel-1">Kapitel 1</h2>
+        <a href="#kapitel-1">Gå till Kapitel 1</a>
         <hr>
       </details>
-  </section>
-  <section>
-    <h2>Tabell</h2>
-    <p>
-      <code>&lt;table&gt;</code> skapar en tabell. 
-      <code>&lt;caption&gt;</code> definierar en beskrivning av tabellen.
-      <code>&lt;td&gt;</code> skapar en ny datacell.
-      <code>&lt;th&gt;</code> skapar ett nytt tabellhuvud.
-      <code>&lt;tr&gt;</code> skapar en ny rad i tabellen.
-    </p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-<pre><code>&lt;table&gt;
-  &lt;caption&gt;Adressbok&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Förnamn&lt;/th&gt;
-    &lt;th&gt;Efternamn&lt;/th&gt;
-    &lt;th&gt;Ålder&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;John&lt;/td&gt;
-    &lt;td&gt;Doe&lt;/td&gt;
-    &lt;td&gt;35&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Jane&lt;/td&gt;
-    &lt;td&gt;Doe&lt;/td&gt;
-    &lt;td&gt;33&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-      <hr>
-        <table>
-          <caption>Adressbok</caption>
-          <tr>
-            <th>Förnamn</th>
-            <th>Efternamn</th>
-            <th>Ålder</th>
-          </tr>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>35</td>
-          </tr>
-          <tr>
-            <td>Jane</td>
-            <td>Doe</td>
-            <td>33</td>
-          </tr>
-        </table>
-      <hr>
-    </details>  
-  </section>
-  <section>
-    <h2>Bild</h2>
-    <p><code>&lt;img&gt;</code> definierar och visar bilder.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-      <code>&lt;img src="../images/exampleImage.png" alt="exampleImage.png"&gt;</code>
-      <hr>
-      <img src="../images/exampleImage.png" alt="exampleImage.png">
-      <hr>
-    </details>
-  </section>
-  <section>
-    <h2>Bildkartor</h2>
-    <p><code>&lt;map&gt;</code> används tillsammans med &lt;area&gt; för att skapa bilder med klickbara länk-områden.</p>
-    <details>
-      <summary>Visa exempel</summary>
-      <hr>
-<pre><code>&lt;map name="bildkarta"&gt;
-  &lt;area 
-    shape="rect" 
-    coords="10,10,150,130"
-    href="index.html"
-    target="_blank" 
-    alt="Röd" /&gt;
-  &lt;area 
-    shape="rect" 
-    coords="160,10,310,130"
-    href="index.html"
-    target="_blank" 
-    alt="Grön" /&gt;
-  &lt;area 
-    shape="rect" 
-    coords="10,310,240,140"
-    href="index.html"
-    target="_blank" 
-    alt="Gul" /&gt;
-  &lt;area 
-    shape="rect" 
-    coords="250,140,310,310"
-    href="index.html"
-    target="_blank" 
-    alt="Blå" /&gt;
-&lt;/map&gt;
-
-&lt;img 
-  usemap="#bildkarta" 
-  src="../images/colors.gif" 
-  alt="Min bildkarta" /&gt;</code></pre>
-      <hr>
-      <map name="infographic">
-        <area 
-          shape="rect" 
-          coords="10,10,150,130"
-          href="index.html"
-          target="_blank" 
-          alt="Röd" />
-        <area 
-          shape="rect" 
-          coords="160,10,310,130"
-          href="index.html"
-          target="_blank" 
-          alt="Grön" />
-        <area 
-          shape="rect" 
-          coords="10,140,240,310"
-          href="index.html"
-          target="_blank" 
-          alt="Gul" />
-        <area 
-          shape="rect" 
-          coords="250,140,310,310"
-          href="index.html"
-          target="_blank" 
-          alt="Blå" />
-      </map>
-      <img 
-        usemap="#infographic" 
-        src="../images/colors.gif" 
-        alt="My infographic" />
-      <hr>
-    </details>
-  </section>
+      <p>Man kan också skapa <i>bild-länkar</i>.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <div class="c-code">
+          <pre>&lt;a href="../images/exampleImage.png"&gt;</pre>
+          <pre>  &lt;img src="../images/exampleImage.png" alt="En katt"&gt;</pre>
+          <pre>&lt;a/&gt;</pre>
+        </div>
+        <hr>
+        <a href="../images/exampleImage.png">
+          <img src="../images/exampleImage.png" alt="En katt">
+        </a>
+        <hr>
+      </details>
+      <p>Det går även att <i>länka till olika protokoll (exempelvis ssh)</i>.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <code>&lt;a href="ssh://triton.dsv.su.se/"&gt;Länk till Triton&lt;/a&gt;</code>
+        <hr>
+        <a href="ssh://triton.dsv.su.se/" target="_top">Länk till Triton</a>
+        <hr>
+      </details>
+      <p>En <i>mailto-länk</i> länkar till en email-adress.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <code>&lt;a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top"&gt;Skicka mail&lt;/a&gt;</code>
+        <hr>
+        <a href="mailto:amst8501@student.su.se?Subject=Hello%20World" target="_top">Skicka mail</a>
+        <hr>
+      </details>
+    </section>
+    <section>
+      <h2>Oordnad, ordnad och beskriven lista</h2>
+      <p>
+        <p>En beskrivnings-lista kan skapas med elementen <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> och <code>&lt;dd&gt;</code>, och visas som en indenterad lista.</p>
+        <details>
+          <summary>Visa exempel</summary>
+          <hr>
+          <div class="c-code">
+            <pre>&lt;dl&gt;</pre>
+            <pre>  &lt;dt&gt;Kaffe&lt;/dt&gt;</pre>
+            <pre>  &lt;dd&gt;- en varm svart dryck&lt;/dd&gt;</pre>
+            <pre>  &lt;dt&gt;Bullar&lt;/dt&gt;</pre>
+            <pre>  &lt;dd&gt;- mjuk välsmakande ätbar deg&lt;/dd&gt;</pre>
+            <pre>  &lt;dt&gt;Kakor&lt;/dt&gt;</pre>
+            <pre>  &lt;dd&gt;- krispig välsmakande ätbar deg&lt;/dd&gt;</pre>
+            <pre>&lt;/dl&gt;</pre>
+          </div>
+          <hr>
+          <dl>
+            <dt>Kaffe</dt>
+            <dd>- en varm svart dryck</dd>
+            <dt>Bullar</dt>
+            <dd>- mjuk välsmakande ätbar deg</dd>
+            <dt>Kakor</dt>
+            <dd>- krispig välsmakande ätbar deg</dd>
+          </dl>
+          <hr>
+        </details>
+        <p>En ordnad lista kan skapas med <code>&lt;ol&gt;</code> och <code>&lt;li&gt;</code> och visas som en numrerad lista.</p>
+        <details>
+          <summary>Visa exempel</summary>
+          <hr>
+          <div class="c-code">
+            <pre>&lt;ol&gt;</pre>
+            <pre>  &lt;li&gt;Kaffe&lt;/li&gt;</pre>
+            <pre>  &lt;li&gt;Bullar&lt;/li&gt;</pre>
+            <pre>  &lt;li&gt;Kakor&lt;/li&gt;</pre>
+            <pre>&lt;/ol&gt;</pre>
+          </div>
+          <hr>
+          <ol>
+            <li>Kaffe</li>
+            <li>Bullar</li>
+            <li>Kakor</li>
+          </ol>
+          <hr>
+        </details>
+        <p>En oordnad lista kan skapas med elementen <code>&lt;ul&gt;</code> och <code>&lt;li&gt;</code> och visas som en punkt lista.</p>
+        <details>
+          <summary>Visa exempel</summary>
+          <hr>
+          <div class="c-code">
+            <pre>&lt;ul&gt;</pre>
+            <pre>  &lt;li&gt;Kaffe&lt;/li&gt;</pre>
+            <pre>  &lt;li&gt;Bullar&lt;/li&gt;</pre>
+            <pre>  &lt;li&gt;Kakor&lt;/li&gt;</pre>
+            <pre>&lt;/ul&gt;</pre>
+          </div>
+          <hr>
+          <ul>
+            <li>Kaffe</li>
+            <li>Bullar</li>
+            <li>Kakor</li>
+          </ul>
+          <hr>
+        </details>
+    </section>
+    <section>
+      <h2>Tabell</h2>
+      <p>
+        <code>&lt;table&gt;</code> skapar en tabell. 
+        <code>&lt;caption&gt;</code> definierar en beskrivning av tabellen.
+        <code>&lt;td&gt;</code> skapar en ny datacell.
+        <code>&lt;th&gt;</code> skapar ett nytt tabellhuvud.
+        <code>&lt;tr&gt;</code> skapar en ny rad i tabellen.
+      </p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <div class="c-code">
+          <pre>&lt;table&gt;</pre>
+          <pre>  &lt;caption&gt;Adressbok&lt;/caption&gt;</pre>
+          <pre>  &lt;tr&gt;</pre>
+          <pre>    &lt;th&gt;Förnamn&lt;/th&gt;</pre>
+          <pre>    &lt;th&gt;Efternamn&lt;/th&gt;</pre>
+          <pre>    &lt;th&gt;Ålder&lt;/th&gt;</pre>
+          <pre>  &lt;/tr&gt;</pre>
+          <pre>  &lt;tr&gt;</pre>
+          <pre>    &lt;td&gt;John&lt;/td&gt;</pre>
+          <pre>    &lt;td&gt;Doe&lt;/td&gt;</pre>
+          <pre>    &lt;td&gt;35&lt;/td&gt;</pre>
+          <pre>  &lt;/tr&gt;</pre>
+          <pre>  &lt;tr&gt;</pre>
+          <pre>    &lt;td&gt;Jane&lt;/td&gt;</pre>
+          <pre>    &lt;td&gt;Doe&lt;/td&gt;</pre>
+          <pre>    &lt;td&gt;33&lt;/td&gt;</pre>
+          <pre>  &lt;/tr&gt;</pre>
+          <pre>&lt;/table&gt;</pre>
+        </div>
+        <hr>
+          <table>
+            <caption>Adressbok</caption>
+            <tr>
+              <th>Förnamn</th>
+              <th>Efternamn</th>
+              <th>Ålder</th>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>35</td>
+            </tr>
+            <tr>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td>33</td>
+            </tr>
+          </table>
+        <hr>
+      </details>  
+    </section>
+    <section>
+      <h2>Bild</h2>
+      <p><code>&lt;img&gt;</code> definierar och visar bilder.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <code>&lt;img src="../images/exampleImage.png" alt="exampleImage.png"&gt;</code>
+        <hr>
+        <img src="../images/exampleImage.png" alt="exampleImage.png">
+        <hr>
+      </details>
+    </section>
+    <section>
+      <h2>Bildkartor</h2>
+      <p><code>&lt;map&gt;</code> används tillsammans med &lt;area&gt; för att skapa bilder med klickbara länk-områden.</p>
+      <details>
+        <summary>Visa exempel</summary>
+        <hr>
+        <div class="c-code">
+          <pre>&lt;map name="bildkarta"&gt;</pre>
+          <pre>  &lt;area </pre>
+          <pre>    shape="rect" </pre>
+          <pre>    coords="10,10,150,130"</pre>
+          <pre>    href="index.html"</pre>
+          <pre>    target="_blank" </pre>
+          <pre>    alt="Röd" /&gt;</pre>
+          <pre>  &lt;area </pre>
+          <pre>    shape="rect" </pre>
+          <pre>    coords="160,10,310,130"</pre>
+          <pre>    href="index.html"</pre>
+          <pre>    target="_blank" </pre>
+          <pre>    alt="Grön" /&gt;</pre>
+          <pre>  &lt;area </pre>
+          <pre>    shape="rect" </pre>
+          <pre>    coords="10,310,240,140"</pre>
+          <pre>    href="index.html"</pre>
+          <pre>    target="_blank" </pre>
+          <pre>    alt="Gul" /&gt;</pre>
+          <pre>  &lt;area </pre>
+          <pre>    shape="rect" </pre>
+          <pre>    coords="250,140,310,310"</pre>
+          <pre>    href="index.html"</pre>
+          <pre>    target="_blank" </pre>
+          <pre>    alt="Blå" /&gt;</pre>
+          <pre>&lt;/map&gt;</pre>
+          <pre>&lt;img </pre>
+          <pre>  usemap="#bildkarta" </pre>
+          <pre>  src="../images/colors.gif" </pre>
+          <pre>  alt="Min bildkarta" /&gt;</pre>
+        </div>
+        <hr>
+        <map name="infographic">
+          <area 
+            shape="rect" 
+            coords="10,10,150,130"
+            href="index.html"
+            target="_blank" 
+            alt="Röd" />
+          <area 
+            shape="rect" 
+            coords="160,10,310,130"
+            href="index.html"
+            target="_blank" 
+            alt="Grön" />
+          <area 
+            shape="rect" 
+            coords="10,140,240,310"
+            href="index.html"
+            target="_blank" 
+            alt="Gul" />
+          <area 
+            shape="rect" 
+            coords="250,140,310,310"
+            href="index.html"
+            target="_blank" 
+            alt="Blå" />
+        </map>
+        <img 
+          usemap="#infographic" 
+          src="../images/colors.gif" 
+          alt="My infographic" />
+        <hr>
+      </details>
+    </section>
+  </main>
 </body>
 
 </html>
